@@ -19,15 +19,38 @@ class Barang extends CI_Controller
 	}
 
 	function tambah(){
-		$data['kode'] = $this->m_barang->tampil_kode();
+		$data['kode'] = $this->m_barang->tampil_data()->result();
+		$data['barangdetail'] = $this->m_barang->tampil_barangdetail()->result();
 		$this->load->view('template/header');
         $this->load->view('template/navbar');
-        $this->load->view('barang/daftarbarang',$data);
+        $this->load->view('barang/tambahbarang', $data);
         $this->load->view('template/footer');
 
 	}
 
-	function store(){
+	function tambah_aksi(){
+		$id_barang		= $this->input->post('id_barang');
+		$nama_barang	= $this->input->post('nama_barang');
+		$stok			= $this->input->post('stok');
+		$harga			= $this->input->post('harga');
+		$berat			= $this->input->post('berat');
+		$rasa			= $this->input->post('rasa');
+		$deskripsi		= $this->input->post('deskripsi');
+		$id_barangdetail= $this->input->post('id_barangdetail');
+
+		$data = array(
+			'id_barang'			=> $id_barang,
+			'nama_barang' 		=> $nama_barang,
+			'stok' 				=> $stok,
+			'harga' 			=> $harga,
+			'berat' 			=> $berat,
+			'rasa' 				=> $rasa,
+			'deskripsi' 		=> $deskripsi,
+			'id_barangdetail' 	=> $id_barangdetail
+		);
+
+		$this->m_barang->input_data('tbl_barang', $data);
+		redirect('barang');
 		
 	}
 }

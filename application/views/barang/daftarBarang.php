@@ -6,18 +6,19 @@
     </div>
     <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <a href="<?php base_url() ?>barang/add" class="btn btn-primary">Tambah Data</a>
+        <a href="<?php base_url() ?>index.php/barang/tambah" class="btn btn-primary">Tambah Data</a>
     </div>
     <div class="card-body">
             <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr style="text-align:center">
-                            <th>Kode Barang</th>
-                            <th>Kategori</th>
+                            <th>ID Barang</th>
                             <th>Nama Barang</th>
                             <th>Stok</th>
                             <th>Harga</th>
+                            <th>Berat</th>
+                            <th>Rasa</th>
                             <th>Deskripsi</th>
                             <th>Aksi</th>
                     </tr>
@@ -32,6 +33,8 @@
                                 <td><?= $item->nama_barang ?></td>
                                 <td><?= $item->stok ?></td>
                                 <td><?= $item->harga ?></td>
+                                <td><?= $item->berat ?></td>
+                                <td><?= $item->rasa ?></td>
                                 <td><?= $item->deskripsi ?></td>
                                 <td>
                                     <a href="<?php echo base_url() . 'barang/edit'; ?>/<?= $item->id_barang ?>" 
