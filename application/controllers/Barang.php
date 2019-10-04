@@ -19,7 +19,7 @@ class Barang extends CI_Controller
 	}
 
 	function tambah(){
-		$data['kode'] = $this->m_barang->tampil_data()->result();
+		$data['kode'] = $this->m_barang->tampil_kode();
 		$data['barangdetail'] = $this->m_barang->tampil_barangdetail()->result();
 		$this->load->view('template/header');
         $this->load->view('template/navbar');
@@ -49,8 +49,8 @@ class Barang extends CI_Controller
 			'id_barangdetail' 	=> $id_barangdetail
 		);
 
-		$this->m_barang->input_data('tbl_barang', $data);
-		redirect('barang');
+		$this->m_barang->input_data($data, 'tbl_barang');
+		redirect('barang/index');
 		
 	}
 }

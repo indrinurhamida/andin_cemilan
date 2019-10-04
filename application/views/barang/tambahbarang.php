@@ -5,13 +5,15 @@
         <h1 class="h3 mb-0 text-gray-800">Tambah Barang</h1>
     </div>
     <div class="container-fluid">
-        <form class="" method="post" action="<?php echo base_url() . 'index.php/barang/tambah_aksi'; ?>" enctype="multipart/form-data">
+        <form class="" method="post" action="<?php echo base_url() . 'barang/tambah_aksi'; ?>" enctype="multipart/form-data">
             <div class="form-group row">
                 <div class="col-sm-4 mb-3 mb-sm-0">
                     <label for="exampleInputEmail1">ID Barang</label>
                     <input type="text" name="id_barang" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan ID" value="<?= $kode ?>" readonly>
+
                 </div>
-                <div class="col-sm-4 mb-3 mb-sm-0">
+
+                <div class="col-sm-6 mb-3 mb-sm-0">
 
                     <label for="exampleInputEmail1">Jenis Barang</label>
                     <select name="id_barangdetail" class="form-control">
@@ -20,7 +22,6 @@
                             <option value="<?php echo $data->id_barangdetail ?>"><?php echo $data->nama_barangdetail ?></option>
                         <?php } ?>
                     </select>
-
                 </div>
             </div>
 
@@ -60,7 +61,7 @@
 
             </div>
             <button type="submit" class="btn btn-primary">Simpan</button>
-            <a href="<?php echo base_url() . 'barang/index.php'; ?>" class="btn btn-danger">Kembali</a>
+            <a href="<?php echo base_url() . 'barang'; ?>" class="btn btn-danger">Kembali</a>
         </form>
     </div>
 </div>

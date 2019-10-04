@@ -4,7 +4,7 @@ class M_barang extends CI_Model
 {
 	function tampil_kode()
 	{
-		$this->db->select('RIGHT (tbl_barang.id_barang,2) as kode', FALSE);
+		$this->db->select('RIGHT (tbl_barang.id_barang, 2) as kode', FALSE);
         $this->db->order_by('id_barang', 'DESC');
         $this->db->limit(1);
         $query = $this->db->get('tbl_barang');    
