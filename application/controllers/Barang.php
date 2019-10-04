@@ -10,6 +10,7 @@ class Barang extends CI_Controller
 
 	function index(){
 		
+
 		$data['barang'] = $this->m_barang->tampil_data()->result();
         $this->load->view('template/header');
         $this->load->view('template/navbar');
