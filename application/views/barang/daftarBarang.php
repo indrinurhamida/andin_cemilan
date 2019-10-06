@@ -6,7 +6,7 @@
     </div>
     <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <a href="<?php echo base_url() . 'barang/tambah' ?>" class="btn btn-primary">Tambah Data</a>
+        <a href="<?php echo base_url() . 'index.php/barang/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
     </div>
     <div class="card-body">
             <div class="table-responsive">
@@ -14,6 +14,7 @@
                 <thead>
                     <tr style="text-align:center">
                             <th>ID Barang</th>
+                            <th>Detail Barang</th>
                             <th>Nama Barang</th>
                             <th>Stok</th>
                             <th>Harga</th>
@@ -30,6 +31,7 @@
 
                             <tr>
                                 <td><?= $item->id_barang ?></td>
+                                <td><?= $item->id_barangdetail ?></td>
                                 <td><?= $item->nama_barang ?></td>
                                 <td><?= $item->stok ?></td>
                                 <td><?= $item->harga ?></td>
@@ -37,9 +39,9 @@
                                 <td><?= $item->rasa ?></td>
                                 <td><?= $item->deskripsi ?></td>
                                 <td>
-                                    <a href="<?php echo base_url() . 'barang/edit'; ?>/<?= $item->id_barang ?>" 
+                                    <a href="<?php echo base_url() . 'index.php/barang/edit'; ?>/<?= $item->id_barang ?>" 
                                             class="btn btn-success">Edit</a>
-                                    <a href="<?php echo base_url() . 'barang/hapus'; ?>/<?php echo $item->id_barang ?>" class="btn btn-danger" onclick="return confirm('Yakin Ingin Menghapus Data ?')">Hapus</a>
+                                    <a href="<?php echo base_url() . 'index.php/barang/hapus'; ?>/<?php echo $item->id_barang ?>" class="btn btn-danger" onclick="return confirm('Yakin Ingin Menghapus Data ?')">Hapus</a>
                                 </td>
                             </tr>
                         <?php } ?>

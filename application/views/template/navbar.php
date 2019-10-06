@@ -41,10 +41,10 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="<?php echo base_url() . 'index.php/barang' ?>">Daftar Barang</a>
-            <a class="collapse-item" href="<?php echo base_url() . 'index.php/barangdetail' ?>">Daftar Detail Barang</a>
-            <a class="collapse-item" href="<?php echo base_url() . 'index.php/supplier' ?>">Daftar Supplier</a>
-            <a class="collapse-item" href="<?php echo base_url() . 'index.php/pegawai' ?>">Detail Pegawai</a>
+            <a class="collapse-item" href="<?php echo base_url() . 'index.php/barang'; ?>">Daftar Barang</a>
+            <a class="collapse-item" href="<?php echo base_url() . 'index.php/barangdetail'; ?>">Daftar Detail Barang</a>
+            <a class="collapse-item" href="<?php echo base_url() . 'index.php/supplier'; ?>">Daftar Supplier</a>
+            <a class="collapse-item" href="<?php echo base_url() . 'index.php/pegawai'; ?>">Detail Pegawai</a>
           </div>
         </div>
       </li>
