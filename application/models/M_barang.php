@@ -47,7 +47,7 @@ class M_barang extends CI_Model
 		$this->db->delete($table);
 	}
 
-	function edit_data($where, $table){
+	function edit_data($table,$where){
 		return $this->db->get_where($table, $where);
 	}
 

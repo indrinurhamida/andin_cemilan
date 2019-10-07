@@ -8,7 +8,7 @@
             <div class="form-group row">
                 <div class="col-sm-6 mb-3 mb-sm-0">
                     <label for="exampleInputEmail1">ID Barang</label>
-                    <input type="text" name="id_barangdetail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan ID" value="<?= $barang['id_barangdetail'] ?>" readonly>
+                    <input type="text" name="id_barang" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan ID" value="<?= $barang['id_barang'] ?>" readonly>
                 </div>
                 <div class="col-sm-6 mb-3 mb-sm-0">
 

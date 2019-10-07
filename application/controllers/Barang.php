@@ -14,7 +14,7 @@ class Barang extends CI_Controller
 		$data['barang'] = $this->m_barang->tampil_data()->result();
         $this->load->view('template/header');
         $this->load->view('template/navbar');
-        $this->load->view('barang/daftarbarang',$data);
+        $this->load->view('data-master/barang/daftarbarang',$data);
         $this->load->view('template/footer');
 	}
 
@@ -24,7 +24,7 @@ class Barang extends CI_Controller
 
 		$this->load->view('template/header');
         $this->load->view('template/navbar');
-        $this->load->view('barang/tambahbarang', $data);
+        $this->load->view('data-master/barang/tambahbarang', $data);
         $this->load->view('template/footer');
 
 	}
@@ -61,14 +61,14 @@ class Barang extends CI_Controller
 		redirect('barang/index');
 	}
 
-	function edit(){
-		$where = array('id_barangdetail');
+	function edit($id){
+		$where = array('id_barangdetail' => $id);
 		$data['barang'] = $this->m_barang->edit_data('tbl_barang', $where)->row_array();
 		$data['data_barangdetail'] = $this->m_barang->tampil_barangdetail()->result();
 
 		$this->load->view('template/header');
         $this->load->view('template/navbar');
-        $this->load->view('barang/editbarang', $data);
+        $this->load->view('data-master/barang/editbarang', $data);
         $this->load->view('template/footer');
 	}
 

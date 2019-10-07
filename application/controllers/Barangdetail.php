@@ -13,7 +13,7 @@
 		$data['barangdetail'] = $this->m_barangdetail->tampil_data()->result();
         $this->load->view('template/header');
         $this->load->view('template/navbar');
-        $this->load->view('barangdetail/daftarbarangdetail',$data);
+        $this->load->view('data-master/barangdetail/daftarbarangdetail',$data);
         $this->load->view('template/footer');
 	}
 	}
