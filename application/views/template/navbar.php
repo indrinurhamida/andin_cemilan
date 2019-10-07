@@ -36,20 +36,32 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-folder"></i>
-          <span>Data Master</span>
+          <span>Barang</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="<?php echo base_url() . 'index.php/barang'; ?>">Daftar Barang</a>
-            <a class="collapse-item" href="<?php echo base_url() . 'index.php/barangdetail'; ?>">Daftar Detail Barang</a>
-            <a class="collapse-item" href="<?php echo base_url() . 'index.php/supplier'; ?>">Daftar Supplier</a>
-            <a class="collapse-item" href="<?php echo base_url() . 'index.php/pegawai'; ?>">Detail Pegawai</a>
+            <a class="collapse-item" href="<?php echo base_url() . 'index.php/barang'; ?>">Data Barang</a>
+            <a class="collapse-item" href="<?php echo base_url() . 'index.php/barangdetail'; ?>">Data Detail Barang</a>
           </div>
         </div>
       </li>
 
       <!-- Nav Item - Utilities Collapse Menu -->
+
+      <!-- Nav Item - Charts -->
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url() . 'index.php/supplier'; ?>">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Data Supplier</span></a>
+      </li>
+
+      <!-- Nav Item - Charts -->
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url() . 'index.php/pegawai';?>">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Data Pegawai</span></a>
+      </li>
 
       <!-- Divider -->
       <hr class="sidebar-divider">
@@ -79,17 +91,32 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="<?php base_url() ?>">
+        <a class="nav-link" href="<?php echo base_url() . 'index.php/Kasir'; ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Kasir</span></a>
+      </li>
+
+      <!-- Nav Item - Charts -->
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url() . 'index.php/Diskon'; ?>">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Diskon</span></a>
+      </li>
+
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url() . 'index.php/Akun'; ?>">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Akun</span></a>
       </li>
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
         <a class="nav-link" href="<?php base_url() ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Akun</span></a>
+          <span>Member</span></a>
       </li>
+
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
 
