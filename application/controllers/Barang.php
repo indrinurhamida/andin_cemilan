@@ -96,6 +96,7 @@ class Barang extends CI_Controller
 		$where = array(
 			'id_barang' => $id
 		);
+		$this->db->where($data);
 
 		$this->m_barang->update_data($where, 'tbl_barang', $data);
 		redirect('barang/index');
