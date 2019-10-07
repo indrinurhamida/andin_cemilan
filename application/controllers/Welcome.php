@@ -22,7 +22,10 @@ class Welcome extends CI_Controller {
 	//$this->load->helper('url');
 	public function index()
 	{
-		$this->load->view('dashboard');
+        $this->load->view('template/header');
+        $this->load->view('template/navbar');
+        $this->load->view('dashboard');
+        $this->load->view('template/footer');
 		
 	}
 
