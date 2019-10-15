@@ -33,9 +33,6 @@ class Barang extends CI_Controller
 		$id_barang		= $this->input->post('id_barang');
 		$nama_barang	= $this->input->post('nama_barang');
 		$stok			= $this->input->post('stok');
-		$harga			= $this->input->post('harga');
-		$berat			= $this->input->post('berat');
-		$rasa			= $this->input->post('rasa');
 		$deskripsi		= $this->input->post('deskripsi');
 		$id_barangdetail= $this->input->post('id_barangdetail');
 
@@ -43,9 +40,6 @@ class Barang extends CI_Controller
 			'id_barang'			=> $id_barang,
 			'nama_barang' 		=> $nama_barang,
 			'stok' 				=> $stok,
-			'harga' 			=> $harga,
-			'berat' 			=> $berat,
-			'rasa' 				=> $rasa,
 			'deskripsi' 		=> $deskripsi,
 			'id_barangdetail' 	=> $id_barangdetail
 		);
@@ -76,9 +70,6 @@ class Barang extends CI_Controller
 		$id_barang		= $this->input->post('id_barang');
 		$nama_barang	= $this->input->post('nama_barang');
 		$stok			= $this->input->post('stok');
-		$harga			= $this->input->post('harga');
-		$berat			= $this->input->post('berat');
-		$rasa			= $this->input->post('rasa');
 		$deskripsi		= $this->input->post('deskripsi');
 		$id_barangdetail= $this->input->post('id_barangdetail');
 
@@ -86,9 +77,6 @@ class Barang extends CI_Controller
 			'id_barang'			=> $id_barang,
 			'nama_barang' 		=> $nama_barang,
 			'stok' 				=> $stok,
-			'harga' 			=> $harga,
-			'berat' 			=> $berat,
-			'rasa' 				=> $rasa,
 			'deskripsi' 		=> $deskripsi,
 			'id_barangdetail' 	=> $id_barangdetail
 		);

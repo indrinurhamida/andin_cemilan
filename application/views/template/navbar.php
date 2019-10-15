@@ -41,8 +41,8 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="<?php echo base_url() . 'index.php/barang'; ?>">Data Barang</a>
-            <a class="collapse-item" href="<?php echo base_url() . 'index.php/barangdetail'; ?>">Data Detail Barang</a>
+            <a class="collapse-item" href="<?php echo base_url() . 'index.php/data-master/barang'; ?>">Data Barang</a>
+            <a class="collapse-item" href="<?php echo base_url() . 'index.php/data-master/barangdetail'; ?>">Data Detail Barang</a>
           </div>
         </div>
       </li>
@@ -51,14 +51,14 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url() . 'index.php/supplier'; ?>">
+        <a class="nav-link" href="<?php echo base_url() . 'index.php/data-master/supplier'; ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Data Supplier</span></a>
       </li>
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url() . 'index.php/pegawai';?>">
+        <a class="nav-link" href="<?php echo base_url() . 'index.php/data-master/pegawai';?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Data Pegawai</span></a>
       </li>

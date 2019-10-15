@@ -36,23 +36,6 @@
                     <label for="exampleInputEmail1">Stok</label>
                     <input type="text" name="stok" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Stok" value="<?= $barang['stok'] ?>">
                 </div>
-                <div class="col-sm-4 mb-3 mb-sm-0">
-
-                    <label for="exampleInputEmail1">Harga</label>
-                    <input type="text" name="harga" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan harga" value="<?= $barang['harga'] ?>">
-                </div>
-                <div class="col-sm-4 mb-3 mb-sm-0">
-                     <div class="col-sm-4 mb-3 mb-sm-0">
-
-                    <label for="exampleInputEmail1">Berat</label>
-                    <input type="text" name="berat" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan berat">
-                </div>
-                <div class="col-sm-4 mb-3 mb-sm-0">
-
-                    <label for="exampleInputEmail1">Rasa</label>
-                    <input type="text" name="rasa" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan rasa">
-                </div>
-
             </div>
 
             </div>
