@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 02, 2019 at 04:27 PM
+-- Generation Time: Oct 15, 2019 at 04:30 PM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 5.6.15
 
@@ -45,9 +45,20 @@ CREATE TABLE `tbl_barang` (
   `nama_barang` varchar(50) NOT NULL,
   `stok` int(20) NOT NULL,
   `harga` int(20) NOT NULL,
+  `berat` varchar(50) NOT NULL,
+  `rasa` varchar(50) NOT NULL,
   `deskripsi` varchar(50) NOT NULL,
   `id_barangdetail` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_barang`
+--
+
+INSERT INTO `tbl_barang` (`id_barang`, `nama_barang`, `stok`, `harga`, `berat`, `rasa`, `deskripsi`, `id_barangdetail`) VALUES
+('BRG001', 'Makaroni', 20, 2000, '20 kg', 'Manis', 'Barang Masuk Hari Ini', 'DTB001'),
+('BRG002', 'Bola-bola Cokelat', 20, 2000, '20 kg', 'Manis', '', 'DTB001'),
+('BRG003', 'Bola-bola Cokelat', 20, 2000, '20 kg', 'Manis', '', 'DTB001');
 
 -- --------------------------------------------------------
 
@@ -58,8 +69,17 @@ CREATE TABLE `tbl_barang` (
 CREATE TABLE `tbl_barangdetail` (
   `id_barangdetail` varchar(20) NOT NULL,
   `nama_barangdetail` varchar(50) NOT NULL,
-  `rasa` varchar(50) NOT NULL
+  `rasa` varchar(50) NOT NULL,
+  `berat` varchar(50) NOT NULL,
+  `harga` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_barangdetail`
+--
+
+INSERT INTO `tbl_barangdetail` (`id_barangdetail`, `nama_barangdetail`, `rasa`, `berat`, `harga`) VALUES
+('DTB001', 'Makaroni per bal', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -71,7 +91,7 @@ CREATE TABLE `tbl_barangkeluar` (
   `id_barangkeluar` varchar(20) NOT NULL,
   `tgl_barangkeluar` date NOT NULL,
   `nama_pegawai` varchar(50) NOT NULL,
-  `total_barangkeluar` int(20) DEFAULT NULL,
+  `total_barangkeluar` int(20) NOT NULL,
   `id_pegawai` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -86,7 +106,8 @@ CREATE TABLE `tbl_barangkeluardetail` (
   `harga` int(11) NOT NULL,
   `qty` int(11) NOT NULL,
   `total_barangkeluar` int(20) DEFAULT NULL,
-  `id_barangdetail` varchar(20) NOT NULL
+  `id_barangdetail` varchar(20) NOT NULL,
+  `id_barangkeluar` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -114,7 +135,8 @@ CREATE TABLE `tbl_barangmasukdetail` (
   `harga` int(11) NOT NULL,
   `qty` int(11) NOT NULL,
   `total_barangmasuk` int(20) DEFAULT NULL,
-  `id_barang` varchar(20) NOT NULL
+  `id_barang` varchar(20) NOT NULL,
+  `id_barangmasuk` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -209,7 +231,8 @@ ALTER TABLE `tbl_barangkeluar`
 --
 ALTER TABLE `tbl_barangkeluardetail`
   ADD PRIMARY KEY (`id_barangkeluardetail`),
-  ADD KEY `id_barangdetail` (`id_barangdetail`);
+  ADD KEY `id_barangdetail` (`id_barangdetail`),
+  ADD KEY `id_barangkeluar` (`id_barangkeluar`);
 
 --
 -- Indexes for table `tbl_barangmasuk`
@@ -224,7 +247,8 @@ ALTER TABLE `tbl_barangmasuk`
 --
 ALTER TABLE `tbl_barangmasukdetail`
   ADD PRIMARY KEY (`id_barangmasukdetail`),
-  ADD KEY `id_barang` (`id_barang`);
+  ADD KEY `id_barang` (`id_barang`),
+  ADD KEY `id_barangmasuk` (`id_barangmasuk`);
 
 --
 -- Indexes for table `tbl_pegawai`
