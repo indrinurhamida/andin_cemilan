@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 15, 2019 at 05:57 PM
+-- Generation Time: Oct 16, 2019 at 08:41 AM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 5.6.15
 
@@ -48,6 +48,14 @@ CREATE TABLE `tbl_barang` (
   `id_barangdetail` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `tbl_barang`
+--
+
+INSERT INTO `tbl_barang` (`id_barang`, `nama_barang`, `stok`, `deskripsi`, `id_barangdetail`) VALUES
+('BRG001', 'Makaroni', 20, 'Baru', 'DEB001'),
+('BRG002', 'Bola-bola Cokelat', 20, 'fdxcvbn', 'DEB001');
+
 -- --------------------------------------------------------
 
 --
@@ -61,6 +69,13 @@ CREATE TABLE `tbl_barangdetail` (
   `berat` varchar(50) NOT NULL,
   `harga` int(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_barangdetail`
+--
+
+INSERT INTO `tbl_barangdetail` (`id_barangdetail`, `nama_barangdetail`, `rasa`, `berat`, `harga`) VALUES
+('DEB001', 'Makaroni', 'Manis', '20 kg', 20000);
 
 -- --------------------------------------------------------
 
