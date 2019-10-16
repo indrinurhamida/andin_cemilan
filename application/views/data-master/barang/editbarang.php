@@ -23,17 +23,6 @@
                     <label for="exampleInputEmail1">Stok</label>
                     <input type="text" name="stok" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Stok" value="<?= $barang['stok'] ?>">
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 9c89354a11873e44d95b0c26df91765007e14bdd
-=======
->>>>>>> 9c89354a11873e44d95b0c26df91765007e14bdd
-            </div>
-
->>>>>>> 9c89354a11873e44d95b0c26df91765007e14bdd
             </div>
             <div class="form-group row">
                 <div class="col-sm-12 mb-3 mb-sm-0">

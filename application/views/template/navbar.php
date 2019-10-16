@@ -63,6 +63,23 @@
           <span>Data Pegawai</span></a>
       </li>
 
+      <li class="nav-item">
+
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Pergudangan</span>
+        </a>
+
+          <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+              <h6 class="collapse-header">Login Screens:</h6>
+              <a class="collapse-item" href="<?php base_url() ?> barangmasuk">Barang Masuk</a>
+              <a class="collapse-item" href="<?php base_url() ?> barangkeluar">Barang Keluar</a>
+              <a class="collapse-item" href="<?php base_url() ?> stokbarang">Stok Barang</a>
+            </div>
+          </div>
+      </li>
+
       <!-- Divider -->
       <hr class="sidebar-divider">
 
@@ -72,22 +89,7 @@
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
-
-      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-          <i class="fas fa-fw fa-folder"></i>
-          <span>Pergudangan</span>
-      </a>
-
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Login Screens:</h6>
-            <a class="collapse-item" href="<?php base_url() ?> barangmasuk">Barang Masuk</a>
-            <a class="collapse-item" href="<?php base_url() ?> barangkeluar">Barang Keluar</a>
-            <a class="collapse-item" href="<?php base_url() ?> stokbarang">Stok Barang</a>
-          </div>
-        </div>
-      </li>
+      
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
