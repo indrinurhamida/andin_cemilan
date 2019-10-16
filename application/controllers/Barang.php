@@ -43,9 +43,6 @@ class Barang extends CI_Controller
 			'id_barang'			=> $id_barang,
 			'nama_barang' 		=> $nama_barang,
 			'stok' 				=> $stok,
-			'harga' 			=> $harga,
-			'berat' 			=> $berat,
-			'rasa' 				=> $rasa,
 			'deskripsi' 		=> $deskripsi,
 			'id_barangdetail' 	=> $id_barangdetail
 		);

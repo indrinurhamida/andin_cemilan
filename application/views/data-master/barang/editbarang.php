@@ -10,19 +10,6 @@
                     <label for="exampleInputEmail1">ID Barang</label>
                     <input type="text" name="id_barang" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan ID" value="<?= $barang['id_barang'] ?>" readonly>
                 </div>
-                <div class="col-sm-6 mb-3 mb-sm-0">
-
-                    <label for="exampleInputEmail1">Jenis Barang</label>
-                    <select name="id_barangdetail" class="form-control">
-                        <?php
-                        foreach ($data_barangdetail as $b) {
-                            echo "<option value='$b->nama_barangdetail'";
-                            echo $barang['nama_barangdetail'] == $b->nama_barangdetail ? 'selected' : '';
-                            echo ">$b->nama_barangdetail</option>";
-                        }
-                        ?>
-                    </select>
-                </div>
             </div>
                 <div class="col-sm-6 mb-3 mb-sm-0">
 
@@ -36,25 +23,17 @@
                     <label for="exampleInputEmail1">Stok</label>
                     <input type="text" name="stok" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Stok" value="<?= $barang['stok'] ?>">
                 </div>
-                <div class="col-sm-4 mb-3 mb-sm-0">
-
-                    <label for="exampleInputEmail1">Harga</label>
-                    <input type="text" name="harga" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan harga" value="<?= $barang['harga'] ?>">
-                </div>
-                <div class="col-sm-4 mb-3 mb-sm-0">
-                     <div class="col-sm-4 mb-3 mb-sm-0">
-
-                    <label for="exampleInputEmail1">Berat</label>
-                    <input type="text" name="berat" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan berat">
-                </div>
-                <div class="col-sm-4 mb-3 mb-sm-0">
-
-                    <label for="exampleInputEmail1">Rasa</label>
-                    <input type="text" name="rasa" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan rasa">
-                </div>
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 9c89354a11873e44d95b0c26df91765007e14bdd
+=======
+>>>>>>> 9c89354a11873e44d95b0c26df91765007e14bdd
             </div>
 
+>>>>>>> 9c89354a11873e44d95b0c26df91765007e14bdd
             </div>
             <div class="form-group row">
                 <div class="col-sm-12 mb-3 mb-sm-0">
