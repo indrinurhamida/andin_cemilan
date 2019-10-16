@@ -11,8 +11,6 @@
                 <div class="col-sm-6 mb-6 mb-sm-4">
                     <label for="exampleInputEmail1">ID Barang</label>
                     <input type="text" name="id_barang" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan ID" value="<?= $kode ?>" readonly>
-<<<<<<< HEAD
-=======
 
                 </div>
                 
@@ -25,7 +23,6 @@
                             <option value="<?php echo $data->id_barangdetail ?>"><?php echo $data->nama_barangdetail ?></option>
                         <?php } ?>
                     </select>
->>>>>>> 9c89354a11873e44d95b0c26df91765007e14bdd
                 </div>
             </div>
             <div class="form-group row">
@@ -38,19 +35,6 @@
                     <label for="exampleInputEmail1">Stok</label>
                     <input type="text" name="stok" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan stok">
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                
->>>>>>> 9c89354a11873e44d95b0c26df91765007e14bdd
-=======
-                
->>>>>>> 9c89354a11873e44d95b0c26df91765007e14bdd
-=======
-                
->>>>>>> 9c89354a11873e44d95b0c26df91765007e14bdd
-
             </div>
             <div class="form-group row">
                 <div class="col-sm-6 mb-6 mb-sm-4">
