@@ -51,7 +51,7 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url() . 'index.php/data-master/supplier'; ?>">
+        <a class="nav-link" href="<?php echo base_url().'index.php/data-master/supplier'; ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Data Supplier</span></a>
       </li>
