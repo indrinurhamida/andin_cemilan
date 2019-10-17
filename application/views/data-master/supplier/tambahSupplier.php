@@ -34,7 +34,7 @@
 
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <button type="submit" class="btn btn-primary">Simpan</button>
-                <a href="<?php echo base_url() . 'index.php/supplier'; ?>" class="btn btn-danger">Kembali</a>
+                <a href="<?php echo base_url() . 'index.php/data-master/supplier'; ?>" class="btn btn-danger">Kembali</a>
             </div>
         </form>
     </div>
