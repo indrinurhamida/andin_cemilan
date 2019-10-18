@@ -5,18 +5,16 @@ class Kasir extends CI_Controller
 	function __construct(){
 		parent::__construct();
 		$this->load->model('m_kasir');
+	}
 	
-	function index(){
-		
+	function index()
+    {
+        $data['barangdetail'] = $this->m_kasir->get_barangdetail_all();
+        $data['barang'] = $this->m_kasir->get_barang($data);
+        $this->load->view('kasir/index', $data);
+    }
 
-		$data['kasir'] = $this->m_kasir->tampil_data()->result();
-        $this->load->view('template/header');
-        $this->load->view('template/navbar');
-        $this->load->view('transaksi/kasir/datatransaksi',$data);
-        $this->load->view('template/footer');
-	}
-
-	}
+	
 }
 
 ?>

@@ -1,18 +1,18 @@
 <?php
 
-class M_barang extends CI_Model
+class M_kasir extends CI_Model
 {
 	public function get_barangdetail_all()
 	{
 		$query = $this->db->get('tbl_barangdetail');
 		return $query->result_array();
 	}
-	public function get_barang_detail($barangdetail)
+	public function get_barang($data)
 	{
-		$query = $this->db->get_where('tbl_barang', array('id_barangdetail' => $barangdetail));
+		$query = $this->db->get_where('tbl_barang', array('id_barangdetail' => $data));
 		return $query->result_array();
 	}
-	function buat_kodePelanggan()
+	function buat_tampilPelanggan()
 	{
 		$this->db->select('RIGHT(tbl_pelanggan  .id_pelanggan,2) as kode', FALSE);
 		$this->db->order_by('id_pelanggan', 'DESC');
@@ -30,7 +30,7 @@ class M_barang extends CI_Model
 		$kodejadi = "PLG" . $kodemax;
 		return $kodejadi;
 	}
-	function buat_kodeTransaksi()
+	function buat_tampilTransaksi()
 	{
 		$this->db->select('RIGHT(tbl_transaksi.id_transaksi,2) as kode', FALSE);
 		$this->db->order_by('id_transaksi', 'DESC');
@@ -52,16 +52,16 @@ class M_barang extends CI_Model
 	{
 		$this->db->insert($table, $data);
 	}
-	function getPemesanan()
+	function getTransaksi()
 	{
 		$this->db->select('*');
-		$this->db->join('tbl_pelanggan', 'tbl_pemesanan.id_pelanggan = tbl_pelanggan.id_pelanggan');
-		$this->db->from('tbl_pemesanan');
+		$this->db->join('tbl_pelanggan', 'tbl_transaksi.id_pelanggan = tbl_pelanggan.id_pelanggan');
+		$this->db->from('tbl_transaksi');
 
 		$query = $this->db->get();
 		return $query->result();
 	}
-	function detailPemesanan($where, $table)
+	function detailTransaksi($where, $table)
 	{
 		return $this->db->get_where($table, $where);
 	}
