@@ -93,7 +93,7 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url() . 'index.php/transaksi/kasir'; ?>">
+        <a class="nav-link" href="<?php echo base_url() . 'index.php/Kasir'; ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Kasir</span></a>
       </li>
