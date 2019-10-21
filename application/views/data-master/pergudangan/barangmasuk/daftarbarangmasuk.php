@@ -30,7 +30,7 @@
                                 <td></td>
                                 <td></td>
                                 <td>
-                                    <a href="<?php echo base_url() . 'index.php/barang/edit'; ?>" 
+                                    <a href="<?php echo base_url() . 'index.php/data-master/pergudangan/barangmasuk/edit'; ?>" 
                                             class="btn btn-success">Edit</a>
                                     <a href="" class="btn btn-danger">Hapus</a>
                                 </td>

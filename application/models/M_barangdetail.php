@@ -1,7 +1,7 @@
 <?php
 class M_barangdetail extends CI_Model
 {
-    function buat_kode()
+    /*function buat_kode()
     {
         $this->db->select('RIGHT(tbl_barangdetail.id_barangdetail,2) as kode', FALSE);
         $this->db->order_by('id_barangdetail', 'DESC');
@@ -18,20 +18,23 @@ class M_barangdetail extends CI_Model
         $kodemax = str_pad($kode, 3, "0", STR_PAD_LEFT);
         $kodejadi = "DTB" . $kodemax;
         return $kodejadi;
-    }
+    }*/
     function tampil_data()
     {
         return $this->db->get('tbl_barangdetail');
     }
-    function input_data($data, $table)
+    function tampil_barangdetail(){
+		return $this->db->get('tbl_barangdetail');
+	}
+    /*function input_data($data, $table)
     {
         $this->db->insert($table, $data);
-    }
+    }*/
     function edit_data($where, $table)
     {
         return $this->db->get_where($table, $where);
     }
-    function update_data($where, $data, $table)
+    /*function update_data($where, $data, $table)
     {
         $this->db->where($where);
         $this->db->update($table, $data);
@@ -40,5 +43,6 @@ class M_barangdetail extends CI_Model
     {
         $this->db->where($where);
         $this->db->delete($table);
-    }
+    }*/
 }
+?>

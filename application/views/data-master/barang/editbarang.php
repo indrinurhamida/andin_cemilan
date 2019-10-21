@@ -8,13 +8,17 @@
             <div class="form-group row">
                 <div class="col-sm-6 mb-3 mb-sm-0">
                     <label for="exampleInputEmail1">ID Barang</label>
-                    <input type="text" name="id_barang" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan ID" value="<?= $barang['id_barang'] ?>" readonly>
+                    <input type="text" name="id_barang" class="form-control" 
+                    id="exampleInputEmail1" aria-describedby="emailHelp" 
+                    placeholder="Masukan ID" value="<?php echo $barang['id_barang'] ?>" readonly>
                 </div>
             </div>
                 <div class="col-sm-6 mb-3 mb-sm-0">
 
                     <label for="exampleInputEmail1">Nama Barang</label>
-                    <input type="text" name="nama_barang" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan nama" value="<?= $barang['nama_barang'] ?>">
+                    <input type="text" name="nama_barang" class="form-control" 
+                    id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan nama" 
+                    value="<?php echo $barang['nama_barang'] ?>">
                 </div>
 
             </div>
