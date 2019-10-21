@@ -73,7 +73,7 @@
           <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
               <h6 class="collapse-header">Login Screens:</h6>
-              <a class="collapse-item" href="<?php base_url() ?> barangmasuk">Barang Masuk</a>
+              <a class="collapse-item" href="<?php echo base_url() . 'index.php/data-master/pergudangan/barangmasuk';?>">Barang Masuk</a>
               <a class="collapse-item" href="<?php base_url() ?> barangkeluar">Barang Keluar</a>
               <a class="collapse-item" href="<?php base_url() ?> stokbarang">Stok Barang</a>
             </div>
@@ -96,13 +96,6 @@
         <a class="nav-link" href="<?php echo base_url() . 'index.php/Kasir'; ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Kasir</span></a>
-      </li>
-
-      <!-- Nav Item - Charts -->
-      <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url() . 'index.php/Diskon'; ?>">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Diskon</span></a>
       </li>
 
       <!-- Nav Item - Tables -->
