@@ -14,7 +14,7 @@ class Barangmasuk extends CI_Controller
 		$data['barangmasuk'] = $this->m_barangmasuk->tampil_data()->result();
         $this->load->view('template/header');
         $this->load->view('template/navbar');
-        $this->load->view('data-master/pergudangan/barangmasuk/daftarbarangmasuk', $data);
+        $this->load->view('data-master/barangmasuk/daftarbarangmasuk', $data);
         $this->load->view('template/footer');
 	}
 }
