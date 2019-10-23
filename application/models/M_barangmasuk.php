@@ -4,10 +4,10 @@ class M_barangmasuk extends CI_Model
 {
 	function tampil_kode()
 	 {
-	 	$this->db->select('RIGHT (tbl_barang.id_barang, 2) as kode', FALSE);
-        $this->db->order_by('id_barang', 'DESC');
+	 	$this->db->select('RIGHT (tbl_barangmasuk.id_barangmasuk, 2) as kode', FALSE);
+        $this->db->order_by('id_barangmasuk', 'DESC');
          $this->db->limit(1);
-         $query = $this->db->get('tbl_barang');    
+         $query = $this->db->get('tbl_barangmasuk');    
 
          //cek dulu apakah ada sudah ada kode di tabel.    
          if ($query->num_rows() <> 0) {

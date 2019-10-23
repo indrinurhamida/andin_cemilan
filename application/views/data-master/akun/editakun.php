@@ -44,7 +44,7 @@
                     <textarea class="form-control" name="deskripsi" id="" cols="30" rows="15"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Simpan</button>
-            <a href="<?php echo base_url() . 'index.php/akun'; ?>" class="btn btn-danger">Kembali</a>
+            <a href="<?php echo base_url() . 'data-master/akun'; ?>" class="btn btn-danger">Kembali</a>
         </form>
     </div>
 </div>

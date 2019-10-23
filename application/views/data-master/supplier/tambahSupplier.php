@@ -5,7 +5,7 @@
         <h1 class="h3 mb-0 text-gray-800">Tambah Supplier</h1>
     </div>
     <div class="container-fluid">
-        <form class="" method="post" action="<?php echo base_url() . 'index.php/data-master/supplier/tambah_aksi'; ?>" enctype="multipart/form-data">
+        <form class="" method="post" action="<?php echo base_url() . 'data-master/supplier/tambah_aksi'; ?>" enctype="multipart/form-data">
 
             <div class="form-group row">
                 <div class="col-sm-6 mb-6 mb-sm-4">
@@ -34,7 +34,7 @@
 
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <button type="submit" class="btn btn-primary">Simpan</button>
-                <a href="<?php echo base_url() . 'index.php/data-master/supplier'; ?>" class="btn btn-danger">Kembali</a>
+                <a href="<?php echo base_url() . 'data-master/supplier'; ?>" class="btn btn-danger">Kembali</a>
             </div>
         </form>
     </div>

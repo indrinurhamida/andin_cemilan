@@ -41,8 +41,8 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="<?php echo base_url() . 'index.php/data-master/barang'; ?>">Data Barang</a>
-            <a class="collapse-item" href="<?php echo base_url() . 'index.php/data-master/barangdetail'; ?>">Data Detail Barang</a>
+            <a class="collapse-item" href="<?php echo base_url() . 'data-master/barang'; ?>">Data Barang</a>
+            <a class="collapse-item" href="<?php echo base_url() . 'data-master/barangdetail'; ?>">Data Detail Barang</a>
           </div>
         </div>
       </li>
@@ -51,16 +51,30 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url().'index.php/data-master/supplier'; ?>">
+        <a class="nav-link" href="<?php echo base_url().'data-master/supplier'; ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Data Supplier</span></a>
       </li>
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url() . 'index.php/data-master/pegawai';?>">
+        <a class="nav-link" href="<?php echo base_url() . 'data-master/pegawai';?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Data Pegawai</span></a>
+      </li>
+
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url() . 'data-master/akun'; ?>">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Akun</span></a>
+      </li>
+
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url() . 'data-master/member'; ?>">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Member</span></a>
       </li>
 
       <li class="nav-item">
@@ -73,9 +87,8 @@
           <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
               <h6 class="collapse-header">Login Screens:</h6>
-              <a class="collapse-item" href="<?php echo base_url() . 'index.php/data-master/pergudangan/barangmasuk'; ?>">Barang Masuk</a>
-              <a class="collapse-item" href="<?php base_url() ?> barangkeluar">Barang Keluar</a>
-              <a class="collapse-item" href="<?php base_url() ?> stokbarang">Stok Barang</a>
+              <a class="collapse-item" href="<?php echo base_url() . 'data-master/barangmasuk'; ?>">Barang Masuk</a>
+              <a class="collapse-item" href="<?php echo base_url() . 'data-master/barangkeluar'; ?>">Barang Keluar</a>
             </div>
           </div>
       </li>
@@ -93,23 +106,9 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url() . 'index.php/Kasir'; ?>">
+        <a class="nav-link" href="<?php echo base_url() . 'transaksi/kasir'; ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Kasir</span></a>
-      </li>
-
-      <!-- Nav Item - Tables -->
-      <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url() . 'index.php/Akun'; ?>">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Akun</span></a>
-      </li>
-
-      <!-- Nav Item - Tables -->
-      <li class="nav-item">
-        <a class="nav-link" href="<?php base_url() ?>">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Member</span></a>
       </li>
 
       <!-- Divider -->

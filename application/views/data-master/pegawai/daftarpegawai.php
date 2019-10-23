@@ -5,7 +5,7 @@
     </div>
     <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <a href="<?php echo base_url() . 'index.php/data-master/pegawai/tambah'; ?>" class="btn btn-primary"" class="btn btn-primary">Tambah Data</a>
+        <a href="<?php echo base_url() . 'data-master/pegawai/tambah'; ?>" class="btn btn-primary"" class="btn btn-primary">Tambah Data</a>
     </div>
     <div class="card-body">
             <div class="table-responsive">
@@ -29,7 +29,7 @@
                                 <td></td>
                                 <td></td>
                                 <td>
-                                    <a href="<?php echo base_url() . 'index.php/data-master/pegawai/edit'; ?>" class="btn btn-success">Edit</a>
+                                    <a href="<?php echo base_url() . 'data-master/pegawai/edit'; ?>" class="btn btn-success">Edit</a>
                                     <a href="" class="btn btn-danger">Hapus</a>
                                 </td>
                             </tr>

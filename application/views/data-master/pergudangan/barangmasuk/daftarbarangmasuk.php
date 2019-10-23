@@ -1,11 +1,11 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Barang Masuk</h1>
+        <h1 class="h3 mb-0 text-gray-800">Data Barang Masuk</h1>
     </div>
     <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <a href="<?php echo base_url() . 'index.php/data-master/pergudangan/barangmasuk/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
+        <a href="<?php echo base_url() . 'data-master/pergudangan/barangmasuk/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
     </div>
     <div class="card-body">
             <div class="table-responsive">
@@ -30,7 +30,7 @@
                                 <td></td>
                                 <td></td>
                                 <td>
-                                    <a href="<?php echo base_url() . 'index.php/data-master/pergudangan/barangmasuk/edit'; ?>" 
+                                    <a href="<?php echo base_url() . 'data-master/pergudangan/barangmasuk/edit'; ?>" 
                                             class="btn btn-success">Edit</a>
                                     <a href="" class="btn btn-danger">Hapus</a>
                                 </td>

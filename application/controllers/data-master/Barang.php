@@ -45,18 +45,18 @@ class Barang extends CI_Controller
 		);
 
 		$this->m_barang->input_data($data, 'tbl_barang');
-		redirect('barang/index');
+		redirect('data-master/barang');
 		
 	}
 
 	function hapus ($id=''){
 		$where = array('id_barang' => $id);
 		$this->m_barang->hapus_data($where, 'tbl_barang');
-		redirect('data-master/barang/index');
+		redirect('data-master/barang');
 	}
 
 	function edit(){
-		$where = array('id_barangdetail');
+		$where = array('id_barang');
 		$data['barang'] = $this->m_barang->edit_data('tbl_barang', $where)->row_array();
 		$data['data_barangdetail'] = $this->m_barang->tampil_barangdetail()->result();
 
@@ -88,11 +88,11 @@ class Barang extends CI_Controller
 		);
 
 		$where = array(
-			'id_barang' => $id
+			'id_barang' => $id_barang
 		);
 
 		$this->m_barang->update_data($where, 'tbl_barang', $data);
-		redirect('barang/index');
+		redirect('data-master/barang');
 
 	}
 }

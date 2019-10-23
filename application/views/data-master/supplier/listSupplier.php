@@ -5,7 +5,7 @@
     </div>
     <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <a href="<?php echo base_url().'index.php/data-master/supplier/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
+        <a href="<?php echo base_url().'data-master/supplier/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
     </div>
     <div class="card-body">
             <div class="table-responsive">
@@ -30,9 +30,9 @@
                                 <td><?= $item->alamat_supplier ?></td>
                                 <td><?= $item->no_hp ?></td>
                                 <td>
-                                    <a href="<?php echo base_url() . 'index.php/supplier/edit'; ?>/<?= $item->id_supplier ?>" 
+                                    <a href="<?php echo base_url() . 'supplier/edit'; ?>/<?= $item->id_supplier ?>" 
                                             class="btn btn-success">Edit</a>
-                                    <a href="<?php echo base_url() . 'index.php/supplier/hapus'; ?>/<?php echo $item->id_supplier ?>" class="btn btn-danger" onclick="return confirm('Yakin Ingin Menghapus Data ?')">Hapus</a>
+                                    <a href="<?php echo base_url() . 'supplier/hapus'; ?>/<?php echo $item->id_supplier ?>" class="btn btn-danger" onclick="return confirm('Yakin Ingin Menghapus Data ?')">Hapus</a>
                                 </td>
                             </tr>
                         <?php } ?>

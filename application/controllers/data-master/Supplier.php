@@ -40,14 +40,14 @@ class Supplier extends CI_Controller
 		);
 
 		$this->m_supplier->input_data($data, 'tbl_supplier');
-		redirect('supplier/index');
+		redirect('data-master/supplier');
 		
 	}
 
 	function hapus ($id=''){
 		$where = array('id_supplier' => $id);
 		$this->m_supplier->hapus_data($where, 'tbl_supplier');
-		redirect('data-master/supplier/index');
+		redirect('data-master/supplier');
 	}
 
 	function edit(){

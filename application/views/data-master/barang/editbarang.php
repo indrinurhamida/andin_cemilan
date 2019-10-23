@@ -4,7 +4,7 @@
         <h1 class="h3 mb-0 text-gray-800">Edit Barang</h1>
     </div>
     <div class="container-fluid">
-        <form class="" method="post" action="<?php echo base_url() . 'index.php/barang/update'; ?>" enctype="multipart/form-data">
+        <form class="" method="post" action="<?php echo base_url() . 'data-master/barang/update'; ?>" enctype="multipart/form-data">
             <div class="form-group row">
                 <div class="col-sm-6 mb-3 mb-sm-0">
                     <label for="exampleInputEmail1">ID Barang</label>
@@ -12,14 +12,20 @@
                     id="exampleInputEmail1" aria-describedby="emailHelp" 
                     placeholder="Masukan ID" value="<?php echo $barang['id_barang'] ?>" readonly>
                 </div>
-            </div>
                 <div class="col-sm-6 mb-3 mb-sm-0">
 
                     <label for="exampleInputEmail1">Nama Barang</label>
-                    <input type="text" name="nama_barang" class="form-control" 
-                    id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan nama" 
-                    value="<?php echo $barang['nama_barang'] ?>">
+                    <select name="id_kategori" class="form-control">
+                        <?php
+                        foreach ($data_barangdetail as $d) {
+                            echo "<option value='$d->id_barangdetail'";
+                            echo $barang['id_barangdetail'] == $d->id_barangdetail ? 'selected' : '';
+                            echo ">$d->nama_kategori</option>";
+                        }
+                        ?>
+                    </select>
                 </div>
+            </div>
 
             </div>
             <div class="form-group row">
@@ -36,7 +42,7 @@
 
             </div>
             <button type="submit" class="btn btn-primary">Simpan</button>
-            <a href="<?php echo base_url() . 'index.php/barang'; ?>" class="btn btn-danger">Kembali</a>
+            <a href="<?php echo base_url() . 'data-master/barang'; ?>" class="btn btn-danger">Kembali</a>
         </form>
     </div>
 </div>
