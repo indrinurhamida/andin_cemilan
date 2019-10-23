@@ -10,14 +10,14 @@
             <div class="form-group row">
                 <div class="col-sm-6 mb-6 mb-sm-4">
                     <label for="exampleInputEmail1">ID Barang Detail</label>
-                    <input type="text" name="id_barangdetail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan ID" value="" readonly>
+                    <input type="text" name="id_barangdetail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan ID" value="<?= $kode ?>" readonly>
 
                 </div>
                 
                 <div class="col-sm-6 mb-6 mb-sm-4">
 
                     <label for="exampleInputEmail1">Nama Detail Barang</label>
-                    <select name="nama_barangdetail" class="form-control">
+                    <input type="text" name="nama_barangdetail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Barang">
                         <?php foreach ($barangdetail as $data) {
                             ?>
                             <option value="<?php echo $data->id_barangdetail ?>"><?php echo $data->nama_barangdetail ?></option>

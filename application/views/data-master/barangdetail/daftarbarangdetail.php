@@ -12,8 +12,8 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr style="text-align:center">
-                            <th>Kode Data Barang Detail</th>
-                            <th>Jenis Barang</th>
+                            <th>Kode Barang Detail</th>
+                            <th>Nama Barang</th>
                             <th>Rasa</th>
                             <th>Berat</th>
                             <th>Harga</th>

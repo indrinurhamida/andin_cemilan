@@ -26,6 +26,7 @@
                     </select>
                 </div>
             </div>
+            <div class="form-group row">
                 <div class="col-sm-6 mb-3 mb-sm-0">
 
                     <label for="exampleInputEmail1">Nama Barang</label>
@@ -33,18 +34,15 @@
                     id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan nama" 
                     value="<?php echo $barang['nama_barang'] ?>">
                 </div>
-
-            </div>
-            <div class="form-group row">
-                <div class="col-sm-4 mb-3 mb-sm-0">
+                <div class="col-sm-6 mb-3 mb-sm-0">
                     <label for="exampleInputEmail1">Stok</label>
                     <input type="text" name="stok" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Stok" value="<?= $barang['stok'] ?>">
                 </div>
             </div>
             <div class="form-group row">
-                <div class="col-sm-12 mb-3 mb-sm-0">
+                <div class="col-sm-6 mb-3 mb-sm-0">
                     <label for="exampleInputEmail1">Deskripsi</label>
-                    <textarea class="form-control" name="deskripsi" id="" cols="30" rows="15"><?= $barang['deskripsi'] ?></textarea>
+                    <textarea class="form-control" name="deskripsi" id="" cols="30" rows="5"><?= $barang['deskripsi'] ?></textarea>
                 </div>
 
             </div>
