@@ -14,18 +14,25 @@
                 </div>
                 <div class="col-sm-6 mb-3 mb-sm-0">
 
-                    <label for="exampleInputEmail1">Nama Barang</label>
-                    <select name="id_kategori" class="form-control">
+                    <label for="exampleInputEmail1">Detail Barang</label>
+                    <select name="id_barangdetail" class="form-control">
                         <?php
                         foreach ($data_barangdetail as $d) {
                             echo "<option value='$d->id_barangdetail'";
                             echo $barang['id_barangdetail'] == $d->id_barangdetail ? 'selected' : '';
-                            echo ">$d->nama_kategori</option>";
+                            echo ">$d->nama_barangdetail</option>";
                         }
                         ?>
                     </select>
                 </div>
             </div>
+                <div class="col-sm-6 mb-3 mb-sm-0">
+
+                    <label for="exampleInputEmail1">Nama Barang</label>
+                    <input type="text" name="nama_barang" class="form-control" 
+                    id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan nama" 
+                    value="<?php echo $barang['nama_barang'] ?>">
+                </div>
 
             </div>
             <div class="form-group row">
