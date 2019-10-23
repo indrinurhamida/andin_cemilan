@@ -10,7 +10,7 @@
             <div class="form-group row">
                 <div class="col-sm-6 mb-6 mb-sm-4">
                     <label for="exampleInputEmail1">ID Barang Masuk</label>
-                    <input type="number" name="id_barangmasuk" class="form-control" id="input_id" aria-describedby="emailHelp" placeholder="Masukan ID" value="<?= $kode ?> readonly>
+                    <input type="number" name="id_barangmasuk" class="form-control" id="input_id" aria-describedby="emailHelp" placeholder="Masukan ID" value="<?= $kode ?>" readonly>
 
                 </div>
                 <div>

@@ -12,7 +12,7 @@ class Supplier extends CI_Controller
 		$data['supplier'] = $this->m_supplier->tampil_data()->result();
         $this->load->view('template/header');
         $this->load->view('template/navbar');
-        $this->load->view('data-master/supplier/listSupplier',$data);
+        $this->load->view('data-master/supplier/daftarsupplier',$data);
         $this->load->view('template/footer');
 	}
 
@@ -21,7 +21,7 @@ class Supplier extends CI_Controller
 
 		$this->load->view('template/header');
         $this->load->view('template/navbar');
-        $this->load->view('data-master/supplier/tambahSupplier', $data);
+        $this->load->view('data-master/supplier/tambahsupplier', $data);
         $this->load->view('template/footer');
 
 	}
@@ -50,13 +50,13 @@ class Supplier extends CI_Controller
 		redirect('data-master/supplier');
 	}
 
-	function edit(){
-		$where = array('id_supplier');
+	function edit($id){
+		$where = array('id_supplier' => $id);
 		$data['supplier'] = $this->m_supplier->edit_data('tbl_supplier', $where)->row_array();
-		
+
 		$this->load->view('template/header');
         $this->load->view('template/navbar');
-        $this->load->view('data-master/supplier/editSupplier', $data);
+        $this->load->view('data-master/supplier/editsupplier', $data);
         $this->load->view('template/footer');
 	}
 	
