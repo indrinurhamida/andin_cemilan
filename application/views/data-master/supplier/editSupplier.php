@@ -3,7 +3,7 @@
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Edit Supplier</h1>
     </div>
-  <!--  <div class="container-fluid">
+    <div class="container-fluid">
         <form class="" method="post" action="<?php echo base_url() . 'data-master/supplier/update'; ?>" enctype="multipart/form-data">
             <div class="form-group row">
                 <div class="col-sm-6 mb-3 mb-sm-0">
@@ -34,7 +34,7 @@
             </div>
 
             <button type="submit" class="btn btn-primary">Simpan</button>
-            <a href="" class="btn btn-danger">Kembali</a>
+            <a href="<?php echo base_url() . 'data-master/daftarsupplier'; ?>" class="btn btn-danger">Kembali</a>
         </form>
-    </div>-->
+    </div>
 </div>
