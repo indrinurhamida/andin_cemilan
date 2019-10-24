@@ -38,7 +38,7 @@
 
   <textarea class="form-control" name="deskripsi" id="" cols="30" rows="15"></textarea>
                 </div>
-            <div class="form-<div class="form-group row">
+            <div class="form-<div class=form-group row">
                 <div class="col-sm-12 mb-3 mb-sm-0">
                     <label for="exampleInputEmail1">Email</label>
                     <textarea class="form-control" name="deskripsi" id="" cols="30" rows="15"></textarea>

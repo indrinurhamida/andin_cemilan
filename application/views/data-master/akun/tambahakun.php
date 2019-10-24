@@ -10,10 +10,10 @@
             <div class="form-group row">
                 <div class="col-sm-6 mb-6 mb-sm-4">
                     <label for="exampleInputEmail1">ID Akun</label>
-                    <input type="number" name="id_pegawai" class="form-control" id="input_id" aria-describedby="emailHelp" placeholder="Masukan ID" value="" readonly>
+                    <input type="number" name="id_akun" class="form-control" id="input_id" aria-describedby="emailHelp" placeholder="Masukan ID" value="" readonly>
 
                 </div>
-                <div>
+                <div class="col-sm-6 mb-6 mb-sm-4">
                     <label for="exampleInputEmail1">Nama Akun</label>
                     <input type="text" name="nama_pegawai" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan nama">
                 </div>

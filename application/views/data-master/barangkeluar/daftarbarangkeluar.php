@@ -31,7 +31,7 @@
                                     <a href="" class="btn btn-danger">Hapus</a>
                                 </td>
                             </tr>
-                        <?php } ?>
+                        <?php  ?>
                     </tbody>
                 </table>
             </div>
