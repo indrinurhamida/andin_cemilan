@@ -111,6 +111,21 @@
           <span>Kasir</span></a>
       </li>
 
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Laporan
+      </div>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      
+
+      <!-- Nav Item - Charts -->
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url() . 'laporan/laporan_transaksi'; ?>">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Laporan Stok</span></a>
+      </li>
+
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
 
