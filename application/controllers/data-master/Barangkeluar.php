@@ -55,7 +55,7 @@ class Barangkeluar extends CI_Controller
 
 	function edit($id){
 		$where = array('id_barangkeluar' => $id);
-		$data['barangkeluar'] = $this->m_barang->edit_data('tbl_barangkeluar', $where)->row_array();
+		$data['barangkeluar'] = $this->m_barangkeluar->edit_data('tbl_barangkeluar', $where)->row_array();
 
 		$this->load->view('template/header');
         $this->load->view('template/navbar');
