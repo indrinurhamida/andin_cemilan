@@ -19,7 +19,6 @@
 
 	function tambah(){
 		$data['kode'] = $this->m_barangdetail->tampil_kode();
-		$data['barangdetail'] = $this->m_barangdetail->tampil_barangdetail()->result();
 
 		$this->load->view('template/header');
         $this->load->view('template/navbar');
@@ -41,14 +40,14 @@
 			'berat'				=> $berat,
 		);
 
-		$this->m_barang->input_data($data, 'tbl_barangdetail');
+		$this->m_barangdetail->input_data($data, 'tbl_barangdetail');
 		redirect('data-master/barangdetail');
 		
 	}
 
 	function hapus ($id=''){
 		$where = array('id_barangdetail' => $id);
-		$this->m_barang->hapus_data($where, 'tbl_barangdetail');
+		$this->m_barangdetail->hapus_data($where, 'tbl_barangdetail');
 		redirect('data-master/barangdetail');
 	}
 
@@ -64,8 +63,8 @@
 	}
 
 	function update(){
-		$id_barang		= $this->input->post('id_barang');
-		$nama_barang	= $this->input->post('nama_barang');
+		$id_barangdetail		= $this->input->post('id_barangdetail');
+		$nama_barangdetail	= $this->input->post('nama_barangdetail');
 		$harga			= $this->input->post('harga');
 		$berat			= $this->input->post('berat');
 		$rasa			= $this->input->post('rasa');
