@@ -23,9 +23,6 @@ class M_barangdetail extends CI_Model
     {
         return $this->db->get('tbl_barangdetail');
     }
-    function tampil_barangdetail(){
-		return $this->db->get('tbl_barangdetail');
-	}
     function input_data($data, $table)
     {
         $this->db->insert($table, $data);
