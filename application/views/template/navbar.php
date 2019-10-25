@@ -121,7 +121,7 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url() . 'laporan/laporan_transaksi'; ?>">
+        <a class="nav-link" href="<?php echo base_url() . 'laporan/laporanstok'; ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Laporan Stok</span></a>
       </li>

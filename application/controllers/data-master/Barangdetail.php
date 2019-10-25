@@ -34,8 +34,8 @@
 		$rasa= $this->input->post('rasa');
 		$berat= $this->input->post('berat');
 		$data = array(
-			'id_barang'			=> $id_barang,
-			'nama_barang' 		=> $nama_barang,
+			'id_barangdetail'			=> $id_barangdetail,
+			'nama_barangdetail' 		=> $nama_barangdetail,
 			'harga' 			=> $harga,
 			'rasa' 				=> $rasa,
 			'berat'				=> $berat,
@@ -71,8 +71,8 @@
 		$rasa			= $this->input->post('rasa');
 
 		$data = array(
-			'id_barang'			=> $id_barang,
-			'nama_barang' 		=> $nama_barang,
+			'id_barangdetail'			=> $id_barangdetail,
+			'nama_barangdetail' 		=> $nama_barangdetail,
 			'harga' 			=> $harga,
 			'berat' 			=> $berat,
 			'rasa' 				=> $rasa,
