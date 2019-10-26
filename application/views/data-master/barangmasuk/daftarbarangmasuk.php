@@ -17,25 +17,28 @@
                             <th>Total Barang Masuk</th>
                             <th>ID Supplier</th>
                             <th>ID Pegawai</th>
+                            <th>ID Barang</th>
                             <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                         
-
+                        <?php
+                        foreach ($barangmasuk as $item) {
+                        ?>
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td><?= $item->id_barangmasuk       ?></td>
+                                <td><?= $item->tgl_barangmasuk      ?></td>
+                                <td><?= $item->total_barangmasuk    ?></td>
+                                <td><?= $item->id_supplier          ?></td>
+                                <td><?= $item->id_pegawai           ?></td>
+                                <td><?= $item->id_barang            ?></td>
                                 <td>
-                                    <a href="<?php echo base_url() . 'data-master/barangmasuk/edit'; ?>" 
-                                            class="btn btn-success">Edit</a>
-                                    <a href="" class="btn btn-danger">Hapus</a>
+                                    <a href="<?php echo base_url() . 'data-master/barangmasuk/edit'; ?>/<?php echo $item->id_barangmasuk ?>" class="btn btn-success">Edit</a>
+                                    <a href="<?php echo base_url() . 'data-master/barangmasuk/hapus'; ?>/<?php echo $item->id_barangmasuk ?>" class="btn btn-danger" onclick= "return confirm('Yakin Ingin Menghapus Data?')">Hapus</a>
                                 </td>
                             </tr>
-                       
+                       <?php } ?>
                     </tbody>
                 </table>
             </div>

@@ -28,16 +28,17 @@
 	}
 	function tambah_aksi(){
 		$id_barangdetail		= $this->input->post('id_barangdetail');
-		$nama_barangdetail	= $this->input->post('nama_barangdetail');
-		$harga		= $this->input->post('harga');
-		$rasa= $this->input->post('rasa');
-		$berat= $this->input->post('berat');
+		$nama_barangdetail		= $this->input->post('nama_barangdetail');
+		$harga					= $this->input->post('harga');
+		$rasa					= $this->input->post('rasa');
+		$berat					= $this->input->post('berat');
+
 		$data = array(
 			'id_barangdetail'			=> $id_barangdetail,
 			'nama_barangdetail' 		=> $nama_barangdetail,
-			'harga' 			=> $harga,
-			'rasa' 				=> $rasa,
-			'berat'				=> $berat,
+			'harga' 					=> $harga,
+			'rasa' 						=> $rasa,
+			'berat'						=> $berat,
 		);
 
 		$this->m_barangdetail->input_data($data, 'tbl_barangdetail');
@@ -64,17 +65,17 @@
 
 	function update(){
 		$id_barangdetail		= $this->input->post('id_barangdetail');
-		$nama_barangdetail	= $this->input->post('nama_barangdetail');
-		$harga			= $this->input->post('harga');
-		$berat			= $this->input->post('berat');
-		$rasa			= $this->input->post('rasa');
+		$nama_barangdetail		= $this->input->post('nama_barangdetail');
+		$harga					= $this->input->post('harga');
+		$berat					= $this->input->post('berat');
+		$rasa					= $this->input->post('rasa');
 
 		$data = array(
 			'id_barangdetail'			=> $id_barangdetail,
 			'nama_barangdetail' 		=> $nama_barangdetail,
-			'harga' 			=> $harga,
-			'berat' 			=> $berat,
-			'rasa' 				=> $rasa,
+			'harga' 					=> $harga,
+			'berat' 					=> $berat,
+			'rasa' 						=> $rasa,
 		);
 
 		$where = array(

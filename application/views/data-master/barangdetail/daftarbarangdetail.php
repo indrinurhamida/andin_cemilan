@@ -31,7 +31,7 @@
                                 <td><?= $item->berat ?></td>
                                 <td><?= $item->harga ?></td>
                                 <td>
-                                    <a href="<?= base_url() . 'data-master/barangdetail/edit'; ?>/<?= $item->id_barangdetail ?>" class="btn btn-success">Edit</a>
+                                    <a href="<?php echo base_url() . 'data-master/barangdetail/edit'; ?>/<?= $item->id_barangdetail ?>" class="btn btn-success">Edit</a>
                                     <a href="<?php echo base_url() . 'data-master/barangdetail/hapus'; ?>/<?php echo $item->id_barangdetail ?>" class="btn btn-danger" onclick="return confirm('Yakin Ingin Menghapus Data ?')">Hapus</a>
                                 </td>
                             </tr>

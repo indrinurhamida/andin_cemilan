@@ -28,28 +28,28 @@ class Barangkeluar extends CI_Controller
 	}
 
 	function tambah_aksi(){
-		$id_barang		= $this->input->post('id_barang');
-		$nama_barang	= $this->input->post('nama_barang');
-		$stok			= $this->input->post('stok');
-		$deskripsi		= $this->input->post('deskripsi');
-		$id_barangdetail= $this->input->post('id_barangdetail');
+		$id_barangkeluar		= $this->input->post('id_barangkeluar');
+		$tgl_barangkeluar		= $this->input->post('tgl_barangkeluar');
+		$nama_pegawai			= $this->input->post('nama_pegawai');
+		$total_barangkeluar		= $this->input->post('total_barangkeluar');
+		$id_pegawai				= $this->input->post('id_pegawai');
 
 		$data = array(
-			'id_barang'			=> $id_barang,
-			'nama_barang' 		=> $nama_barang,
-			'stok' 				=> $stok,
-			'deskripsi' 		=> $deskripsi,
-			'id_barangdetail' 	=> $id_barangdetail
+			'id_barangkeluar'			=> $id_barangkeluar,
+			'tgl_barangkeluar' 			=> $tgl_barangkeluar,
+			'nama_pegawai' 				=> $nama_pegawai,
+			'total_barangkeluar' 		=> $total_barangkeluar,
+			'id_pegawai' 				=> $id_pegawai
 		);
 
-		$this->m_barang->input_data($data, 'tbl_barangkeluar');
+		$this->m_barangkeluar->input_data($data, 'tbl_barangkeluar');
 		redirect('data-master/barangkeluar');
 		
 	}
 
 	function hapus ($id=''){
 		$where = array('id_barangkeluar' => $id);
-		$this->m_barang->hapus_data($where, 'tbl_barangkeluar');
+		$this->m_barangkeluar->hapus_data($where, 'tbl_barangkeluar');
 		redirect('data-master/barangkeluar');
 	}
 
@@ -64,25 +64,25 @@ class Barangkeluar extends CI_Controller
 	}
 
 	function update(){
-		$id_barang		= $this->input->post('id_barang');
-		$nama_barang	= $this->input->post('nama_barang');
-		$stok			= $this->input->post('stok');
-		$deskripsi		= $this->input->post('deskripsi');
-		$id_barangdetail= $this->input->post('id_barangdetail');
+		$id_barangkeluar		= $this->input->post('id_barangkeluar');
+		$tgl_barangkeluar		= $this->input->post('tgl_barangkeluar');
+		$nama_pegawai			= $this->input->post('nama_pegawai');
+		$total_barangkeluar		= $this->input->post('total_barangkeluar');
+		$id_pegawai				= $this->input->post('id_pegawai');
 
 		$data = array(
-			'id_barang'			=> $id_barang,
-			'nama_barang' 		=> $nama_barang,
-			'stok' 				=> $stok,
-			'deskripsi' 		=> $deskripsi,
-			'id_barangdetail' 	=> $id_barangdetail
+			'id_barangkeluar'			=> $id_barangkeluar,
+			'tgl_barangkeluar' 			=> $tgl_barangkeluar,
+			'nama_pegawai' 				=> $nama_pegawai,
+			'total_barangkeluar' 		=> $total_barangkeluar,
+			'id_pegawai' 				=> $id_pegawai
 		);
 
 		$where = array(
-			'id_barang' => $id_barang
+			'id_barangkeluar' => $id_barangkeluar
 		);
 
-		$this->m_barang->update_data($where, $data, 'tbl_barangkeluar');
+		$this->m_barangkeluar->update_data($where, $data, 'tbl_barangkeluar');
 		redirect('data-master/barangkeluar');
 
 	}

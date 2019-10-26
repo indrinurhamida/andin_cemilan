@@ -20,18 +20,20 @@
                     </tr>
                 </thead>
                 <tbody>
+                            <?php
+                        foreach ($barangkeluar as $item) {
+                            ?>
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td><?= $item->id_barangkeluar   ?></td>
+                                <td><?= $item->tgl_barangkeluar ?></td>
+                                <td><?= $item->nama_pegawai  ?></td>
+                                <td><?= $item->total_barangkeluar ?></td>
                                 <td>
-                                    <a href="<?php echo base_url() . 'data-master/barangkeluar/edit'; ?>" 
-                                            class="btn btn-success">Edit</a>
-                                    <a href="" class="btn btn-danger">Hapus</a>
+                                    <a href="<?php echo base_url() . 'data-master/barangkeluar/edit'; ?>/<?php echo $item->id_barangkeluar ?>" class="btn btn-success">Edit</a>
+                                    <a href="<?php echo base_url() . 'data-master/barangkeluar/hapus'; ?>/<?php echo $item->id_barangkeluar ?>" class="btn btn-danger" onclick= "return confirm('Yakin Ingin Menghapus Data?')">Hapus</a>
                                 </td>
                             </tr>
-                        <?php  ?>
+                        <?php } ?>
                     </tbody>
                 </table>
             </div>
