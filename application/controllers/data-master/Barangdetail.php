@@ -52,10 +52,9 @@
 		redirect('data-master/barangdetail');
 	}
 
-	function edit(){
-		$where = array('id_barangdetail');
+	function edit($id){
+		$where = array('id_barangdetail' =>$id);
 		$data['barangdetail'] = $this->m_barangdetail->edit_data('tbl_barangdetail', $where)->row_array();
-		$data['data_barangdetail'] = $this->m_barangdetail->tampil_barangdetail()->result();
 
 		$this->load->view('template/header');
         $this->load->view('template/navbar');
@@ -82,9 +81,9 @@
 			'id_barangdetail' => $id_barangdetail
 		);
 
-		$this->m_barangdetail->update_data($where, 'tbl_barangdetail', $data);
+		$this->m_barangdetail->update_data($where, $data, 'tbl_barangdetail');
 		redirect('data-master/barangdetail');
 
 	}
-	}
+}
 ?>

@@ -5,8 +5,7 @@
         <h1 class="h3 mb-0 text-gray-800">Tambah Barang Detail</h1>
     </div>
     <div class="container-fluid">
-        <form class="" method="post" action="" enctype="multipart/form-data">
-
+        <form class="" method="post" action="<?php echo base_url() . 'data-master/barangdetail/tambah_aksi'; ?>">
             <div class="form-group row">
                 <div class="col-sm-6 mb-6 mb-sm-0">
                     <label for="exampleInputEmail1">ID Barang Detail</label>
@@ -35,7 +34,7 @@
             </div>
 
             <div class="col-sm-6 mb-3 mb-sm-0">
-                <button type="submit" class="btn btn-primary">Simpan</button>
+                <button typpe="submit" class="btn btn-primary">Simpan</button>
                 <a href="<?php echo base_url() . 'data-master/barangdetail'; ?>" class="btn btn-danger">Kembali</a>
             </div>
         </form>
