@@ -13,10 +13,10 @@
                 <thead>
                     <tr style="text-align:center">
                             <th>ID Akun</th>
-                            <th>Nama Akun</th>
-                            <th>Alamat</th>
-                            <th>Email</th>
-                            <th>No.hp</th>
+                            <th>User Name</th>
+                            <th>Password</th>
+                            <th>Jabatan</th>
+                            <th>ID Pegawai</th>
                             <th>Aksi</th>
                     </tr>
                 </thead>

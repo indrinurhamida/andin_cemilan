@@ -13,9 +13,9 @@
                 <thead>
                     <tr style="text-align:center">
                             <th>ID Supplier</th>
-                            <th>Nama Barang</th>
-                            <th>Alamat</th>
-                            <th>No Telepon</th>
+                            <th>Nama Supplier</th>
+                            <th>Alamat Supplier</th>
+                            <th>No Hp</th>
                             <th>Aksi</th>
                     </tr>
                 </thead>

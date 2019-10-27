@@ -12,8 +12,8 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr style="text-align:center">
-                            <th>ID Barang</th>
-                            <th>Detail Barang</th>
+                            <th>Id Barang</th>
+                            <th>Id Detail Barang</th>
                             <th>Nama Barang</th>
                             <th>Stok</th>
                             <th>Deskripsi</th>

@@ -14,24 +14,24 @@
 
                 </div>
                 <div class="col-sm-6 mb-6 mb-sm-4">
-                    <label for="exampleInputEmail1">Nama Akun</label>
+                    <label for="exampleInputEmail1">username</label>
                     <input type="text" name="nama_pegawai" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan nama">
                 </div>
             </div>
             <div class="form-group row">
                  <div class="col-sm-6 mb-6 mb-sm-4">
-                    <label for="exampleInputEmail1">Alamat</label>
+                    <label for="exampleInputEmail1">Password</label>
                     <input type="text" name="stok" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Alamat">
                   
                 </div>
                 <div class="col-sm-6 mb-6 mb-sm-4">
-                  <label for="exampleInputEmail1">Email</label>
+                  <label for="exampleInputEmail1">Jabatan</label>
                     <input type="text" name="deskripsi" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Alamat">  
                 </div>
             </div>
             <div class="form-group row">
                 <div class="col-sm-6 mb-6 mb-sm-4">
-                    <label for="exampleInputEmail1">No Telepon</label>
+                    <label for="exampleInputEmail1">Id Pegawai</label>
                     <input type="text" name="deskripsi" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan no telepon">
                 </div>
 
