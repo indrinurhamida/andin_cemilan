@@ -5,7 +5,7 @@
     </div>
     <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <a href="<?php echo base_url() . 'data-master/pegawai/tambah'; ?>" class="btn btn-primary"" class="btn btn-primary">Tambah Data</a>
+        <a href="<?php echo base_url() . 'data-master/pegawai/tambah'; ?>" class="btn btn-primary" class="btn btn-primary">Tambah Data</a>
     </div>
     <div class="card-body">
             <div class="table-responsive">
@@ -20,20 +20,24 @@
                             <th>Aksi</th>
                     </tr>
                 </thead>
-                <tbody>
-                            
+                <tbody> 
+                    <?php 
+                        foreach ($pegawai as $p) {
+                    ?>
                             <tr>
-                                 <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td><?= $p->id_pegawai;?></td>
+                                <td><?= $p->nama_pegawai;?></td>
+                                <td><?= $p->alamat; ?></td>
+                                <td><?= $p->email;?></td>
+                                <td><?= $p->no_hp;?></td>
                                 <td>
                                     <a href="<?php echo base_url() . 'data-master/pegawai/edit'; ?>" class="btn btn-success">Edit</a>
-                                    <a href="" class="btn btn-danger">Hapus</a>
+                                    <a href="<?php echo base_url() . 'data-master/pegawai/hapus'; ?>"
+                                    <?php echo $p->id_pegawai ?>" class="btn btn-danger" onclick="
+                                     return confirm('Yakin Ingin Menghapus Data ?')">Hapus</a>
                                 </td>
                             </tr>
-                   
+                   <?php } ?>
                     </tbody>
                 </table>
             </div>
