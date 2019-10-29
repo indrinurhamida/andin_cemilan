@@ -32,7 +32,7 @@
                                 <td>
                                     <a href="<?php echo base_url() . 'data-master/supplier/edit'; ?>/<?= $item->id_supplier ?>" 
                                             class="btn btn-success">Edit</a>
-                                    <a href="<?php echo base_url() . 'supplier/hapus'; ?>/<?php echo $item->id_supplier ?>" class="btn btn-danger" onclick="return confirm('Yakin Ingin Menghapus Data ?')">Hapus</a>
+                                    <a href="<?php echo base_url() . 'data-master/supplier/hapus'; ?>/<?php echo $item->id_supplier ?>" class="btn btn-danger" onclick="return confirm('Yakin Ingin Menghapus Data ?')">Hapus</a>
                                 </td>
                             </tr>
                         <?php } ?>
