@@ -5,35 +5,43 @@
     </div>
     <div class="card shadow mb-4">
     <div class="card-header py-3">
+
+
         <a href="<?php echo base_url() . 'data-master/akun/tambah'; ?>" class="btn btn-primary"" class="btn btn-primary">Tambah Data</a>
+
     </div>
     <div class="card-body">
             <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr style="text-align:center">
-                            <th>ID Akun</th>
-                            <th>User Name</th>
-                            <th>Password</th>
-                            <th>Jabatan</th>
-                            <th>ID Pegawai</th>
+                            <th>ID_Akun</th>
+                            <th>username</th>
+                            <th>password</th>
+                            <th>jabatan</th>
+                            <th>id_pegawai</th>
                             <th>Aksi</th>
-                    </tr>
+                     </tr>
                 </thead>
                 <tbody>
-                            
+                            <?php
+                            foreach ($akun as $item) {
+                            ?>
+
                             <tr>
-                                 <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td><?= $item->id_akun ?></td>
+                                <td><?= $item->username ?></td>
+                                <td><?= $item->password ?></td>
+                                <td><?= $item->jabatan ?></td>
+                                <td><?= $item->id_pegawai ?></td>
                                 <td>
-                                    <a href="<?php echo base_url() . 'data-master/akun/edit'; ?>" class="btn btn-success">Edit</a>
-                                    <a href="" class="btn btn-danger">Hapus</a>
+                                    <a href="<?php echo base_url() . 'index.php/akun/edit'; ?>/<?= $item->id_akun ?>" 
+                                            class="btn btn-success">Edit</a>
+                                    <a href="<?php echo base_url() . 'index.php/akun/hapus'; ?>/<?php echo $item->id_akun ?>" class="btn btn-danger" onclick="return confirm('Yakin Ingin Menghapus Data ?')">Hapus</a>
+
                                 </td>
                             </tr>
-                   
+                        <?php } ?>
                     </tbody>
                 </table>
             </div>
