@@ -10,7 +10,7 @@
             <div class="form-group row">
                 <div class="col-sm-6 mb-3 mb-sm-0">
                     <label for="exampleInputEmail1">ID Pegawai</label>
-                    <input type="text" name="id_pegawai" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan ID" value="">
+                    <input type="text" name="id_pegawai" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan ID" value="<?= $kode ?>"readonly>
 
                 </div>
                 <div class="col-sm-6 mb-3 mb-sm-0">
@@ -31,7 +31,7 @@
             </div>
             <div class="form-group row">
                 <div class="col-sm-6 mb-6 mb-sm-4">
-                    <label for="exampleInputEmail1">No Telepon</label>
+                    <label for="exampleInputEmail1">No Hp</label>
                     <input type="text" name="no_hp" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan no telepon">
                 </div>
 
