@@ -33,8 +33,7 @@
                                 <td>
                                     <a href="<?php echo base_url() . 'data-master/pegawai/edit'; ?>/<?= $p->id_pegawai ?>"
                                             class="btn btn-success">Edit</a>
-                                    <a href="<?php echo base_url() . 'data-master/pegawai/hapus'; ?>
-                                    /<?php echo $p->id_pegawai ?>" class="btn btn-danger" onclick="
+                                    <a href="<?php echo base_url() . 'data-master/pegawai/hapus'; ?>/<?php echo $p->id_pegawai ?>" class="btn btn-danger" onclick="
                                      return confirm('Yakin Ingin Menghapus Data ?')">Hapus</a>
                                 </td>
                             </tr>
