@@ -5,11 +5,11 @@
     </div>
     <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <a href="<?php echo base_url().'data-master/supplier/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
+        <a href="<?php echo base_url().'data-master/supplier/tambah'; ?>" class="btn btn-primary">Tambah Data Supplier</a>
     </div>
     <div class="card-body">
             <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0"> 
                 <thead>
                     <tr style="text-align:center">
                             <th>ID Supplier</th>
@@ -30,9 +30,9 @@
                                 <td><?= $item->alamat_supplier ?></td>
                                 <td><?= $item->no_hp ?></td>
                                 <td>
-                                    <a href="<?php echo base_url() . 'supplier/edit'; ?>/<?= $item->id_supplier ?>" 
+                                    <a href="<?php echo base_url() . 'data-master/supplier/edit'; ?>/<?= $item->id_supplier ?>" 
                                             class="btn btn-success">Edit</a>
-                                    <a href="<?php echo base_url() . 'supplier/hapus'; ?>/<?php echo $item->id_supplier ?>" class="btn btn-danger" onclick="return confirm('Yakin Ingin Menghapus Data ?')">Hapus</a>
+                                    <a href="<?php echo base_url() . 'data-master/supplier/hapus'; ?>/<?php echo $item->id_supplier ?>" class="btn btn-danger" onclick="return confirm('Yakin Ingin Menghapus Data ?')">Hapus</a>
                                 </td>
                             </tr>
                         <?php } ?>

@@ -56,10 +56,31 @@ class Supplier extends CI_Controller
 
 		$this->load->view('template/header');
         $this->load->view('template/navbar');
-        $this->load->view('data-master/supplier/editsupplier', $data);
+        $this->load->view('data-master/supplier/editSupplier', $data);
         $this->load->view('template/footer');
 	}
-	
+
+	function update(){
+		$id_supplier		= $this->input->post('id_supplier');
+		$nama_supplier		= $this->input->post('nama_supplier');
+		$alamat_supplier	= $this->input->post('alamat_supplier');
+		$no_hp				= $this->input->post('no_hp');
+
+		$data = array(
+			'id_supplier'			=> $id_supplier,
+			'nama_supplier' 		=> $nama_supplier,
+			'alamat_supplier' 		=> $alamat_supplier,
+			'no_hp' 				=> $no_hp
+		);
+
+		$where = array(
+			'id_supplier' => $id_supplier
+		);
+
+		$this->m_supplier->update_data($where, $data, 'tbl_supplier');
+		redirect('data-master/supplier');
+
+	}
 }
 
 ?>
