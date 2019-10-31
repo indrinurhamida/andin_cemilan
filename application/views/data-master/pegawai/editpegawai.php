@@ -23,13 +23,13 @@
                 </div>
                 <div class="col-sm-6 mb-3 mb-sm-0">
                     <label for="exampleInputEmail1">Email</label>
-                    <input type="text" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Email" value="<?php echo $pegawai['email'] ?>">
+                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Email" value="<?php echo $pegawai['email'] ?>">
                 </div>
             </div>
             <div class="form-group row">
                 <div class="col-sm-6 mb-3 mb-sm-0">
                     <label for="exampleInputEmail1">No.hp</label>
-                    <input type="text" name="no_hp" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan No.hp" value="<?php echo $pegawai['no_hp'] ?>">
+                    <input type="number" name="no_hp" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan No.hp" value="<?php echo $pegawai['no_hp'] ?>">
                 </div>
                 
 

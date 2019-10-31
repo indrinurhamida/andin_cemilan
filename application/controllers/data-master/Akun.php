@@ -34,11 +34,11 @@ class Akun extends CI_Controller
 		$id_pegawai			= $this->input->post('id_pegawai');
 
 		$data = array(
-			'id_akun'			=> $id_akun,
-			'username' 		=> $username,
+			'id_akun'				=> $id_akun,
+			'username' 				=> $username,
 			'password' 				=> $password,
 			'jabatan' 				=> $jabatan,
-			'id_pegawai' 				=> $id_pegawai,
+			'id_pegawai' 			=> $id_pegawai,
 		);
 
 		$this->m_akun->input_data($data, 'tbl_akun');
