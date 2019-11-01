@@ -38,7 +38,7 @@
             </div>
 
             <button type="submit" class="btn btn-primary">Simpan</button>
-            <a href="<?php echo base_url() . 'data-master/barang'; ?>" class="btn btn-danger">Kembali</a>
+            <a href="<?php echo base_url() . 'data-master/barangdetail'; ?>" class="btn btn-danger">Kembali</a>
         </form>
     </div>
     <div>

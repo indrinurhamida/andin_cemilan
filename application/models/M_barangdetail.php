@@ -19,18 +19,23 @@ class M_barangdetail extends CI_Model
         $kodejadi = "DTB" . $kodemax;
         return $kodejadi;
     }
-    function tampil_data()
-    {
+    function tampil_data(){
         return $this->db->get('tbl_barangdetail');
     }
+
+    function tambah(){
+		return $this->db->get('tbl_barangdetail');
+    }
     
-    function input_data($data, $table)
-    {
+    function tampil_pegawai(){
+		return $this->db->get('tbl_pegawai');
+	}
+    
+    function input_data($data, $table){
         $this->db->insert($table, $data);
     }
    
-    function edit_data($table, $where)
-    {
+    function edit_data($table, $where){
         return $this->db->get_where($table, $where);
     }
    
@@ -39,8 +44,7 @@ class M_barangdetail extends CI_Model
         $this->db->update($table, $data);
     }
    
-    function hapus_data($where, $table)
-    {
+    function hapus_data($where, $table) {
         $this->db->where($where);
         $this->db->delete($table);
     }
