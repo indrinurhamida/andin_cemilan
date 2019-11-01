@@ -5,7 +5,7 @@
     </div>
     <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <a href="<?php echo base_url().'data-master/supplier/tambah'; ?>" class="btn btn-primary">Tambah Data Member</a>
+        <a href="<?php echo base_url().'data-master/member/tambah'; ?>" class="btn btn-primary">Tambah Data Member</a>
     </div>
     <div class="card-body">
             <div class="table-responsive">
@@ -14,7 +14,8 @@
                     <tr style="text-align:center">
                             <th>ID Member</th>
                             <th>Nama Member</th>
-                            <th>Alamat Member</th>
+                            <th>Email</th>
+                            <th>Alamat</th>
                             <th>No Hp</th>
                             <th>Point</th>
                             <th>Aksi</th>
@@ -28,6 +29,7 @@
                             <tr>
                                 <td><?= $item->id_member ?></td>
                                 <td><?= $item->nama_member ?></td>
+                                <td><?= $item->email ?></td>
                                 <td><?= $item->alamat_supplier ?></td>
                                 <td><?= $item->no_hp ?></td>
                                 <td></td>

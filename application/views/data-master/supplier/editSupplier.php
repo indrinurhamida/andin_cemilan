@@ -35,7 +35,7 @@
                 <div class="col-sm-6 mb-3 mb-sm-0">
 
                     <label for="exampleInputEmail1">No Hp</label>
-                    <input type="text" name="no_hp" class="form-control" 
+                    <input type="number" name="no_hp" class="form-control" 
                     id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan nama" 
                     value="<?php echo $supplier['no_hp'] ?>">
                 </div>

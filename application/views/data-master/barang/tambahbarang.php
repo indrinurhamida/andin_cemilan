@@ -33,7 +33,7 @@
                 </div>
                 <div class="col-sm-6 mb-6 mb-sm-4">
                     <label for="exampleInputEmail1">Stok</label>
-                    <input type="text" name="stok" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan stok">
+                    <input type="number" name="stok" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan stok">
                 </div>
             </div>
             <div class="form-group row">

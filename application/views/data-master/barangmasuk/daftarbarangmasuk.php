@@ -15,8 +15,8 @@
                             <th>ID Barang Masuk</th>
                             <th>Tanggal Barang Masuk</th>
                             <th>Total Barang Masuk</th>
-                            <th>ID Supplier</th>
-                            <th>ID Pegawai</th>
+                            <th>Nama Supplier</th>
+                            <th>Nama Pegawai</th>
                             <th>ID Barang</th>
                             <th>Aksi</th>
                     </tr>

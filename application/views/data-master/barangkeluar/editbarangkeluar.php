@@ -14,14 +14,14 @@
                 <div class="col-sm-6 mb-3 mb-sm-0">
 
                     <label for="exampleInputEmail1">Tanggal Barang Keluar</label>
-                    <input type="text" name="tgl_barangmasuk" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan tanggal" value="">
+                    <input type="date" name="tgl_barangmasuk" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan tanggal" value="">
                 </div>
 
             </div>
             <div class="form-group row">
                 <div class="col-sm-4 mb-3 mb-sm-0">
                     <label for="exampleInputEmail1">Total Barang Keluar</label>
-                    <input type="text" name="total_barangmasuk" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan total" value="">
+                    <input type="number" name="total_barangmasuk" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan total" value="">
                 </div>
             </div>
             <div class="form-group row">
