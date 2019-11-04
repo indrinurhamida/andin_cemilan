@@ -16,7 +16,7 @@ class M_barangdetail extends CI_Model
             $kode = 1;
         }
         $kodemax = str_pad($kode, 3, "0", STR_PAD_LEFT);
-        $kodejadi = "DTB" . $kodemax;
+        $kodejadi = "DEB" . $kodemax;
         return $kodejadi;
     }
     function tampil_data(){
