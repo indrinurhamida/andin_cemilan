@@ -30,7 +30,7 @@
                                 <td><?= $item->id_member ?></td>
                                 <td><?= $item->nama_member ?></td>
                                 <td><?= $item->email ?></td>
-                                <td><?= $item->alamat_supplier ?></td>
+                                <td><?= $item->alamat ?></td>
                                 <td><?= $item->no_hp ?></td>
                                 <td></td>
                                 <td>
