@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 31, 2019 at 02:42 PM
+-- Generation Time: Nov 06, 2019 at 04:19 AM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 5.6.15
 
@@ -34,6 +34,13 @@ CREATE TABLE `tbl_akun` (
   `id_pegawai` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `tbl_akun`
+--
+
+INSERT INTO `tbl_akun` (`id_akun`, `username`, `password`, `jabatan`, `id_pegawai`) VALUES
+('1', 'admin', 'admin', 'admin', 'PGW001');
+
 -- --------------------------------------------------------
 
 --
@@ -44,23 +51,15 @@ CREATE TABLE `tbl_barang` (
   `id_barang` varchar(20) NOT NULL,
   `nama_barang` varchar(50) NOT NULL,
   `stok` int(20) NOT NULL,
-  `deskripsi` varchar(50) NOT NULL,
-  `id_barangdetail` varchar(20) NOT NULL
+  `deskripsi` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_barang`
 --
 
-INSERT INTO `tbl_barang` (`id_barang`, `nama_barang`, `stok`, `deskripsi`, `id_barangdetail`) VALUES
-('BRG001', 'Makaroni', 20, 'lama', 'DEB001'),
-('BRG002', 'Bola-bola Cokelat', 20, 'fdxcvbn', 'DEB001'),
-('BRG003', 'Makaroni', 20, 'hgcahcb', 'DEB001'),
-('BRG004', 'Bola-bola Cokelat', 20, 'hgcahcb', 'DEB001'),
-('BRG005', 'Makaroni', 10, 'hgcahcb', 'DEB001'),
-('BRG006', 'Bola-bola Cokelat', 10, 'hgcahcb', 'DEB001'),
-('BRG007', 'Bola-bola Cokelat', 10, 'hgcahcb', 'DEB001'),
-('BRG008', 'Bola-bola Cokelat', 20, 'asikk', 'DTB002');
+INSERT INTO `tbl_barang` (`id_barang`, `nama_barang`, `stok`, `deskripsi`) VALUES
+('BRG001', 'Makaroni', 20, 'lama');
 
 -- --------------------------------------------------------
 
@@ -70,7 +69,7 @@ INSERT INTO `tbl_barang` (`id_barang`, `nama_barang`, `stok`, `deskripsi`, `id_b
 
 CREATE TABLE `tbl_barangdetail` (
   `id_barangdetail` varchar(20) NOT NULL,
-  `nama_barangdetail` varchar(50) NOT NULL,
+  `id_barang` varchar(20) NOT NULL,
   `rasa` varchar(50) NOT NULL,
   `berat` varchar(50) NOT NULL,
   `harga` int(20) NOT NULL
@@ -80,9 +79,9 @@ CREATE TABLE `tbl_barangdetail` (
 -- Dumping data for table `tbl_barangdetail`
 --
 
-INSERT INTO `tbl_barangdetail` (`id_barangdetail`, `nama_barangdetail`, `rasa`, `berat`, `harga`) VALUES
-('DEB001', 'Makaroni per bal', 'Manis', '20 kg', 20000),
-('DTB002', 'cokelat per bal', 'Manis', '20 kg', 2000);
+INSERT INTO `tbl_barangdetail` (`id_barangdetail`, `id_barang`, `rasa`, `berat`, `harga`) VALUES
+('DEB001', 'BRG001', 'Asin', '20 kg', 20000),
+('DTB002', 'BRG001', 'Manis', '20 kg', 2000);
 
 -- --------------------------------------------------------
 
@@ -155,8 +154,16 @@ CREATE TABLE `tbl_member` (
   `email` varchar(50) NOT NULL,
   `alamat` text NOT NULL,
   `no_hp` varchar(20) NOT NULL,
-  `id_transaksi` varchar(20) NOT NULL
+  `point` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_member`
+--
+
+INSERT INTO `tbl_member` (`id_member`, `nama_member`, `email`, `alamat`, `no_hp`, `point`) VALUES
+('MBR001', 'azizah', 'burhan@gmail.com', 'jember', '086567234566', 0),
+('MBR002', 'munaroh', 'jihu@gmail.com', 'lamongan', '089765734234', 0);
 
 -- --------------------------------------------------------
 
@@ -171,6 +178,13 @@ CREATE TABLE `tbl_pegawai` (
   `email` varchar(50) NOT NULL,
   `no_hp` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_pegawai`
+--
+
+INSERT INTO `tbl_pegawai` (`id_pegawai`, `nama_pegawai`, `alamat`, `email`, `no_hp`) VALUES
+('PGW001', 'murdin dah', 'jember', 'murdin@gmail.com', '089765345567');
 
 -- --------------------------------------------------------
 
@@ -190,7 +204,7 @@ CREATE TABLE `tbl_supplier` (
 --
 
 INSERT INTO `tbl_supplier` (`id_supplier`, `nama_supplier`, `alamat_supplier`, `no_hp`) VALUES
-('SPL001', 'mintul', 'jombag', '085607498613');
+('SPL001', 'mintul dah', 'jombag', '089765778765');
 
 -- --------------------------------------------------------
 
@@ -204,7 +218,7 @@ CREATE TABLE `tbl_transaksi` (
   `total_harga` int(50) NOT NULL,
   `total_bayar` int(50) NOT NULL,
   `id_pegawai` varchar(20) NOT NULL,
-  `id_pelanggan` varchar(8) NOT NULL
+  `id_member` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -236,8 +250,7 @@ ALTER TABLE `tbl_akun`
 -- Indexes for table `tbl_barang`
 --
 ALTER TABLE `tbl_barang`
-  ADD PRIMARY KEY (`id_barang`),
-  ADD KEY `id_barangdetail` (`id_barangdetail`);
+  ADD PRIMARY KEY (`id_barang`);
 
 --
 -- Indexes for table `tbl_barangdetail`
@@ -281,8 +294,7 @@ ALTER TABLE `tbl_barangmasukdetail`
 -- Indexes for table `tbl_member`
 --
 ALTER TABLE `tbl_member`
-  ADD PRIMARY KEY (`id_member`),
-  ADD KEY `id_transaksi` (`id_transaksi`);
+  ADD PRIMARY KEY (`id_member`);
 
 --
 -- Indexes for table `tbl_pegawai`
@@ -302,7 +314,7 @@ ALTER TABLE `tbl_supplier`
 ALTER TABLE `tbl_transaksi`
   ADD PRIMARY KEY (`id_transaksi`),
   ADD KEY `id_pegawai` (`id_pegawai`),
-  ADD KEY `id_pelanggan` (`id_pelanggan`);
+  ADD KEY `id_pelanggan` (`id_member`);
 
 --
 -- Indexes for table `tbl_transaksidetail`
@@ -321,12 +333,6 @@ ALTER TABLE `tbl_transaksidetail`
 --
 ALTER TABLE `tbl_akun`
   ADD CONSTRAINT `tbl_akun_ibfk_1` FOREIGN KEY (`id_pegawai`) REFERENCES `tbl_pegawai` (`id_pegawai`);
-
---
--- Constraints for table `tbl_barang`
---
-ALTER TABLE `tbl_barang`
-  ADD CONSTRAINT `tbl_barang_ibfk_1` FOREIGN KEY (`id_barangdetail`) REFERENCES `tbl_barangdetail` (`id_barangdetail`);
 
 --
 -- Constraints for table `tbl_barangkeluar`
@@ -354,12 +360,6 @@ ALTER TABLE `tbl_barangmasuk`
 ALTER TABLE `tbl_barangmasukdetail`
   ADD CONSTRAINT `tbl_barangmasukdetail_ibfk_1` FOREIGN KEY (`id_barang`) REFERENCES `tbl_barang` (`id_barang`),
   ADD CONSTRAINT `tbl_barangmasukdetail_ibfk_2` FOREIGN KEY (`id_barangmasuk`) REFERENCES `tbl_barangmasuk` (`id_barangmasuk`);
-
---
--- Constraints for table `tbl_member`
---
-ALTER TABLE `tbl_member`
-  ADD CONSTRAINT `tbl_member_ibfk_1` FOREIGN KEY (`id_transaksi`) REFERENCES `tbl_transaksi` (`id_transaksi`);
 
 --
 -- Constraints for table `tbl_transaksi`
