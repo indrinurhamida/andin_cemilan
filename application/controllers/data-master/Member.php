@@ -74,7 +74,7 @@ class Member extends CI_Controller
 			'nama_member' 		=> $nama_member,
 			'email'				=> $email,
 			'alamat' 			=> $alamat,
-			'no_hp' 			=> $no_hp
+			'no_hp' 			=> $no_hp,
 		);
 
 		$where = array(
