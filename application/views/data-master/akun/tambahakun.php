@@ -42,7 +42,7 @@
                         foreach ($pegawai as $value) {
                         ?>
                         <option value="<?= $value->id_pegawai ?>"><?= $value->nama_pegawai ?></option>}
-                        option
+                        
                         <?php
                         }
                         ?>
