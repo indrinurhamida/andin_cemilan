@@ -16,10 +16,10 @@
                 <thead>
                     <tr style="text-align:center">
                             <th>ID_Akun</th>
-                            <th>username</th>
-                            <th>password</th>
-                            <th>jabatan</th>
-                            <th>id_pegawai</th>
+                            <th>Username</th>
+                            <th>Password</th>
+                            <th>Jabatan</th>
+                            <th>ID_pegawai</th>
                             <th>Aksi</th>
                      </tr>
                 </thead>
@@ -35,9 +35,9 @@
                                 <td><?= $item->jabatan ?></td>
                                 <td><?= $item->id_pegawai ?></td>
                                 <td>
-                                    <a href="<?php echo base_url() . 'data-master/akun/edit'; ?>/<?= $item->id_akun ?>" 
+                                    <a href="<?php echo base_url() . 'data-master/akun/edit'; ?>/<?php echo $item->id_akun?>" 
                                             class="btn btn-success">Edit</a>
-                                    <a href="<?php echo base_url() . 'data-master/akun/hapus'; ?>/<?php echo $item->id_akun ?>" class="btn btn-danger" onclick="return confirm('Yakin Ingin Menghapus Data ?')">Hapus</a>
+                                    <a href="<?php echo base_url() . 'data-master/akun/hapus'; ?>/<?php echo $item->id_akun?>" class="btn btn-danger" onclick="return confirm('Yakin Ingin Menghapus Data ?')">Hapus</a>
 
                                 </td>
                             </tr>

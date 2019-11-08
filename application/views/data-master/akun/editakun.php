@@ -11,7 +11,7 @@
                     <input type="text" name="id_akun" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan ID" value="<?php echo $akun['id_akun'] ?>" readonly>
                 </div>
                 <div class="col-sm-6 mb-3 mb-sm-0">
-                    <label for="exampleInputEmail1">username</label>
+                    <label for="exampleInputEmail1">Username</label>
                     <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan nama" value="<?php echo $akun['username'] ?>">
                 </div>
             </div>
@@ -29,7 +29,7 @@
 
             <div class="form-group row">
                 <div class="col-sm-6 mb-3 mb-sm-0">
-                    <label for="exampleInputEmail1">Id Pegawai</label>
+                    <label for="exampleInputEmail1">ID Pegawai</label>
                     <input type="text" name="id_pegawai" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Stok" value="<?php echo $akun['id_pegawai'] ?>">
                 </div>
             </div>

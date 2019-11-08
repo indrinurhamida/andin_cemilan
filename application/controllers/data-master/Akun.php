@@ -63,9 +63,9 @@ class Akun extends CI_Controller
         $this->load->view('template/footer');
 	}
 	function update(){
-		$id_akun		= $this->input->post('id_akun');
-		$username	= $this->input->post('username');
-		$password	= $this->input->post('password');
+		$id_akun			= $this->input->post('id_akun');
+		$username			= $this->input->post('username');
+		$password			= $this->input->post('password');
 		$jabatan			= $this->input->post('jabatan');
 		$id_pegawai			= $this->input->post('id_pegawai');
 		
@@ -82,8 +82,8 @@ class Akun extends CI_Controller
 			'id_akun' => $id_akun
 		);
 
-		$this->m_akun->update_data($where, 'tbl_akun', $data);
-		redirect('akun');
+		$this->m_akun->update_data($where, $data,  'tbl_akun');
+		redirect('data-master/akun');
 
 	}
 }
