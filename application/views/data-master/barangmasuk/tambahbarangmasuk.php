@@ -20,18 +20,9 @@
             <div class="form-group row">
                  <div class="col-sm-6 mb-6 mb-sm-4">
                     <label for="exampleInputEmail1">Total Barang Masuk</label>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    <input type="text" name="total_barangmasuk" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Total Barang Masuk">        
-=======
-=======
->>>>>>> 5b01764d58ab74d76ff398ed085f9f489aed5ad2
-=======
->>>>>>> 5b01764d58ab74d76ff398ed085f9f489aed5ad2
+
                     <input type="number" name="total_barangmasuk" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Total Barang Masuk">
-                  
->>>>>>> 5b01764d58ab74d76ff398ed085f9f489aed5ad2
+                
                 </div>
                 <div class="col-sm-6 mb-6 mb-sm-4">
                   <label for="exampleInputEmail1">Nama Supplier</label>
