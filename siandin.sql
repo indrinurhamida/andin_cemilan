@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 06, 2019 at 04:19 AM
+-- Generation Time: Nov 08, 2019 at 05:41 AM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 5.6.15
 
@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `tbl_akun` (
-  `id_akun` varchar(20) NOT NULL,
+  `id_akun` char(8) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(100) NOT NULL,
   `jabatan` varchar(50) NOT NULL,
@@ -48,18 +48,17 @@ INSERT INTO `tbl_akun` (`id_akun`, `username`, `password`, `jabatan`, `id_pegawa
 --
 
 CREATE TABLE `tbl_barang` (
-  `id_barang` varchar(20) NOT NULL,
+  `id_barang` char(8) NOT NULL,
   `nama_barang` varchar(50) NOT NULL,
-  `stok` int(20) NOT NULL,
-  `deskripsi` varchar(50) NOT NULL
+  `rasa` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_barang`
 --
 
-INSERT INTO `tbl_barang` (`id_barang`, `nama_barang`, `stok`, `deskripsi`) VALUES
-('BRG001', 'Makaroni', 20, 'lama');
+INSERT INTO `tbl_barang` (`id_barang`, `nama_barang`, `rasa`) VALUES
+('BRG001', 'Makaroni', '');
 
 -- --------------------------------------------------------
 
@@ -68,48 +67,11 @@ INSERT INTO `tbl_barang` (`id_barang`, `nama_barang`, `stok`, `deskripsi`) VALUE
 --
 
 CREATE TABLE `tbl_barangdetail` (
-  `id_barangdetail` varchar(20) NOT NULL,
-  `id_barang` varchar(20) NOT NULL,
-  `rasa` varchar(50) NOT NULL,
-  `berat` varchar(50) NOT NULL,
-  `harga` int(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tbl_barangdetail`
---
-
-INSERT INTO `tbl_barangdetail` (`id_barangdetail`, `id_barang`, `rasa`, `berat`, `harga`) VALUES
-('DEB001', 'BRG001', 'Asin', '20 kg', 20000),
-('DTB002', 'BRG001', 'Manis', '20 kg', 2000);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_barangkeluar`
---
-
-CREATE TABLE `tbl_barangkeluar` (
-  `id_barangkeluar` varchar(20) NOT NULL,
-  `tgl_barangkeluar` date NOT NULL,
-  `nama_pegawai` varchar(50) NOT NULL,
-  `total_barangkeluar` int(20) NOT NULL,
-  `id_pegawai` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_barangkeluardetail`
---
-
-CREATE TABLE `tbl_barangkeluardetail` (
-  `id_barangkeluardetail` varchar(20) NOT NULL,
-  `harga` int(11) NOT NULL,
-  `qty` int(11) NOT NULL,
-  `total_barangkeluar` int(20) NOT NULL,
-  `id_barangdetail` varchar(20) NOT NULL,
-  `id_barangkeluar` varchar(20) NOT NULL
+  `id_barangdetail` char(8) NOT NULL,
+  `id_barang` char(8) NOT NULL,
+  `berat` varchar(10) NOT NULL,
+  `harga` varchar(20) NOT NULL,
+  `stok` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -119,12 +81,13 @@ CREATE TABLE `tbl_barangkeluardetail` (
 --
 
 CREATE TABLE `tbl_barangmasuk` (
-  `id_barangmasuk` varchar(20) NOT NULL,
-  `tgl_barangmasuk` date NOT NULL,
-  `total_barangmasuk` int(20) NOT NULL,
-  `id_supplier` varchar(20) NOT NULL,
+  `id_barangmasuk` char(8) NOT NULL,
+  `tgl_masuk` date NOT NULL,
+  `id_supplier` char(8) NOT NULL,
+  `id_barang` char(8) NOT NULL,
   `id_pegawai` varchar(20) NOT NULL,
-  `id_barang` varchar(20) NOT NULL
+  `berat` varchar(10) NOT NULL,
+  `harga_beli` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -134,12 +97,10 @@ CREATE TABLE `tbl_barangmasuk` (
 --
 
 CREATE TABLE `tbl_barangmasukdetail` (
-  `id_barangmasukdetail` varchar(20) NOT NULL,
-  `harga` int(11) NOT NULL,
-  `qty` int(11) NOT NULL,
-  `total_barangmasuk` int(20) NOT NULL,
-  `id_barang` varchar(20) NOT NULL,
-  `id_barangmasuk` varchar(20) NOT NULL
+  `id_barangmasukdetail` char(8) NOT NULL,
+  `id_barangdetail` char(8) NOT NULL,
+  `id_barangmasuk` char(8) NOT NULL,
+  `qty` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -149,7 +110,7 @@ CREATE TABLE `tbl_barangmasukdetail` (
 --
 
 CREATE TABLE `tbl_member` (
-  `id_member` varchar(20) NOT NULL,
+  `id_member` char(8) NOT NULL,
   `nama_member` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `alamat` text NOT NULL,
@@ -193,7 +154,7 @@ INSERT INTO `tbl_pegawai` (`id_pegawai`, `nama_pegawai`, `alamat`, `email`, `no_
 --
 
 CREATE TABLE `tbl_supplier` (
-  `id_supplier` varchar(20) NOT NULL,
+  `id_supplier` char(8) NOT NULL,
   `nama_supplier` varchar(50) NOT NULL,
   `alamat_supplier` varchar(50) NOT NULL,
   `no_hp` varchar(50) NOT NULL
@@ -213,12 +174,12 @@ INSERT INTO `tbl_supplier` (`id_supplier`, `nama_supplier`, `alamat_supplier`, `
 --
 
 CREATE TABLE `tbl_transaksi` (
-  `id_transaksi` varchar(20) NOT NULL,
+  `id_transaksi` char(8) NOT NULL,
+  `id_member` char(8) NOT NULL,
   `tgl_transaksi` date NOT NULL,
-  `total_harga` int(50) NOT NULL,
-  `total_bayar` int(50) NOT NULL,
   `id_pegawai` varchar(20) NOT NULL,
-  `id_member` varchar(20) NOT NULL
+  `jumlah_bayar` varchar(10) NOT NULL,
+  `kembalian` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -228,11 +189,10 @@ CREATE TABLE `tbl_transaksi` (
 --
 
 CREATE TABLE `tbl_transaksidetail` (
-  `id_transaksidetail` varchar(20) NOT NULL,
-  `qty` int(11) NOT NULL,
-  `total_harga` int(50) NOT NULL,
-  `id_transaksi` varchar(20) NOT NULL,
-  `id_barang` varchar(20) NOT NULL
+  `id_transaksidetail` char(8) NOT NULL,
+  `id_transaksi` char(8) NOT NULL,
+  `id_barangdetail` char(8) NOT NULL,
+  `qty` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -256,22 +216,8 @@ ALTER TABLE `tbl_barang`
 -- Indexes for table `tbl_barangdetail`
 --
 ALTER TABLE `tbl_barangdetail`
-  ADD PRIMARY KEY (`id_barangdetail`);
-
---
--- Indexes for table `tbl_barangkeluar`
---
-ALTER TABLE `tbl_barangkeluar`
-  ADD PRIMARY KEY (`id_barangkeluar`),
-  ADD KEY `id_pegawai` (`id_pegawai`);
-
---
--- Indexes for table `tbl_barangkeluardetail`
---
-ALTER TABLE `tbl_barangkeluardetail`
-  ADD PRIMARY KEY (`id_barangkeluardetail`),
-  ADD KEY `id_barangdetail` (`id_barangdetail`),
-  ADD KEY `id_barangkeluar` (`id_barangkeluar`);
+  ADD PRIMARY KEY (`id_barangdetail`),
+  ADD KEY `id_barang` (`id_barang`);
 
 --
 -- Indexes for table `tbl_barangmasuk`
@@ -279,15 +225,15 @@ ALTER TABLE `tbl_barangkeluardetail`
 ALTER TABLE `tbl_barangmasuk`
   ADD PRIMARY KEY (`id_barangmasuk`),
   ADD KEY `id_supplier` (`id_supplier`),
-  ADD KEY `id_pegawai` (`id_pegawai`),
-  ADD KEY `id_barang` (`id_barang`);
+  ADD KEY `id_barang` (`id_barang`),
+  ADD KEY `id_pegawai` (`id_pegawai`);
 
 --
 -- Indexes for table `tbl_barangmasukdetail`
 --
 ALTER TABLE `tbl_barangmasukdetail`
   ADD PRIMARY KEY (`id_barangmasukdetail`),
-  ADD KEY `id_barang` (`id_barang`),
+  ADD KEY `id_barangdetail` (`id_barangdetail`),
   ADD KEY `id_barangmasuk` (`id_barangmasuk`);
 
 --
@@ -313,8 +259,8 @@ ALTER TABLE `tbl_supplier`
 --
 ALTER TABLE `tbl_transaksi`
   ADD PRIMARY KEY (`id_transaksi`),
-  ADD KEY `id_pegawai` (`id_pegawai`),
-  ADD KEY `id_pelanggan` (`id_member`);
+  ADD KEY `id_member` (`id_member`),
+  ADD KEY `id_pegawai` (`id_pegawai`);
 
 --
 -- Indexes for table `tbl_transaksidetail`
@@ -322,7 +268,7 @@ ALTER TABLE `tbl_transaksi`
 ALTER TABLE `tbl_transaksidetail`
   ADD PRIMARY KEY (`id_transaksidetail`),
   ADD KEY `id_transaksi` (`id_transaksi`),
-  ADD KEY `id_barang` (`id_barang`);
+  ADD KEY `id_barangdetail` (`id_barangdetail`);
 
 --
 -- Constraints for dumped tables
@@ -335,44 +281,39 @@ ALTER TABLE `tbl_akun`
   ADD CONSTRAINT `tbl_akun_ibfk_1` FOREIGN KEY (`id_pegawai`) REFERENCES `tbl_pegawai` (`id_pegawai`);
 
 --
--- Constraints for table `tbl_barangkeluar`
+-- Constraints for table `tbl_barangdetail`
 --
-ALTER TABLE `tbl_barangkeluar`
-  ADD CONSTRAINT `tbl_barangkeluar_ibfk_1` FOREIGN KEY (`id_pegawai`) REFERENCES `tbl_pegawai` (`id_pegawai`);
-
---
--- Constraints for table `tbl_barangkeluardetail`
---
-ALTER TABLE `tbl_barangkeluardetail`
-  ADD CONSTRAINT `tbl_barangkeluardetail_ibfk_1` FOREIGN KEY (`id_barangdetail`) REFERENCES `tbl_barangdetail` (`id_barangdetail`),
-  ADD CONSTRAINT `tbl_barangkeluardetail_ibfk_2` FOREIGN KEY (`id_barangkeluar`) REFERENCES `tbl_barangkeluar` (`id_barangkeluar`);
+ALTER TABLE `tbl_barangdetail`
+  ADD CONSTRAINT `tbl_barangdetail_ibfk_1` FOREIGN KEY (`id_barang`) REFERENCES `tbl_barang` (`id_barang`);
 
 --
 -- Constraints for table `tbl_barangmasuk`
 --
 ALTER TABLE `tbl_barangmasuk`
   ADD CONSTRAINT `tbl_barangmasuk_ibfk_1` FOREIGN KEY (`id_supplier`) REFERENCES `tbl_supplier` (`id_supplier`),
-  ADD CONSTRAINT `tbl_barangmasuk_ibfk_2` FOREIGN KEY (`id_pegawai`) REFERENCES `tbl_pegawai` (`id_pegawai`);
+  ADD CONSTRAINT `tbl_barangmasuk_ibfk_2` FOREIGN KEY (`id_barang`) REFERENCES `tbl_barang` (`id_barang`),
+  ADD CONSTRAINT `tbl_barangmasuk_ibfk_3` FOREIGN KEY (`id_pegawai`) REFERENCES `tbl_pegawai` (`id_pegawai`);
 
 --
 -- Constraints for table `tbl_barangmasukdetail`
 --
 ALTER TABLE `tbl_barangmasukdetail`
-  ADD CONSTRAINT `tbl_barangmasukdetail_ibfk_1` FOREIGN KEY (`id_barang`) REFERENCES `tbl_barang` (`id_barang`),
+  ADD CONSTRAINT `tbl_barangmasukdetail_ibfk_1` FOREIGN KEY (`id_barangdetail`) REFERENCES `tbl_barangdetail` (`id_barangdetail`),
   ADD CONSTRAINT `tbl_barangmasukdetail_ibfk_2` FOREIGN KEY (`id_barangmasuk`) REFERENCES `tbl_barangmasuk` (`id_barangmasuk`);
 
 --
 -- Constraints for table `tbl_transaksi`
 --
 ALTER TABLE `tbl_transaksi`
-  ADD CONSTRAINT `tbl_transaksi_ibfk_1` FOREIGN KEY (`id_pegawai`) REFERENCES `tbl_pegawai` (`id_pegawai`);
+  ADD CONSTRAINT `tbl_transaksi_ibfk_1` FOREIGN KEY (`id_member`) REFERENCES `tbl_member` (`id_member`),
+  ADD CONSTRAINT `tbl_transaksi_ibfk_2` FOREIGN KEY (`id_pegawai`) REFERENCES `tbl_pegawai` (`id_pegawai`);
 
 --
 -- Constraints for table `tbl_transaksidetail`
 --
 ALTER TABLE `tbl_transaksidetail`
   ADD CONSTRAINT `tbl_transaksidetail_ibfk_1` FOREIGN KEY (`id_transaksi`) REFERENCES `tbl_transaksi` (`id_transaksi`),
-  ADD CONSTRAINT `tbl_transaksidetail_ibfk_2` FOREIGN KEY (`id_barang`) REFERENCES `tbl_barang` (`id_barang`);
+  ADD CONSTRAINT `tbl_transaksidetail_ibfk_2` FOREIGN KEY (`id_barangdetail`) REFERENCES `tbl_barangdetail` (`id_barangdetail`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
