@@ -25,7 +25,7 @@
 
                 <div class="col-sm-6 mb-6 mb-sm-4">
                     <label for="exampleInputEmail1">No Hp</label>
-                    <input type="number" name="no_hp" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan nomor hp">
+                    <input type="text" name="no_hp" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan nomor hp">
                 </div>
             </div>
 

@@ -18,7 +18,7 @@
 
 	function tambah(){
 		$data['kode'] = $this->m_barangdetail->tampil_kode();
-
+		$data['barangdetail'] = $this->m_barangdetail->getBarang();
 		$this->load->view('template/header');
         $this->load->view('template/navbar');
         $this->load->view('data-master/barangdetail/tambahbarangdetail', $data);

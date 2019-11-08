@@ -12,8 +12,8 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr style="text-align:center">
-                            <th>Kode Barang Detail</th>
-                            <th>Nama Barang</th>
+                            <th>ID Barang Detail</th>
+                            <th>ID Barang</th>
                             <th>Rasa</th>
                             <th>Berat</th>
                             <th>Harga</th>
@@ -26,7 +26,7 @@
                             ?>
                             <tr>
                                 <td><?= $item->id_barangdetail   ?></td>
-                                <td><?= $item->nama_barangdetail ?></td>
+                                <td><?= $item->id_barang ?></td>
                                 <td><?= $item->rasa  ?></td>
                                 <td><?= $item->berat ?></td>
                                 <td><?= $item->harga ?></td>

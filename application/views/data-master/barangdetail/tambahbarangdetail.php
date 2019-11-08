@@ -12,8 +12,18 @@
                     <input type="text" name="id_barangdetail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan ID" value="<?= $kode ?>" readonly>
                 </div>
                 <div class="col-sm-6 mb-6 mb-sm-0">
-                    <label for="exampleInputEmail1">Nama Detail Barang</label>
-                    <input type="text" name="nama_barangdetail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Barang">
+                    <label for="exampleInputEmail1">id_barang</label>
+                    <select name="id_pegawai" class="form-control" required>
+                        <option value="">-- Pilih Barang --</option>
+                        <?php
+                        foreach ($barang as $value) {
+                        ?>
+                        <option value="<?= $value->id_barang ?>"><?= $value->nama_barang ?></option>}
+                        
+                        <?php
+                        }
+                        ?>
+                    </select>
                 </div>
             </div>
             <div class="form-group row">
