@@ -35,9 +35,9 @@
                                 <td><?= $item->jabatan ?></td>
                                 <td><?= $item->id_pegawai ?></td>
                                 <td>
-                                    <a href="<?php echo base_url() . 'index.php/akun/edit'; ?>/<?= $item->id_akun ?>" 
+                                    <a href="<?php echo base_url() . 'data-master/akun/edit'; ?>/<?= $item->id_akun ?>" 
                                             class="btn btn-success">Edit</a>
-                                    <a href="<?php echo base_url() . 'index.php/akun/hapus'; ?>/<?php echo $item->id_akun ?>" class="btn btn-danger" onclick="return confirm('Yakin Ingin Menghapus Data ?')">Hapus</a>
+                                    <a href="<?php echo base_url() . 'data-master/akun/hapus'; ?>/<?php echo $item->id_akun ?>" class="btn btn-danger" onclick="return confirm('Yakin Ingin Menghapus Data ?')">Hapus</a>
 
                                 </td>
                             </tr>

@@ -52,7 +52,7 @@ class Akun extends CI_Controller
 		redirect('data-master/akun');
 	}
 
-	function edit(){
+	function edit($id){
 		$where = array('id_akun' =>$id);
 		$data['akun'] = $this->m_akun->edit_data('tbl_akun', $where)->row_array();
 		$data['data_akun'] = $this->m_akun->tampil_akun()->result();
@@ -79,11 +79,11 @@ class Akun extends CI_Controller
 		);
 
 		$where = array(
-			'id_akun' => $id
+			'id_akun' => $id_akun
 		);
 
 		$this->m_akun->update_data($where, 'tbl_akun', $data);
-		redirect('akun/index');
+		redirect('akun');
 
 	}
 }
