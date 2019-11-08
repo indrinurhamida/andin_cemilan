@@ -14,10 +14,11 @@
                     <tr style="text-align:center">
                             <th>ID Barang Masuk</th>
                             <th>Tanggal Barang Masuk</th>
-                            <th>Total Barang Masuk</th>
                             <th>Nama Supplier</th>
                             <th>Nama Pegawai</th>
-                            <th>ID Barang</th>
+                            <th>Nama Barang</th>
+                            <th>Berat</th>
+                            <th>Harga Beli</th>
                             <th>Aksi</th>
                     </tr>
                 </thead>
@@ -28,11 +29,12 @@
                         ?>
                             <tr>
                                 <td><?= $item->id_barangmasuk       ?></td>
-                                <td><?= $item->tgl_barangmasuk      ?></td>
-                                <td><?= $item->total_barangmasuk    ?></td>
+                                <td><?= $item->tgl_masuk            ?></td>
                                 <td><?= $item->id_supplier          ?></td>
                                 <td><?= $item->id_pegawai           ?></td>
                                 <td><?= $item->id_barang            ?></td>
+                                <td><?= $item->berat                ?></td>
+                                <td><?= $item->harga_beli           ?></td>
                                 <td>
                                     <a href="<?php echo base_url() . 'data-master/barangmasuk/edit'; ?>/<?php echo $item->id_barangmasuk ?>" class="btn btn-success">Edit</a>
                                     <a href="<?php echo base_url() . 'data-master/barangmasuk/hapus'; ?>/<?php echo $item->id_barangmasuk ?>" class="btn btn-danger" onclick= "return confirm('Yakin Ingin Menghapus Data?')">Hapus</a>

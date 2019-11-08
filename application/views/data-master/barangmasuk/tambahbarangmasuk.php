@@ -14,27 +14,33 @@
                 </div>
                 <div>
                     <label for="exampleInputEmail1">Tanggal Barang Masuk</label>
-                    <input type="date" name="tgl_barangmasuk" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Tanggal Barang Masuk">
+                    <input type="date" name="tgl_masuk" class="form-control" id="exampleInputEmail1">
                 </div>
             </div>
             <div class="form-group row">
-                 <div class="col-sm-6 mb-6 mb-sm-4">
-                    <label for="exampleInputEmail1">Total Barang Masuk</label>
-
-                    <input type="number" name="total_barangmasuk" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Total Barang Masuk">
-                
-                    <input type="number" name="total_barangmasuk" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Total Barang Masuk">
-                  
+                <div class="col-sm-6 mb-6 mb-sm-4">
+                    <label for="exampleInputEmail1">Nama Supplier</label>
+                    <input type="text" name="id_supplier" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan ID Supplier">  
                 </div>
                 <div class="col-sm-6 mb-6 mb-sm-4">
-                  <label for="exampleInputEmail1">Nama Supplier</label>
-                    <input type="text" name="id_supplier" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan ID Supplier">  
+                    <label for="exampleInputEmail1">Nama Barang</label>
+                    <input type="text" name="id_barang" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan ID Pegawai">
                 </div>
             </div>
             <div class="form-group row">
                 <div class="col-sm-6 mb-6 mb-sm-4">
                     <label for="exampleInputEmail1">Nama Pegawai</label>
                     <input type="text" name="id_pegawai" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan ID Pegawai">
+                </div>
+                <div class="col-sm-6 mb-6 mb-sm-4">
+                    <label for="exampleInputEmail1">Berat</label>
+                    <input type="text" name="berat" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan ID Pegawai">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-6 mb-6 mb-sm-4">
+                    <label for="exampleInputEmail1">Harga Beli</label>
+                    <input type="text" name="harga_beli" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan ID Pegawai">
                 </div>
 
             </div>

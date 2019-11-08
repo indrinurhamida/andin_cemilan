@@ -30,19 +30,21 @@ class Barangmasuk extends CI_Controller
 
 	function tambah_aksi(){
 		$id_barangmasuk			= $this->input->post('id_barangmasuk');
-		$tgl_barangmasuk		= $this->input->post('tgl_barangmasuk');
-		$total_barangmasuk		= $this->input->post('total_barangmasuk');
+		$tgl_masuk				= $this->input->post('tgl_masuk');
 		$id_supplier			= $this->input->post('id_supplier');
-		$id_pegawai				= $this->input->post('id_pegawai');
 		$id_barang				= $this->input->post('id_barang');
+		$id_pegawai				= $this->input->post('id_pegawai');
+		$berat					= $this->input->post('berat');
+		$harga_beli				= $this->input->post('harga_beli');
+		
 
 		$data = array(
 			'id_barangmasuk'		=> $id_barangmasuk,
-			'tgl_barangmasuk' 		=> $tgl_barangmasuk,
-			'total_barangmasuk' 	=> $total_barangmasuk,
+			'tgl_masuk' 			=> $tgl_masuk,
 			'id_supplier' 			=> $id_supplier,
-			'id_pegawai' 			=> $id_pegawai,
-			'id_barang' 			=> $id_barang
+			'id_barang' 			=> $id_barang,
+			'berat' 				=> $berat,
+			'harga_beli' 			=> $harga_beli
 		);
 
 		$this->m_barangmasuk->input_data($data, 'tbl_barangmasuk');
@@ -68,19 +70,21 @@ class Barangmasuk extends CI_Controller
 
 	function update(){
 		$id_barangmasuk			= $this->input->post('id_barangmasuk');
-		$tgl_barangmasuk		= $this->input->post('tgl_barangmasuk');
-		$total_barangmasuk		= $this->input->post('total_barangmasuk');
+		$tgl_masuk				= $this->input->post('tgl_masuk');
 		$id_supplier			= $this->input->post('id_supplier');
-		$id_pegawai				= $this->input->post('id_pegawai');
 		$id_barang				= $this->input->post('id_barang');
+		$id_pegawai				= $this->input->post('id_pegawai');
+		$berat					= $this->input->post('berat');
+		$harga_beli				= $this->input->post('harga_beli');
+		
 
 		$data = array(
 			'id_barangmasuk'		=> $id_barangmasuk,
-			'tgl_barangmasuk' 		=> $tgl_barangmasuk,
-			'total_barangmasuk' 	=> $total_barangmasuk,
+			'tgl_masuk' 			=> $tgl_masuk,
 			'id_supplier' 			=> $id_supplier,
-			'id_pegawai' 			=> $id_pegawai,
-			'id_barang' 			=> $id_barang
+			'id_barang' 			=> $id_barang,
+			'berat' 				=> $berat,
+			'harga_beli' 			=> $harga_beli
 		);
 
 		$where = array(
