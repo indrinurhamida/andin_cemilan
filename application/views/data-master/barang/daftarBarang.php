@@ -13,11 +13,8 @@
                 <thead>
                     <tr style="text-align:center">
                             <th>Id Barang</th>
-                            <th>Id Detail Barang</th>
                             <th>Nama Barang</th>
-                            <th>Stok</th>
-                            <th>Deskripsi</th>
-                            <th>Aksi</th>
+                            <th>Rasa</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -27,10 +24,8 @@
 
                             <tr>
                                 <td><?= $item->id_barang ?></td>
-                                <td><?= $item->id_barangdetail ?></td>
                                 <td><?= $item->nama_barang ?></td>
-                                <td><?= $item->stok ?></td>
-                                <td><?= $item->deskripsi ?></td>
+                                <td><?= $item->rasa ?></td>
                                 <td>
                                     <a href="<?php echo base_url() . 'data-master/barang/edit'; ?>/<?= $item->id_barang ?>" 
                                             class="btn btn-success">Edit</a>

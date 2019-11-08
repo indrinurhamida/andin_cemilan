@@ -12,14 +12,24 @@
                     <input type="text" name="id_barangdetail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan ID" value="<?= $kode ?>" readonly>
                 </div>
                 <div class="col-sm-6 mb-6 mb-sm-0">
-                    <label for="exampleInputEmail1">Nama Detail Barang</label>
-                    <input type="text" name="nama_barangdetail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Barang">
+                    <label for="exampleInputEmail1">id_barang</label>
+                    <select name="id_pegawai" class="form-control" required>
+                        <option value="">-- Pilih Barang --</option>
+                        <?php
+                        foreach ($barang as $value) {
+                        ?>
+                        <option value="<?= $value->id_barang ?>"><?= $value->nama_barang ?></option>}
+                        
+                        <?php
+                        }
+                        ?>
+                    </select>
                 </div>
             </div>
             <div class="form-group row">
                  <div class="col-sm-6 mb-6 mb-sm-0">
                     <label for="exampleInputEmail1">Harga</label>
-                    <input type="text" name="harga" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan nama">
+                    <input type="number" name="harga" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan nama">
                 </div>
                 <div class="col-sm-6 mb-6 mb-sm-0">
                     <label for="exampleInputEmail1">Rasa</label>
@@ -29,7 +39,7 @@
             <div class="form-group row">
                 <div class="col-sm-6 mb-6 mb-sm-0">
                     <label for="exampleInputEmail1">Berat</label>
-                    <input type="text" name="berat" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan deskripsi">
+                    <input type="number" name="berat" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan deskripsi">
                 </div>
             </div>
 

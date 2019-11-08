@@ -9,7 +9,6 @@
 
 	function index(){
 		
-
 		$data['barangdetail'] = $this->m_barangdetail->tampil_data()->result();
         $this->load->view('template/header');
         $this->load->view('template/navbar');
@@ -19,7 +18,7 @@
 
 	function tambah(){
 		$data['kode'] = $this->m_barangdetail->tampil_kode();
-
+		$data['barangdetail'] = $this->m_barangdetail->getBarang();
 		$this->load->view('template/header');
         $this->load->view('template/navbar');
         $this->load->view('data-master/barangdetail/tambahbarangdetail', $data);
@@ -42,8 +41,7 @@
 		);
 
 		$this->m_barangdetail->input_data($data, 'tbl_barangdetail');
-		redirect('data-master/barangdetail');
-		
+		redirect('data-master/barangdetail');	
 	}
 
 	function hapus ($id=''){
@@ -66,8 +64,6 @@
 		$id_barangdetail		= $this->input->post('id_barangdetail');
 		$nama_barangdetail		= $this->input->post('nama_barangdetail');
 		$harga					= $this->input->post('harga');
-		$berat					= $this->input->post('berat');
-		$rasa					= $this->input->post('rasa');
 
 		$data = array(
 			'id_barangdetail'			=> $id_barangdetail,

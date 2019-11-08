@@ -1,6 +1,5 @@
 <?php
 
-defined('BASEPATH') OR exit('No direct script access allowed');
 class M_pegawai extends CI_Model
 {
 	function tampil_kode()
@@ -30,11 +29,11 @@ class M_pegawai extends CI_Model
 		return $this->db->get('tbl_pegawai');
 	}
 
-	function tampil_pegawai(){
+	function tambah(){
 		return $this->db->get('tbl_pegawai');
 	}
 
-	function tambah(){
+	function tampil_pegawai(){
 		return $this->db->get('tbl_pegawai');
 	}
 

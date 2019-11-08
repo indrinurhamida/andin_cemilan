@@ -32,16 +32,12 @@ class Barang extends CI_Controller
 	function tambah_aksi(){
 		$id_barang		= $this->input->post('id_barang');
 		$nama_barang	= $this->input->post('nama_barang');
-		$stok			= $this->input->post('stok');
-		$deskripsi		= $this->input->post('deskripsi');
-		$id_barangdetail= $this->input->post('id_barangdetail');
+		$rasa			= $this->input->post('rasa');
 
 		$data = array(
 			'id_barang'			=> $id_barang,
 			'nama_barang' 		=> $nama_barang,
-			'stok' 				=> $stok,
-			'deskripsi' 		=> $deskripsi,
-			'id_barangdetail' 	=> $id_barangdetail
+			'rasa' 				=> $rasa,
 		);
 
 		$this->m_barang->input_data($data, 'tbl_barang');
@@ -69,16 +65,12 @@ class Barang extends CI_Controller
 	function update(){
 		$id_barang		= $this->input->post('id_barang');
 		$nama_barang	= $this->input->post('nama_barang');
-		$stok			= $this->input->post('stok');
-		$deskripsi		= $this->input->post('deskripsi');
-		$id_barangdetail= $this->input->post('id_barangdetail');
+		$rasa			= $this->input->post('rasa');
 
 		$data = array(
 			'id_barang'			=> $id_barang,
 			'nama_barang' 		=> $nama_barang,
-			'stok' 				=> $stok,
-			'deskripsi' 		=> $deskripsi,
-			'id_barangdetail' 	=> $id_barangdetail
+			'rasa' 				=> $rasa,
 		);
 
 		$where = array(

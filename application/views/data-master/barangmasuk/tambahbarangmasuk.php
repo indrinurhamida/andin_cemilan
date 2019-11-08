@@ -14,23 +14,33 @@
                 </div>
                 <div>
                     <label for="exampleInputEmail1">Tanggal Barang Masuk</label>
-                    <input type="text" name="tgl_barangmasuk" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Tanggal Barang Masuk">
+                    <input type="date" name="tgl_barangmasuk" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Tanggal Barang Masuk">
                 </div>
             </div>
             <div class="form-group row">
                  <div class="col-sm-6 mb-6 mb-sm-4">
                     <label for="exampleInputEmail1">Total Barang Masuk</label>
-                    <input type="text" name="total_barangmasuk" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Total Barang Masuk">
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    <input type="text" name="total_barangmasuk" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Total Barang Masuk">        
+=======
+=======
+>>>>>>> 5b01764d58ab74d76ff398ed085f9f489aed5ad2
+=======
+>>>>>>> 5b01764d58ab74d76ff398ed085f9f489aed5ad2
+                    <input type="number" name="total_barangmasuk" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Total Barang Masuk">
                   
+>>>>>>> 5b01764d58ab74d76ff398ed085f9f489aed5ad2
                 </div>
                 <div class="col-sm-6 mb-6 mb-sm-4">
-                  <label for="exampleInputEmail1">ID Supplier</label>
+                  <label for="exampleInputEmail1">Nama Supplier</label>
                     <input type="text" name="id_supplier" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan ID Supplier">  
                 </div>
             </div>
             <div class="form-group row">
                 <div class="col-sm-6 mb-6 mb-sm-4">
-                    <label for="exampleInputEmail1">ID Pegawai</label>
+                    <label for="exampleInputEmail1">Nama Pegawai</label>
                     <input type="text" name="id_pegawai" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan ID Pegawai">
                 </div>
 

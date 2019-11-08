@@ -16,7 +16,7 @@ class Pegawai extends CI_Controller
 	}
 
 	function tambah(){
-		$data['pegawai'] = $this->m_pegawai->tambah()->result();
+		$data['kode'] = $this->m_pegawai->tampil_kode();
 		$this->load->view('template/header');
         $this->load->view('template/navbar');
         $this->load->view('data-master/pegawai/tambahpegawai', $data);
@@ -50,10 +50,9 @@ class Pegawai extends CI_Controller
 		redirect('data-master/pegawai');
 	}
 
-	function edit(){
-		$where = array('id_pegawai');
+	function edit($id){
+		$where = array('id_pegawai'=>$id);
 		$data['pegawai'] = $this->m_pegawai->edit_data('tbl_pegawai', $where)->row_array();
-		$data['data_pegawai'] = $this->m_pegawai->tampil_pegawai()->result();
 
 		$this->load->view('template/header');
         $this->load->view('template/navbar');
@@ -62,8 +61,8 @@ class Pegawai extends CI_Controller
 	}
 
 	function update(){
-	$id_barang		= $this->input->post('id_pegawai');
-	$nama_barang	= $this->input->post('nama_pegawai');
+	$id_pegawai		= $this->input->post('id_pegawai');
+	$nama_pegawai	= $this->input->post('nama_pegawai');
 	$alamat			= $this->input->post('alamat');
 	$email			= $this->input->post('email');
 	$no_hp			= $this->input->post('no_hp');
@@ -79,11 +78,11 @@ class Pegawai extends CI_Controller
 	);
 
 	$where = array(
-	'id_pegawai' => $id
+	'id_pegawai' => $id_pegawai
 	);
 
-	$this->m_pegawai->update_data($where, 'tbl_pegawai', $data);
-	redirect('pegawai/index');
+	$this->m_pegawai->update_data($where, $data, 'tbl_pegawai');
+	redirect('data-master/pegawai');
 
 	}
 }

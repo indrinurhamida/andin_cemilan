@@ -1,17 +1,15 @@
-<?php
-
+<?php  
 class Akun extends CI_Controller
 {
-	function __construct(){
+	function __construct()
+	{
 		parent::__construct();
 		$this->load->model('m_akun');
-		
 	}
-
-	function index(){
-		
-
-		$data['akun'] = $this->m_akun->tampil_akun()->result();
+ 
+	public function index() 
+	{
+		$data['akun'] = $this->m_akun->tampil_data()->result();
         $this->load->view('template/header');
         $this->load->view('template/navbar');
         $this->load->view('data-master/akun/daftarakun',$data);
@@ -19,9 +17,8 @@ class Akun extends CI_Controller
 	}
 
 	function tambah(){
-		// $data['kode'] = $this->m_pegawai->tampil_kode();
-		$data['akun'] = $this->m_akun->tampil_akun()->result();
-
+		$data['kode'] = $this->m_akun->tampil_kode();
+		$data['pegawai'] = $this->m_akun->getPegawai();
 		$this->load->view('template/header');
         $this->load->view('template/navbar');
         $this->load->view('data-master/akun/tambahakun', $data);
@@ -29,72 +26,67 @@ class Akun extends CI_Controller
 
 	}
 
-	// function tambah_aksi(){
-	// 	$id_barang		= $this->input->post('id_barang');
-	// 	$nama_barang	= $this->input->post('nama_barang');
-	// 	$stok			= $this->input->post('stok');
-	// 	$deskripsi		= $this->input->post('deskripsi');
-	// 	$id_barangdetail= $this->input->post('id_barangdetail');
+	function tambah_aksi(){
+		$id_akun			= $this->input->post('id_akun');
+		$username			= $this->input->post('username');
+		$password			= $this->input->post('password');
+		$jabatan			= $this->input->post('jabatan');
+		$id_pegawai			= $this->input->post('id_pegawai');
 
-	// 	$data = array(
-	// 		'id_barang'			=> $id_barang,
-	// 		'nama_barang' 		=> $nama_barang,
-	// 		'stok' 				=> $stok,
-	// 		'deskripsi' 		=> $deskripsi,
-	// 		'id_barangdetail' 	=> $id_barangdetail
-	// 	);
+		$data = array(
+			'id_akun'				=> $id_akun,
+			'username' 				=> $username,
+			'password' 				=> $password,
+			'jabatan' 				=> $jabatan,
+			'id_pegawai' 			=> $id_pegawai,
+		);
 
-	// 	$this->m_barang->input_data($data, 'tbl_barang');
-	// 	redirect('barang/index');
+		$this->m_akun->input_data($data, 'tbl_akun');
+		redirect('data-master/akun');
 		
-	// }
+	}
 
-	// function hapus ($id=''){
-	// 	$where = array('id_barang' => $id);
-	// 	$this->m_barang->hapus_data($where, 'tbl_barang');
-	// 	redirect('data-master/barang/index');
-	// }
+	function hapus ($id=''){
+		$where = array('id_akun' => $id);
+		$this->m_akun->hapus_data($where, 'tbl_akun');
+		redirect('data-master/akun');
+	}
 
-	function edit(){
-		$where = array('id_akun');
+	function edit($id){
+		$where = array('id_akun' =>$id);
 		$data['akun'] = $this->m_akun->edit_data('tbl_akun', $where)->row_array();
 		$data['data_akun'] = $this->m_akun->tampil_akun()->result();
-
+		
 		$this->load->view('template/header');
         $this->load->view('template/navbar');
         $this->load->view('data-master/akun/editakun', $data);
         $this->load->view('template/footer');
 	}
+	function update(){
+		$id_akun			= $this->input->post('id_akun');
+		$username			= $this->input->post('username');
+		$password			= $this->input->post('password');
+		$jabatan			= $this->input->post('jabatan');
+		$id_pegawai			= $this->input->post('id_pegawai');
+		
+		$data = array(
+			'id_akun'		=> $id_akun,
+			'username' 		=> $username,
+			'password' 		=> $password,
+			'jabatan' 		=> $jabatan,
+			'id_pegawai' 	=> $id_pegawai,
+			
+		);
 
-	// function update(){
-	// 	$id_barang		= $this->input->post('id_barang');
-	// 	$nama_barang	= $this->input->post('nama_barang');
-	// 	$stok			= $this->input->post('stok');
-	// 	$harga			= $this->input->post('harga');
-	// 	$berat			= $this->input->post('berat');
-	// 	$rasa			= $this->input->post('rasa');
-	// 	$deskripsi		= $this->input->post('deskripsi');
-	// 	$id_barangdetail= $this->input->post('id_barangdetail');
+		$where = array(
+			'id_akun' => $id_akun
+		);
 
-	// 	$data = array(
-	// 		'id_barang'			=> $id_barang,
-	// 		'nama_barang' 		=> $nama_barang,
-	// 		'stok' 				=> $stok,
-	// 		'harga' 			=> $harga,
-	// 		'berat' 			=> $berat,
-	// 		'rasa' 				=> $rasa,
-	// 		'deskripsi' 		=> $deskripsi,
-	// 		'id_barangdetail' 	=> $id_barangdetail
-	// 	);
+		$this->m_akun->update_data($where, $data,  'tbl_akun');
+		redirect('data-master/akun');
 
-	// 	$where = array(
-	// 		'id_barang' => $id
-	// 	);
-
-	// 	$this->m_barang->update_data($where, 'tbl_barang', $data);
-	// 	redirect('barang/index');
-
-	// }
+	}
 }
 
 ?>
+

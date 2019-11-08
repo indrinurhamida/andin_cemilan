@@ -14,7 +14,7 @@
                 </div>
                 <div class="col-sm-6 mb-6 mb-sm-4">
                     <label for="exampleInputEmail1">Tanggal Barang Keluar</label>
-                    <input type="text" name="tgl_barangmasuk" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Tanggal Barang Masuk">
+                    <input type="date" name="tgl_barangmasuk" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Tanggal Barang Masuk">
                 </div>
             </div>
 
@@ -25,7 +25,7 @@
                 </div>
                  <div class="col-sm-6 mb-6 mb-sm-4">
                     <label for="exampleInputEmail1">Total Barang Keluar</label>
-                    <input type="text" name="total_barangmasuk" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Total Barang Masuk">
+                    <input type="number" name="total_barangmasuk" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Total Barang Masuk">
                 </div>
             </div>
 
