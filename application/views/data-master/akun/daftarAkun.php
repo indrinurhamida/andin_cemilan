@@ -7,7 +7,7 @@
     <div class="card-header py-3">
 
 
-        <a href="<?php echo base_url() . 'data-master/akun/tambah'; ?>" class="btn btn-primary"" class="btn btn-primary">Tambah Data</a>
+        <a href="<?php echo base_url() . 'data-master/akun/tambah'; ?>" class="btn btn-primary" class="btn btn-primary">Tambah Data</a>
 
     </div>
     <div class="card-body">

@@ -53,7 +53,7 @@ class Akun extends CI_Controller
 	}
 
 	function edit(){
-		$where = array('id_akun');
+		$where = array('id_akun' =>$id);
 		$data['akun'] = $this->m_akun->edit_data('tbl_akun', $where)->row_array();
 		$data['data_akun'] = $this->m_akun->tampil_akun()->result();
 		
