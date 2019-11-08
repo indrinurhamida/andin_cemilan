@@ -58,7 +58,7 @@ class Member extends CI_Controller
 
 		$this->load->view('template/header');
         $this->load->view('template/navbar');
-        $this->load->view('data-master/member/editSupplier', $data);
+        $this->load->view('data-master/member/editmember', $data);
         $this->load->view('template/footer');
 	}
 
