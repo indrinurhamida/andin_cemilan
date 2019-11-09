@@ -20,7 +20,6 @@ class Barang extends CI_Controller
 
 	function tambah(){
 		$data['kode'] = $this->m_barang->tampil_kode();
-		$data['barangdetail'] = $this->m_barang->tampil_barangdetail()->result();
 
 		$this->load->view('template/header');
         $this->load->view('template/navbar');
@@ -54,7 +53,6 @@ class Barang extends CI_Controller
 	function edit($id){
 		$where = array('id_barang' => $id);
 		$data['barang'] = $this->m_barang->edit_data('tbl_barang', $where)->row_array();
-		$data['data_barangdetail'] = $this->m_barang->tampil_barangdetail()->result();
 
 		$this->load->view('template/header');
         $this->load->view('template/navbar');

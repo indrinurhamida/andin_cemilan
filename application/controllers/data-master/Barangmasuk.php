@@ -19,8 +19,10 @@ class Barangmasuk extends CI_Controller
 	}
 
 	 function tambah(){
-		$data['kode'] = $this->m_barangmasuk->tampil_kode();
-
+		$data['kode'] 				= $this->m_barangmasuk->tampil_kode();
+		$data['tambah_supplier'] 	= $this->m_barangmasuk->tampil_supplier();
+		$data['tambah_barang'] 		= $this->m_barangmasuk->tampil_barang();
+		$data['tambah_pegawai'] 	= $this->m_barangmasuk->tampil_pegawai();
 		$this->load->view('template/header');
         $this->load->view('template/navbar');
         $this->load->view('data-master/barangmasuk/tambahbarangmasuk', $data);
@@ -60,7 +62,10 @@ class Barangmasuk extends CI_Controller
 
 	function edit($id){
 		$where = array('id_barangmasuk' => $id);
-		$data['barangmasuk'] = $this->m_barangmasuk->edit_data('tbl_barangmasuk', $where)->row_array();
+		$data['ambil_supplier'] 		= $this->m_barangmasuk->tampil_supplier();
+		$data['ambil_barang'] 			= $this->m_barangmasuk->tampil_barang();
+		$data['ambil_pegawai'] 			= $this->m_barangmasuk->tampil_pegawai();
+		$data['barangmasuk'] 			= $this->m_barangmasuk->edit_data('tbl_barangmasuk', $where)->row_array();
 
 		$this->load->view('template/header');
         $this->load->view('template/navbar');

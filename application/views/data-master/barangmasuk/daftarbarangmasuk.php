@@ -15,8 +15,8 @@
                             <th>ID Barang Masuk</th>
                             <th>Tanggal Barang Masuk</th>
                             <th>Nama Supplier</th>
-                            <th>Nama Pegawai</th>
                             <th>Nama Barang</th>
+                            <th>Nama Pegawai</th>
                             <th>Berat</th>
                             <th>Harga Beli</th>
                             <th>Aksi</th>
@@ -31,8 +31,8 @@
                                 <td><?= $item->id_barangmasuk       ?></td>
                                 <td><?= $item->tgl_masuk            ?></td>
                                 <td><?= $item->id_supplier          ?></td>
-                                <td><?= $item->id_pegawai           ?></td>
                                 <td><?= $item->id_barang            ?></td>
+                                <td><?= $item->id_pegawai           ?></td>
                                 <td><?= $item->berat                ?></td>
                                 <td><?= $item->harga_beli           ?></td>
                                 <td>

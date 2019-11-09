@@ -14,7 +14,6 @@
                         <tr style="text-align:center">
                             <th>ID Barang Detail</th>
                             <th>ID Barang</th>
-                            <th>Rasa</th>
                             <th>Berat</th>
                             <th>Harga</th>
                             <th>Aksi</th>
@@ -27,9 +26,9 @@
                             <tr>
                                 <td><?= $item->id_barangdetail   ?></td>
                                 <td><?= $item->id_barang ?></td>
-                                <td><?= $item->rasa  ?></td>
                                 <td><?= $item->berat ?></td>
                                 <td><?= $item->harga ?></td>
+                                <td><?= $item->stok  ?></td>
                                 <td>
                                     <a href="<?php echo base_url() . 'data-master/barangdetail/edit'; ?>/<?= $item->id_barangdetail ?>" 
                                     class="btn btn-success">Edit</a>

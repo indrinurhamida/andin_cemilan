@@ -23,17 +23,14 @@ class M_barangdetail extends CI_Model
         return $this->db->get('tbl_barangdetail');
     }
 
-    function getBarang(){
+    function tampil_barang(){
 		return $this->db->get('tbl_barang')->result();
     }
-        
+    
     function input_data($data, $table){
         $this->db->insert($table, $data);
     }
-    function tampil_detailbarang(){
-        return $this->db->get('tbl_barangdetail');
-    }
-   
+    
     function edit_data($table, $where){
         return $this->db->get_where($table, $where);
     }

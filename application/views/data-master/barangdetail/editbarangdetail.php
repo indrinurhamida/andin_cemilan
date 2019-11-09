@@ -7,33 +7,42 @@
         <form class="" method="post" action="<?php echo base_url() . 'data-master/barangdetail/update'; ?>" enctype="multipart/form-data">
             <div class="form-group row">
                 <div class="col-sm-6 mb-3 mb-sm-0">
-                    <label for="exampleInputEmail1">ID Barang</label>
-                    <input type="text" name="id_barang" class="form-control" 
+                    <label for="exampleInputEmail1">ID Barang Detail</label>
+                    <input type="text" name="id_barangdetail" class="form-control" 
                     id="exampleInputEmail1" aria-describedby="emailHelp" 
                     placeholder="Masukan ID" value="<?php echo $barangdetail['id_barangdetail'] ?>" readonly>
                 </div>
-                <div class="col-sm-6 mb-3 mb-sm-0">
-
-                    <label for="exampleInputEmail1">Nama Barang Detail</label>
-                    <input type="text" name="nama_barangdetail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan nama" value="<?php echo $barangdetail['nama_barangdetail'] ?>">
+                <div class="col-sm-6 mb-6 mb-sm-0">
+                    <label for="exampleInputEmail1">ID_Barang</label>
+                    <select name="id_barang" class="form-control" required>
+                        <option value="">-- Pilih Barang --</option>
+                        <?php
+                        foreach ($ambil_barangdetail as $v) {
+                        ?>
+                        <option value="<?php echo $v->id_barang ?>"><?php echo $v->nama_barang ?></option>}
+                        
+                        <?php
+                        }
+                        ?>
+                    </select>
                 </div>
             </div>
             <div class="form-group row">
                 <div class="col-sm-6 mb-3 mb-sm-0">
                     <label for="exampleInputEmail1">Harga</label>
-                    <input type="number" name="harga" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="stok" value="<?= $barangdetail['harga'] ?>">
+                    <input type="number" name="harga" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukkan Harga" value="<?= $barangdetail['harga'] ?>">
                 </div>
 
                 <div class="col-sm-6 mb-3 mb-sm-0">
                     <label for="exampleInputEmail1">Berat</label>
-                    <input type="number" name="berat" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="stok" value="<?= $barangdetail['berat'] ?>">
+                    <input type="number" name="berat" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukkan Berat" value="<?= $barangdetail['berat'] ?>">
                 </div>
             </div>
 
             <div class="form-group row">
                 <div class="col-sm-6 mb-3 mb-sm-0">
-                    <label for="exampleInputEmail1">Rasa</label>
-                    <input type="text" name="rasa" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="stok" value="<?= $barangdetail['rasa'] ?>">
+                    <label for="exampleInputEmail1">Stok</label>
+                    <input type="number" name="stok" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukkan Stok" value="<?= $barangdetail['stok'] ?>">
                 </div>
             </div>
 

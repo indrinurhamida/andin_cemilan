@@ -19,28 +19,58 @@
             </div>
             <div class="form-group row">
                 <div class="col-sm-6 mb-6 mb-sm-4">
-                    <label for="exampleInputEmail1">Nama Supplier</label>
-                    <input type="text" name="id_supplier" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan ID Supplier">  
+                    <label for="exampleInputEmail1">ID_Supplier</label>
+                    <select name="id_supplier" class="form-control" required>
+                        <option value="">-- Pilih Supplier --</option>
+                        <?php
+                        foreach ($tambah_supllier as $value) {
+                        ?>
+                        <option value="<?php echo $value->id_supplier ?>"><?php echo $value->nama_supplier ?></option>}
+                        
+                        <?php
+                        }
+                        ?>
+                    </select> 
                 </div>
                 <div class="col-sm-6 mb-6 mb-sm-4">
-                    <label for="exampleInputEmail1">Nama Barang</label>
-                    <input type="text" name="id_barang" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan ID Pegawai">
+                    <label for="exampleInputEmail1">ID_Barang</label>
+                    <select name="id_barang" class="form-control" required>
+                        <option value="">-- Pilih Barang --</option>
+                        <?php
+                        foreach ($tambah_barang as $value) {
+                        ?>
+                        <option value="<?php echo $value->id_barang ?>"><?php echo $value->nama_barang ?></option>}
+                        
+                        <?php
+                        }
+                        ?>
+                    </select>
                 </div>
             </div>
             <div class="form-group row">
                 <div class="col-sm-6 mb-6 mb-sm-4">
-                    <label for="exampleInputEmail1">Nama Pegawai</label>
-                    <input type="text" name="id_pegawai" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan ID Pegawai">
+                    <label for="exampleInputEmail1">ID_Pegawai</label>
+                    <select name="id_pegawai" class="form-control" required>
+                        <option value="">-- Pilih Pegawai --</option>
+                        <?php
+                        foreach ($tambah_pegawai as $value) {
+                        ?>
+                        <option value="<?php echo $value->id_pegawai ?>"><?php echo $value->nama_pegawai ?></option>}
+                        
+                        <?php
+                        }
+                        ?>
+                    </select>
                 </div>
                 <div class="col-sm-6 mb-6 mb-sm-4">
                     <label for="exampleInputEmail1">Berat</label>
-                    <input type="text" name="berat" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan ID Pegawai">
+                    <input type="number" name="berat" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Berat">
                 </div>
             </div>
             <div class="form-group row">
                 <div class="col-sm-6 mb-6 mb-sm-4">
                     <label for="exampleInputEmail1">Harga Beli</label>
-                    <input type="text" name="harga_beli" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan ID Pegawai">
+                    <input type="number" name="harga_beli" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Harga Beli">
                 </div>
 
             </div>
