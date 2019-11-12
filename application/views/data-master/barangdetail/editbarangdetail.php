@@ -35,7 +35,19 @@
 
                 <div class="col-sm-6 mb-3 mb-sm-0">
                     <label for="exampleInputEmail1">Berat</label>
-                    <input type="number" name="berat" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukkan Berat" value="<?= $barangdetail['berat'] ?>">
+                    <!--<input type="number" name="berat" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukkan Berat" value="">-->
+                    <select name="berat" class="form-control">
+                <option value="">---Pilih Berat---</option>
+                <?php
+                    $berat = array(
+                        "50 g","100 g","200 g","300 g","400 g","500 g","1000 g"
+                    );
+                    foreach($berat as $b){
+                        $kode = ($barangdetail[0]["berat"] == $b) ? "selected" : "";
+                        ?>
+                <option value="<?php echo $b?>"<?= $kode?>><?php echo $b?></option>
+                <?php }?>
+            </select>
                 </div>
             </div>
 

@@ -12,7 +12,7 @@
                     <input type="text" name="id_barangmasuk" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan ID" value="<?= $kode ?>" readonly>
 
                 </div>
-                <div>
+                <div class="col-sm-6 mb-6 mb-sm-4">
                     <label for="exampleInputEmail1">Tanggal Barang Masuk</label>
                     <input type="date" name="tgl_masuk" class="form-control" id="exampleInputEmail1">
                 </div>

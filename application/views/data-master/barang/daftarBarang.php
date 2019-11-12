@@ -15,6 +15,7 @@
                             <th>Id Barang</th>
                             <th>Nama Barang</th>
                             <th>Rasa</th>
+                            <th>aksi</th>
                     </tr>
                 </thead>
                 <tbody>

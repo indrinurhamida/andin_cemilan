@@ -29,17 +29,24 @@
             <div class="form-group row">
                  <div class="col-sm-6 mb-6 mb-sm-0">
                     <label for="exampleInputEmail1">Berat</label>
-                    <input type="number" name="berat" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Berat">
+                    <!--<input type="number" name="berat" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Berat">-->
+                    <select name="berat" class="form-control" required>
+                        <option value="">-- Pilih Berat --</option>
+                        <option>50 g</option>
+                        <option>100 g</option>
+                        <option>200 g</option>                        
+                        <option>500 g</option>
+                    </select>
                 </div>
                 <div class="col-sm-6 mb-6 mb-sm-0">
                     <label for="exampleInputEmail1">Harga</label>
-                    <input type="number" name="harga" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Harga">
+                    <input type="text" name="harga" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Harga">
                 </div>
             </div>
             <div class="form-group row">
                 <div class="col-sm-6 mb-6 mb-sm-0">
                     <label for="exampleInputEmail1">Stok</label>
-                    <input type="number" name="stok" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Stok">
+                    <input type="text" name="stok" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Stok">
                 </div>
             </div>
 
