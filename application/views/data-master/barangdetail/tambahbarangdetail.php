@@ -18,7 +18,7 @@
                         <?php
                         foreach ($barangdetail as $value) {
                         ?>
-                        <option value="<?php echo $value->id_barang ?>"><?php echo $value->nama_barang ?></option>}
+                        <option value="<?php echo $value->id_barang ?>"><?php echo $value->nama_barang, $value->rasa ?></option>}
                         
                         <?php
                         }
@@ -34,8 +34,10 @@
                         <option value="">-- Pilih Berat --</option>
                         <option>50 g</option>
                         <option>100 g</option>
-                        <option>200 g</option>                        
+                        <option>200 g</option> 
+                        <option>250 g</option>                       
                         <option>500 g</option>
+                        <option>1000 g</option>
                     </select>
                 </div>
                 <div class="col-sm-6 mb-6 mb-sm-0">
