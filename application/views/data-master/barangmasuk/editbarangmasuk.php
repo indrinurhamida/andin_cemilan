@@ -52,7 +52,7 @@
                     <select name="id_pegawai" class="form-control" required>
                         <option value="">-- Pilih Pegawai --</option>
                         <?php
-                        foreach ($ambil_pegawai as $v) {
+                        foreach ($pegawai as $v) {
                         ?>
                         <option value="<?php echo $v->id_pegawai ?>"><?php echo $v->nama_pegawai ?></option>}
                         
