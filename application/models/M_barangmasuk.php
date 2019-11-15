@@ -29,14 +29,20 @@ class M_barangmasuk extends CI_Model
 		return $this->db->get('tbl_barangmasuk');
 	}
 
-	function tampil_supplier(){
-		return $this->db->get('tbl_supplier');
-	}
 	function tampil_barang(){
 		return $this->db->get('tbl_barang');
 	}
-	function tampil_pegawai(){
-		return $this->db->get('tbl_pegawai');
+
+	function getSupplier(){
+		return $this->db->get('tbl_supplier')->result();
+	}
+
+	function getPegawai(){
+		return $this->db->get('tbl_pegawai')->result();
+	}
+
+	function getBarang(){
+		return $this->db->get('tbl_barang')->result();
 	}
 
 	function input_data($data, $table){

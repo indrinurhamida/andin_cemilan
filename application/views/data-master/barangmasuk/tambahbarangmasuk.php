@@ -22,10 +22,10 @@
                     <label for="exampleInputEmail1">ID_Supplier</label>
                     <select name="id_supplier" class="form-control" required>
                         <option value="">-- Pilih Supplier --</option>
-                        <?php
-                        foreach ($tambah_supllier as $value) {
+                      <?php
+                        foreach ($supplier as $value) {
                         ?>
-                        <option value="<?php echo $value->id_supplier ?>"><?php echo $value->nama_supplier ?></option>}
+                        <option value="<?= $value->id_supplier ?>"><?= $value->nama_supplier ?></option>}
                         
                         <?php
                         }
@@ -37,9 +37,9 @@
                     <select name="id_barang" class="form-control" required>
                         <option value="">-- Pilih Barang --</option>
                         <?php
-                        foreach ($tambah_barang as $value) {
+                        foreach ($barang as $value) {
                         ?>
-                        <option value="<?php echo $value->id_barang ?>"><?php echo $value->nama_barang ?></option>}
+                        <option value="<?= $value->id_barang ?>"><?= $value->nama_barang, $value->rasa ?></option>}
                         
                         <?php
                         }
@@ -53,9 +53,9 @@
                     <select name="id_pegawai" class="form-control" required>
                         <option value="">-- Pilih Pegawai --</option>
                         <?php
-                        foreach ($tambah_pegawai as $value) {
+                        foreach ($pegawai as $value) {
                         ?>
-                        <option value="<?php echo $value->id_pegawai ?>"><?php echo $value->nama_pegawai ?></option>}
+                        <option value="<?= $value->id_pegawai ?>"><?= $value->nama_pegawai ?></option>}
                         
                         <?php
                         }

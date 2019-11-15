@@ -20,9 +20,10 @@ class Barangmasuk extends CI_Controller
 
 	 function tambah(){
 		$data['kode'] 				= $this->m_barangmasuk->tampil_kode();
-		$data['tambah_supplier'] 	= $this->m_barangmasuk->tampil_supplier();
-		$data['tambah_barang'] 		= $this->m_barangmasuk->tampil_barang();
-		$data['tambah_pegawai'] 	= $this->m_barangmasuk->tampil_pegawai();
+		$data['supplier'] 			= $this->m_barangmasuk->getSupplier();
+		$data['pegawai'] 			= $this->m_barangmasuk->getPegawai();
+		$data['barang'] 			= $this->m_barangmasuk->getBarang();
+
 		$this->load->view('template/header');
         $this->load->view('template/navbar');
         $this->load->view('data-master/barangmasuk/tambahbarangmasuk', $data);
