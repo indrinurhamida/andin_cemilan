@@ -62,10 +62,14 @@ class Barangmasuk extends CI_Controller
 
 	function edit($id){
 		$where = array('id_barangmasuk' => $id);
-		$data['ambil_supplier'] 		= $this->m_barangmasuk->tampil_supplier();
-		$data['ambil_barang'] 			= $this->m_barangmasuk->tampil_barang();
-		$data['ambil_pegawai'] 			= $this->m_barangmasuk->tampil_pegawai();
-		$data['barangmasuk'] 			= $this->m_barangmasuk->edit_data('tbl_barangmasuk', $where)->row_array();
+		$data['supplier'] 			= $this->m_barangmasuk->getSupplier();
+		$data['pegawai'] 			= $this->m_barangmasuk->getPegawai();
+		$data['barang'] 			= $this->m_barangmasuk->getBarang();
+
+		//$data['ambil_supplier'] 		= $this->m_barangmasuk->tampil_supplier();
+		//$data['ambil_barang'] 			= $this->m_barangmasuk->tampil_barang();
+		//$data['ambil_pegawai'] 			= $this->m_barangmasuk->tampil_pegawai();
+		$data['barangmasuk'] 		= $this->m_barangmasuk->edit_data('tbl_barangmasuk', $where)->row_array();
 
 		$this->load->view('template/header');
         $this->load->view('template/navbar');
