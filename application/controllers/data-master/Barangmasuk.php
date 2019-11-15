@@ -31,6 +31,8 @@ class Barangmasuk extends CI_Controller
 
 	}
 
+	
+
 	function tambah_aksi(){
 		$id_barangmasuk			= $this->input->post('id_barangmasuk');
 		$tgl_masuk				= $this->input->post('tgl_masuk');
@@ -39,20 +41,17 @@ class Barangmasuk extends CI_Controller
 		$id_pegawai				= $this->input->post('id_pegawai');
 		$berat					= $this->input->post('berat');
 		$harga_beli				= $this->input->post('harga_beli');
-		
-
 		$data = array(
 			'id_barangmasuk'		=> $id_barangmasuk,
 			'tgl_masuk' 			=> $tgl_masuk,
 			'id_supplier' 			=> $id_supplier,
 			'id_barang' 			=> $id_barang,
+			'id_pegawai'			=> $id_pegawai,
 			'berat' 				=> $berat,
 			'harga_beli' 			=> $harga_beli
 		);
-
 		$this->m_barangmasuk->input_data($data, 'tbl_barangmasuk');
-		redirect('data-master/barangmasuk');
-		
+		redirect('data-master/barangmasuk');	
 	}
 
 	function hapus ($id=''){
