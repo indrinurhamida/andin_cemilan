@@ -39,7 +39,7 @@
                         <?php
                         foreach ($barang as $value) {
                         ?>
-                        <option value="<?= $value->id_barang ?>"><?= $value->nama_barang, $value->rasa ?></option>}
+                        <option value="<?= $value->id_barang ?>"><?= $value->nama_barang ?> <?= $value->rasa ?></option>}
                         <?php
                         }
                         ?>

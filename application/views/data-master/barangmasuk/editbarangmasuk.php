@@ -23,7 +23,7 @@
                     <select name="id_supplier" class="form-control" required>
                         <option value="">-- Pilih Supplier --</option>
                         <?php
-                        foreach ($ambil_supllier as $v) {
+                        foreach ($supplier as $v) {
                         ?>
                         <option value="<?php echo $v->id_supplier ?>"><?php echo $v->nama_supplier ?></option>}
                         
@@ -37,9 +37,9 @@
                     <select name="id_barang" class="form-control" required>
                         <option value="">-- Pilih Barang --</option>
                         <?php
-                        foreach ($ambil_barang as $v) {
+                        foreach ($barang as $v) {
                         ?>
-                        <option value="<?php echo $v->id_barang ?>"><?php echo $v->nama_barang ?></option>}
+                        <option value="<?php echo $v->id_barang ?>"><?php echo $v->nama_barang ?> <?php echo $v->rasa ?></option>}
                         
                         <?php
                         }
