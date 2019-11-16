@@ -30,7 +30,17 @@
             <div class="form-group row">
                 <div class="col-sm-6 mb-3 mb-sm-0">
                     <label for="exampleInputEmail1">ID Pegawai</label>
-                    <input type="text" name="id_pegawai" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Stok" value="<?php echo $akun['id_pegawai'] ?>">
+                    <select name="id_pegawai" class="form-control" required>
+                        <option value="">-- Pilih Pegawai --</option>
+                        <?php
+                        foreach ($pegawai as $v) {
+                        ?>
+                        <option value="<?php echo $v->id_pegawai ?>"><?php echo $v->nama_pegawai ?></option>}
+                        
+                        <?php
+                        }
+                        ?>
+                    </select>
                 </div>
             </div>
 
