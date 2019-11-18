@@ -66,7 +66,7 @@ class Barangmasuk extends CI_Controller
 		$data['pegawai'] 			= $this->m_barangmasuk->getPegawai();
 		$data['barang'] 			= $this->m_barangmasuk->getBarang();
 		$data['barangmasuk'] 		= $this->m_barangmasuk->edit_data('tbl_barangmasuk', $where)->row_array();
-
+		
 		$this->load->view('template/header');
         $this->load->view('template/navbar');
         $this->load->view('data-master/barangmasuk/editbarangmasuk', $data);

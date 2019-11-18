@@ -18,8 +18,9 @@
                         <option value="">-- Pilih Barang --</option>
                         <?php
                         foreach ($ambil_barangdetail as $v) {
+                            $kode = ($v->id_barang == $barangdetail["id_barang"]) ? "selected" : "";
                         ?>
-                        <option value="<?php echo $v->id_barang ?>"><?php echo $v->nama_barang ?></option>}
+                        <option value="<?php echo $v->id_barang ?>" <?= $kode?>><?php echo $v->nama_barang ?></option>}
                         
                         <?php
                         }
@@ -43,7 +44,7 @@
                         "50 g","100 g","200 g","300 g","400 g","500 g","1000 g"
                     );
                     foreach($berat as $b){
-                        $kode = ($barangdetail[0]["berat"] == $b) ? "selected" : "";
+                        $kode = ($barangdetail["berat"] == $b) ? "selected" : "";
                         ?>
                 <option value="<?php echo $b?>"<?= $kode?>><?php echo $b?></option>
                 <?php }?>
