@@ -29,7 +29,6 @@
             <div class="form-group row">
                  <div class="col-sm-6 mb-6 mb-sm-0">
                     <label for="exampleInputEmail1">Berat</label>
-                    <!--<input type="number" name="berat" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Berat">-->
                     <select name="berat" class="form-control" required>
                         <option value="">-- Pilih Berat --</option>
                         <option>50 g</option>
