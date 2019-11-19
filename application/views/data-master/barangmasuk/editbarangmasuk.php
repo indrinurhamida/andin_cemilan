@@ -14,7 +14,7 @@
                 </div>
                 <div class="col-sm-6 mb-6 mb-sm-4">
                     <label for="exampleInputEmail1">Tanggal Barang Masuk</label>
-                    <input type="date" name="tgl_masuk" class="form-control" id="exampleInputEmail1">
+                    <input type="date" name="tgl_masuk" class="form-control" id="exampleInputEmail1" value="<?php echo $barangmasuk["tgl_masuk"]?>">
                 </div>
             </div>
             <div class="form-group row">
@@ -24,8 +24,9 @@
                         <option value="">-- Pilih Supplier --</option>
                         <?php
                         foreach ($supplier as $v) {
+                        $selected = ($v->id_supplier == $barangmasuk['id_supplier']) ? "selected" : "";
                         ?>
-                        <option value="<?php echo $v->id_supplier ?>"><?php echo $v->nama_supplier ?></option>}
+                        <option value="<?php echo $v->id_supplier ?>" <?php echo $selected ?> ><?php echo $v->nama_supplier ?></option>}
                         
                         <?php
                         }
@@ -38,8 +39,9 @@
                         <option value="">-- Pilih Barang --</option>
                         <?php
                         foreach ($barang as $v) {
+                        $selected = ($v->id_barang == $barangmasuk['id_barang']) ? "selected" : "";
                         ?>
-                        <option value="<?php echo $v->id_barang ?>"><?php echo $v->nama_barang ?> <?php echo $v->rasa ?></option>}
+                        <option value="<?php echo $v->id_barang ?>" <?php echo $selected?>><?php echo $v->nama_barang ?> <?php echo $v->rasa ?></option>}
                         
                         <?php
                         }
@@ -54,8 +56,9 @@
                         <option value="">-- Pilih Pegawai --</option>
                         <?php
                         foreach ($pegawai as $v) {
+                        $selected = ($v->id_pegawai == $barangmasuk['id_pegawai']) ? "selected" : "";
                         ?>
-                        <option value="<?php echo $v->id_pegawai ?>"><?php echo $v->nama_pegawai ?></option>}
+                        <option value="<?php echo $v->id_pegawai ?>" <?php echo $selected ?>><?php echo $v->nama_pegawai ?></option>}
                         
                         <?php
                         }

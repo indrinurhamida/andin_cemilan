@@ -31,12 +31,12 @@
                     <label for="exampleInputEmail1">Berat</label>
                     <select name="berat" class="form-control" required>
                         <option value="">-- Pilih Berat --</option>
-                        <option>50 g</option>
-                        <option>100 g</option>
-                        <option>200 g</option> 
-                        <option>250 g</option>                       
-                        <option>500 g</option>
-                        <option>1000 g</option>
+                        <?php
+                            $berat = array("50 g","100 g","200 g","300 g","400 g","500 g","1000 g");
+                            foreach ($berat as $v) {
+                        ?>
+                        <option><?= $v?></option>
+                    <?php }?>
                     </select>
                 </div>
                 <div class="col-sm-6 mb-6 mb-sm-0">
