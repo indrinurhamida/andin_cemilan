@@ -26,7 +26,7 @@ class M_akun extends CI_Model
 	}
 
 	function tampil_data(){
-		return $this->db->get('tbl_akun');
+		return $this->db->query('SELECT pg.nama_pegawai, ak.id_akun, ak.username, ak.password, ak.jabatan, ak.id_pegawai FROM `tbl_akun` as ak join tbl_pegawai as pg ON pg.id_pegawai=ak.id_pegawai');
 	}
 
 	function getPegawai(){

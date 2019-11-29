@@ -19,7 +19,7 @@
                             <th>Username</th>
                             <th>Password</th>
                             <th>Jabatan</th>
-                            <th>ID_pegawai</th>
+                            <th>Nama pegawai</th>
                             <th>Aksi</th>
                      </tr>
                 </thead>
@@ -33,7 +33,7 @@
                                 <td><?= $item->username ?></td>
                                 <td><?= $item->password ?></td>
                                 <td><?= $item->jabatan ?></td>
-                                <td><?= $item->id_pegawai ?></td>
+                                <td><?= $item->nama_pegawai ?></td>
                                 <td>
                                     <a href="<?php echo base_url() . 'data-master/akun/edit'; ?>/<?php echo $item->id_akun?>" 
                                             class="btn btn-success">Edit</a>

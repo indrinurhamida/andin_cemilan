@@ -13,7 +13,7 @@
                     <thead>
                         <tr style="text-align:center">
                             <th>ID Barang Detail</th>
-                            <th>ID Barang</th>
+                            <th>Nama Barang & Rasa</th>
                             <th>Berat</th>
                             <th>Harga</th>
                             <th>Stok</th>
@@ -26,7 +26,7 @@
                             ?>
                             <tr>
                                 <td><?= $item->id_barangdetail   ?></td>
-                                <td><?= $item->id_barang ?></td>
+                                <td><?= $item->nama_barang .' - '. $item->rasa ?></td>
                                 <td><?= $item->berat ?></td>
                                 <td><?= $item->harga ?></td>
                                 <td><?= $item->stok  ?></td>

@@ -20,7 +20,7 @@ class M_barangdetail extends CI_Model
         return $kodejadi;
     }
     function tampil_data(){
-        return $this->db->get('tbl_barangdetail');
+        return $this->db->query('SELECT b.nama_barang, b.rasa, bt.id_barangdetail, bt.berat, bt.harga, bt.stok FROM `tbl_barangdetail` as bt join tbl_barang as b ON bt.id_barang=b.id_barang');
     }
 
     function tampil_barang(){

@@ -30,9 +30,9 @@
                             <tr>
                                 <td><?= $item->id_barangmasuk       ?></td>
                                 <td><?= $item->tgl_masuk            ?></td>
-                                <td><?= $item->id_supplier          ?></td>
-                                <td><?= $item->id_barang            ?></td>
-                                <td><?= $item->id_pegawai           ?></td>
+                                <td><?= $item->nama_supplier          ?></td>
+                                <td><?= $item->nama_barang            ?></td>
+                                <td><?= $item->nama_pegawai           ?></td>
                                 <td><?= $item->berat                ?></td>
                                 <td><?= $item->harga_beli           ?></td>
                                 <td>
