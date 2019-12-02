@@ -1,15 +1,8 @@
 <?php
 class M_login extends CI_Model{
-    //cek pegawai
+    //cek pegawai di databse
     function auth_pegawai($username,$password){
-        $query = $this->db->query("SELECT * FROM akun WHERE username='$username' AND password=MD5('$password') LIMIT 1");
-        return $query;
+        $sql = $this->db->query("SELECT * FROM tbl_akun WHERE username='$username' AND password='$password' LIMIT 1");
+        return $sql;
     }
- 
-    //cek gudang
-    function auth_gudang($username,$password){
-        $query = $this->db->query("SELECT * FROM akun WHERE ='$username' AND pass=MD5('$password') LIMIT 1");
-        return $query;
-    }
- 
 }

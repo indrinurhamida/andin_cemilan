@@ -1,5 +1,6 @@
 <?php
 class Page extends CI_Controller{
+  
   function __construct(){
     parent::__construct();
     //validasi jika user belum login
@@ -10,7 +11,9 @@ class Page extends CI_Controller{
   }
  
   function index(){
-    $this->load->view('dashboard');
+
+    echo "berhasillll";
+    //$this->load->view('dashboard');
   }
  
   

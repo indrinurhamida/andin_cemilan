@@ -10,7 +10,25 @@ class Pegawai extends CI_Controller
 	function index(){
 		$data['pegawai'] = $this->m_pegawai->tampil_data()->result();
     	$this->load->view('template/header');
-    	$this->load->view('template/navbar');
+    	if($this->session->set_userdata('jabatan','gudang')){
+
+			// jika yang login adalah admin maka menggunakan navbar_gudang
+			
+			$this->load->view('template_login/navbar_gudang');
+			
+
+		} elseif ($this->session->set_userdata('jabatan','admin')) {
+
+			// jika yang login adalah pegawai maka menggunakan navbar_admin
+			
+			$this->load->view('template_login/navbar_admin');
+			
+
+		} else {
+			
+			// jika yang login adalah gudang maka menggunakan navbar_pegawai
+			$this->load->view('template_login/navbar_pegawai');
+		}
        	$this->load->view('data-master/pegawai/daftarpegawai',$data);
        	$this->load->view('template/footer');
 	}
