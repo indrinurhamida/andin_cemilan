@@ -53,14 +53,14 @@
       <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url().'data-master/supplier'; ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Data Supplier</span></a>
+          <span>Supplier</span></a>
       </li>
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url() . 'data-master/pegawai';?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Data Pegawai</span></a>
+          <span>Pegawai</span></a>
       </li>
 
       <!-- Nav Item - Tables -->

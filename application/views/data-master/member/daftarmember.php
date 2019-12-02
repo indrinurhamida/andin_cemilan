@@ -5,7 +5,7 @@
     </div>
     <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <a href="<?php echo base_url().'data-master/member/tambah'; ?>" class="btn btn-primary">Tambah Data Member</a>
+        <a href="<?php echo base_url().'data-master/member/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
     </div>
     <div class="card-body">
             <div class="table-responsive">
