@@ -30,8 +30,18 @@ date_default_timezone_set('Asia/Jakarta');
             </div>
             <div class="form-group row">
                  <div class="col-sm-6 mb-6 mb-sm-0">
-                    <label for="exampleInputEmail1">Kode Barang</label>
-                    <input type="text" name="id_barang" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Kode Barang">
+                    <label for="exampleInputEmail1">Barang</label>
+                    <select name="id_barangdetail" class="form-control" required>
+                        <option value="">-- Pilih Barang --</option>
+                        <?php
+                        foreach ($barang as $value) {
+                        ?>
+                        <option value="<?= $value->id_barangdetail ?>"><?= $value->id_barangdetail ?></option>}
+                        
+                        <?php
+                        }
+                        ?>
+                    </select>
                 </div>
                 <div class="col-sm-6 mb-6 mb-sm-0">
                     <label for="exampleInputEmail1">Bayar</label>
