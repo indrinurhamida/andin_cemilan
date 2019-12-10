@@ -120,9 +120,9 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url() . 'laporan/laporanstok'; ?>">
+        <a class="nav-link" href="<?php echo base_url() . 'laporan/laporan'; ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Laporan Stok</span></a>
+          <span>Laporan</span></a>
       </li>
 
       <!-- Divider -->
