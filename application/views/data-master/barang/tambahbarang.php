@@ -19,13 +19,7 @@
             <div class="form-group row">
                 <div class="col-sm-6 mb-6 mb-sm-4">
                     <label for="exampleInputEmail1">Rasa</label>
-                    <select name="rasa" class="form-control" required>
-                        <option value="">-- Pilih Rasa --</option>
-                        <option>Asin</option>
-                        <option>Manis</option>
-                        <option>Balado</option> 
-                        <option>Pedas</option>                       
-                    </select>
+                    <input type="text" name="rasa" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Rasa">
                 </div>
             </div>
 
