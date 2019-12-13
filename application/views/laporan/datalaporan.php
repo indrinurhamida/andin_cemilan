@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Data Laporan Stok</h1>
+        <h1 class="h3 mb-0 text-gray-800">Data Laporan</h1>
     </div>
     <div class="card shadow mb-4">
     <!--<div class="card-header py-3">
@@ -23,7 +23,7 @@
                                 <td></td>
                                 <td></td>
                                 <td>
-                                    <a href="<?php echo base_url() . 'laporan/laporanstok/cetak'; ?>" 
+                                    <a href="<?php echo base_url() . 'laporan/laporan/cetak'; ?>" 
                                             class="btn btn-success">Cetak</a>
                                 </td>
                             </tr>

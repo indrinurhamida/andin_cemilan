@@ -31,7 +31,7 @@ class Laporanstok extends CI_Controller
             // jika yang login adalah gudang maka menggunakan navbar_pegawai
             $this->load->view('template_login/navbar_pegawai');
         }
-        $this->load->view('laporan/datalaporan',$data);
+        $this->load->view('laporan/datalaporan', $data);
         $this->load->view('template/footer');
     }
     
