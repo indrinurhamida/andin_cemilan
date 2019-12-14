@@ -11,11 +11,11 @@
           <form class="form-horizontal" action="">
             <div class="form-group">
               <label class="control-label" for="email">tanggal :</label>
-                <input type="email" class="form-control" id="" placeholder="" name="" readonly>
+                <input type="email" class="form-control" id="" placeholder="<?php echo date("d/m/Y"); ?>" name="" readonly>
             </div>
             <div class="form-group">
               <label class="control-label" for="pwd">karyawan :</label>
-                <input type="password" class="form-control" id="" placeholder="" name="" readonly>
+                <input type="password" class="form-control" id="" placeholder="kasir" name="" readonly>
             </div>
             <div class="form-group">
               <label class="control-label" for="pwd">member :</label>
