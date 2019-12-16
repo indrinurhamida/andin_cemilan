@@ -1,16 +1,16 @@
 <?php
 
-class Laporan extends CI_Controller
+class Laporantransaksi extends CI_Controller
     {
 	function __construct(){
 		parent::__construct();
-		$this->load->model('m_laporan');
+		$this->load->model('m_laporantransaksi');
 		
 	}
 
     function index()
     {
-		$data['laporan'] = $this->m_laporan->tampil_data()->result();
+		$data['laporantransaksi'] = $this->m_laporantransaksi->tampil_data()->result();
         $this->load->view('template/header');
         if($this->session->set_userdata('jabatan','admin')){
 
@@ -31,7 +31,7 @@ class Laporan extends CI_Controller
             // jika yang login adalah gudang maka menggunakan navbar_pegawai
             $this->load->view('template_login/navbar_pegawai');
         }
-        $this->load->view('laporan/datalaporan',$data);
+        $this->load->view('laporan/laporantransaksi',$data);
         $this->load->view('template/footer');
     }
     
