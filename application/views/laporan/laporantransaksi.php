@@ -4,11 +4,13 @@
         <h1 class="h3 mb-0 text-gray-800">Data Laporan Transaksi</h1>
     </div>
         <div class="row">
-            <div class="col-md-12">
-                <div class="card card-body">
-                    <form class="form-horizontal" action="">
-                        <div class="form-group">
-                            <label class="control-label col-sm-2" for="pwd">Bulan :</label>
+        <div class="card card-body">
+            <div class="col-sm-12">
+            <form class="form-horizontal" action="">
+            <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="">Bulan :</label>
                                 <select name="" class="form-control">
                                     <option value="">---Option---</option>
                                         <?php foreach ($bulan as $item) {
@@ -17,8 +19,10 @@
                                         <?php } ?>
                                 </select>
                         </div>
-                        <div class="form-group">
-                            <label class="control-label col-sm-2" for="pwd">Tahun :</label>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                            <label for="">Tahun :</label>
                                 <select name="" class="form-control">
                                     <option value="">---Option---</option>
                                         <?php foreach ($tahun as $item) {
@@ -26,13 +30,20 @@
                                     <option></option>
                                         <?php } ?>
                                 </select>
-                                <br>
-                                <button type="button" class="btn btn-info">Cari</button>
+                                
+                                
                         </div>
+                       
                     </form>
+               
                 </div>
+                </div>
+                <br>
+                    <button type="button" class="btn btn-info">Cari</button>
+        
             </div>
-        </div>
+            </div>
+            </div>
             <br>
             
         <div class="card card-body">
