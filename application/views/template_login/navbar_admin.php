@@ -122,7 +122,7 @@
       <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url() . 'laporan/laporanstok'; ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Laporan Stok</span></a>
+          <span>Laporan Transaksi</span></a>
       </li>
 
       <!-- Divider -->
