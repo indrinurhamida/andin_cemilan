@@ -120,9 +120,9 @@ s<body id="page-top">
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url() . 'laporan/laporan'; ?>">
+        <a class="nav-link" href="<?php echo base_url() . 'laporan/laporantransaksi'; ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Laporan</span></a>
+          <span>Laporan Transaksi</span></a>
       </li>
 
       <!-- Divider -->
