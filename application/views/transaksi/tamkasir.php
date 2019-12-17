@@ -15,7 +15,14 @@
             </div>
             <div class="form-group">
               <label class="control-label" for="pwd">karyawan :</label>
-                <input type="password" class="form-control" id="" placeholder="kasir" name="" readonly>
+                <select name="" class="form-control">
+                <option value="">---Option--</option>
+                <?php 
+                  foreach ($pegawai as $item) {
+                ?>
+                <option><?= $item->id_pegawai ?> <?= $item->nama_pegawai ?></option>
+              <?php } ?>
+              </select>
             </div>
             <div class="form-group">
               <label class="control-label" for="pwd">member :</label>
@@ -125,7 +132,7 @@
             var total = response.harga*qty
             if( num > 0 ){
             $("#tr").append(`
-              <tr>
+              <tr id="`+num+`">
               <td>`+num+`</td>
               <td>`+kode+`</td>
               <td>`+nama+`</td>
@@ -133,7 +140,6 @@
               <td>`+qty+`</td>
               <td>`+total+`</td>
                 <td>
-                  <button type="button" class="btn btn-success">Update</button>
                   <button type="button" class="btn btn-danger">Hapus</button>
                 </td>
               </tr>

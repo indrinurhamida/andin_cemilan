@@ -11,10 +11,11 @@ class Transaksi extends CI_Controller
     {
         $this->load->model('m_barangdetail');
         $this->load->model('m_member');
+        $this->load->model('m_pegawai');
         $data['transaksi'] = $this->m_transaksi->tampil_data()->result();
         $data['barangdetail'] = $this->m_barangdetail->tampil_data()->result();
         $data['member'] = $this->m_member->tampil_data()->result();
-
+        $data['pegawai'] = $this->m_pegawai->tampil_data()->result();
 
         $this->load->view('template/header');
         $this->load->view('template/navbar');
