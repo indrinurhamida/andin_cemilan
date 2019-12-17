@@ -32,25 +32,25 @@ class Transaksi extends CI_Controller
 
     }
     
-    function tambah_aksi(){
-        $id_pegawai		= $this->input->post('id_pegawai');
-        $nama_pegawai	= $this->input->post('nama_pegawai');
-        $alamat			= $this->input->post('alamat');
-        $email			= $this->input->post('email');
-        $no_hp			= $this->input->post('no_hp');
-    
-        $data = array(
-        'id_pegawai'		=> $id_pegawai,
-        'nama_pegawai' 		=> $nama_pegawai,
-        'alamat' 			=> $alamat,
-        'email' 			=> $email,
-        'no_hp' 			=> $no_hp,
-        );
-    
-        $this->m_pegawai->input_data($data, 'tbl_pegawai');
-        redirect('data-master/pegawai');
-            
+    function kode_barang(){
+        $this->load->model('m_barangdetail');
+        $kode = $_POST["kode_barang"];
+        $detailbarang = $this->m_barangdetail->ambil_satu_data($kode)->result();
+        foreach($detailbarang as $val) {
+        $barang = array(
+                "id_barangdetail" => $val->id_barangdetail,
+                "nama_barang" => $val->nama_barang,
+                "rasa" => $val->rasa,
+                "berat" => $val->berat,
+                "harga" => $val->harga,
+                "stok" => $val->stok
+            );
         }
+
+        echo json_encode($barang);
+       
+    }
+
     
 
 }

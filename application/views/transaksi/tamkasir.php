@@ -42,15 +42,15 @@
                 <?php 
                   foreach ($barangdetail as $item) {
                 ?>
-                <option><?= $item->nama_barang .' - '. $item->rasa ?> <?= $item->berat ?> <?= $item->harga ?></option>
+                <option id="brg" value="<?php echo $item->id_barangdetail ?>"><?= $item->nama_barang .' - '. $item->rasa ?> <?= $item->berat ?> <?= $item->harga ?></option>
               <?php } ?>
               </select>
             </div>
             <div class="form-group">
               <label class="control-label" for="pwd">qty :</label>
-                <input type="number" class="form-control" id="" placeholder="" name="">
+                <input type="number" class="form-control" id="qty" placeholder="" name="">
                 <br>
-                <button type="button" class="btn btn-info">tambahkan</button>
+                <button type="button" class="btn btn-info" id="tambah">tambahkan</button>
             </div>
           </form>
         </div>
@@ -73,19 +73,7 @@
             <th>aksi</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>
-              <button type="button" class="btn btn-success">Update</button>
-              <button type="button" class="btn btn-danger">Hapus</button>
-            </td>
-          </tr>
+        <tbody id="tr">
         </tbody>
       </table>
     </div>
@@ -119,3 +107,41 @@
 
   </div>
 </div>
+<script>
+  $(document).ready(function(){ 
+    var num = 1
+    $("#tambah").click(function(){
+      var kode = document.getElementById("brg").value
+        $.ajax({
+        type : 'post',
+        url  : 'transaksi/kode_barang',
+        data : { "kode_barang" : kode},
+        success: function(response) {
+          var response = JSON.parse(response)
+            var qty = document.getElementById("qty").value
+            var kode = response.id_barangdetail;
+            var nama = response.nama_barang
+            var harga = response.harga 
+            var total = response.harga*qty
+            if( num > 0 ){
+            $("#tr").append(`
+              <tr>
+              <td>`+num+`</td>
+              <td>`+kode+`</td>
+              <td>`+nama+`</td>
+              <td>`+harga+`</td>
+              <td>`+qty+`</td>
+              <td>`+total+`</td>
+                <td>
+                  <button type="button" class="btn btn-success">Update</button>
+                  <button type="button" class="btn btn-danger">Hapus</button>
+                </td>
+              </tr>
+              `)
+            num = num + 1
+            }
+          }
+        })
+      })    
+})
+</script>
