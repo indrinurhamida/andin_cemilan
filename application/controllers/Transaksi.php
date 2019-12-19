@@ -23,22 +23,35 @@ class Transaksi extends CI_Controller
         $this->load->view('template/footer');
     }
 
-    function tambah(){
-		$data['kode'] = $this->m_transaksi->tampil_kode();
+  //   function tambah(){
+		// $data['kode'] = $this->m_transaksi->tampil_kode();
 
-		$this->load->view('template/header');
-        $this->load->view('template/navbar');
-        $this->load->view('transaksi/tamkasir', $data);
-        $this->load->view('template/footer');
+		// $this->load->view('template/header');
+  //       $this->load->view('template/navbar');
+  //       $this->load->view('transaksi/tamkasir', $data);
+  //       $this->load->view('template/footer');
 
+  //   }
+    function add()
+    {
+        $data = array(
+            "id_member" => $_POST["id_member"],
+            "tgl_transaksi" => $_POST["tgl_transaksi"],
+            "id_pegawai" => $_POST["id_pegawai"],
+            "jumlah_bayar" => $_POST["jumlah_bayar"],
+            "kembalian" => $_POST["kembalian"]
+        );
+        $this->m_transaksi->input_data($data, "tbl_transaksi");
+        redirect(base_url()."transaksi");
     }
     
     function kode_barang(){
         $this->load->model('m_barangdetail');
         $kode = $_POST["kode_barang"];
         $detailbarang = $this->m_barangdetail->ambil_satu_data($kode)->result();
+        $barang = array();
         foreach($detailbarang as $val) {
-        $barang = array(
+        $array = array(
                 "id_barangdetail" => $val->id_barangdetail,
                 "nama_barang" => $val->nama_barang,
                 "rasa" => $val->rasa,
@@ -46,8 +59,8 @@ class Transaksi extends CI_Controller
                 "harga" => $val->harga,
                 "stok" => $val->stok
             );
+        $barang[] = $array;
         }
-
         echo json_encode($barang);
        
     }
