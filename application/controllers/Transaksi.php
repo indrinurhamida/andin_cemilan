@@ -52,6 +52,9 @@ class Transaksi extends CI_Controller
        
     }
 
-    
+    function hapus ($id=''){
+        $where = array('id_barangdetail' => $id);
+        $this->m_transaksi->hapus_data($where, 'tbl_transaksi');
+    }
 
 }

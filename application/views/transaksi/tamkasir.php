@@ -108,7 +108,7 @@
     </div>
   </form>
   <br>
-  <button type="button" class="btn btn-danger">Batal</button>
+  <a href="<?php echo base_url() . 'transaksi/tamkasir'; ?>" class="btn btn-danger">Batal</a>
   <button type="button" class="btn btn-success">Simpan dan Cetak</button>
 </div>
 
