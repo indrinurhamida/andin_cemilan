@@ -47,22 +47,26 @@
             <br>
             
         <div class="card card-body">
-        <button type="button" class="btn btn-info primary">cetak</button>
+       
         <br>
             <div class="table table-bordered">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr style="text-align:center">
-                            <th>No</th>
-                            <th>ID User</th>
+                            <th>#</th>
                             <th>Tanggal</th>
-                            <th>Kode Barang</th>
-                            <th>Jumlah</th>
-                            <th>Total Harga</th>
+                            <th>Karyawan</th>
+                            <th>Member</th>
+                            <th>Kode Transaksi</th>
+                            <th>Barang</th>
+                            <th>Qty</th>
+                            <th>Total</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
+                            <td></td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -74,6 +78,7 @@
                     </tbody>
                 </table>
             </div>
+             <button type="button" class="btn btn-info primary">cetak</button>
         </div>
 </div>
 
