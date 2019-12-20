@@ -12,11 +12,26 @@
                 <div class="form-group">
                     <label for="">Bulan :</label>
                                 <select name="" class="form-control">
-                                    <option value="">---Option---</option>
-                                        <?php foreach ($bulan as $item) {
-                                        ?>
-                                    <option></option>
-                                        <?php } ?>
+                                    <option value="">-- Pilih Bulan --</option>
+                                    <?php
+                                    $bulan = array(
+                                            '01' => 'JANUARI',
+                                            '02' => 'FEBRUARI',
+                                            '03' => 'MARET',
+                                            '04' => 'APRIL',
+                                            '05' => 'MEI',
+                                            '06' => 'JUNI',
+                                            '07' => 'JULI',
+                                            '08' => 'AGUSTUS',
+                                            '09' => 'SEPTEMBER',
+                                            '10' => 'OKTOBER',
+                                            '11' => 'NOVEMBER',
+                                            '12' => 'DESEMBER',
+                                            );
+                                    foreach ($bulan as $b) {
+                                    ?>
+                                    <option><?= $b?></option>
+                                    <?php }?>
                                 </select>
                         </div>
                         </div>
