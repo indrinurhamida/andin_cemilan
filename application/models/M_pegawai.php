@@ -8,7 +8,7 @@ class M_pegawai extends CI_Model
 	$this->db->order_by('id_pegawai', 'DESC');
  	$this->db->limit(1);
  	$query = $this->db->get('tbl_pegawai');    
-
+// 
  // //        //cek dulu apakah ada sudah ada kode di tabel.    
 	if ($query->num_rows() <> 0) {
             

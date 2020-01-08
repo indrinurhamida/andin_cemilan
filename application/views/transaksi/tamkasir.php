@@ -9,8 +9,8 @@
       <div class="col-md-6">
         <div class="card card-body">
             <div class="form-group">
-              <label class="control-label" for="email">tanggal :</label>
-                <input type="email" class="form-control" id="" placeholder="<?php echo date("d/m/Y"); ?>" name="tgl_transaksi" readonly>
+              <label class="control-label" for="email">id_transaksi</label>
+                <input type="email" class="form-control" id="" value="<?= $kode1 ?>" name="id_transaksi" readonly>
             </div>
             <div class="form-group">
               <label class="control-label" for="pwd">karyawan :</label>
@@ -39,6 +39,10 @@
       <!-- Tampilan Untuk Mencari Barang di Transaksi -->
       <div class="col-md-6">
         <div class="card card-body">
+            <div class="form-group">
+              <label class="control-label" for="email">tanggal :</label>
+              <input type="email" class="form-control" id="" placeholder="<?php echo date("d/m/Y"); ?>" name="tgl_transaksi" readonly>
+            </div>
             <div class="form-group">
               <label class="control-label" for="email">barang :</label>
               <select name=""  id="brg" class="form-control">
@@ -137,11 +141,18 @@
                   <td>${qty}</td>
                   <td>${total}</td>
                     <td>
-                      <button type="button" class="btn btn-danger">Hapus</button>
+                      <button type="button" id="${num}" class="btn btn-danger hapus">Hapus</button>
                     </td>
                   </tr>
                   `)
               num = num + 1
+
+              $(".hapus").click(function(e){
+                e.preventDefault()
+                var id = $(this).attr("id")
+                $("tr#"+id).remove()
+                num--
+              })
               }
             })
         $(".subs").val(subtotal)

@@ -16,6 +16,7 @@ class Transaksi extends CI_Controller
         $data['barangdetail'] = $this->m_barangdetail->tampil_data()->result();
         $data['member'] = $this->m_member->tampil_data()->result();
         $data['pegawai'] = $this->m_pegawai->tampil_data()->result();
+        $data['kode1'] = $this->m_transaksi->tampil_kode1();
 
         $this->load->view('template/header');
         $this->load->view('template/navbar');
@@ -23,18 +24,21 @@ class Transaksi extends CI_Controller
         $this->load->view('template/footer');
     }
 
-  //   function tambah(){
-		// $data['kode'] = $this->m_transaksi->tampil_kode();
+    // function tambah(){
+	// 	$data['kode'] = $this->m_transaksi->tampil_kode();
 
-		// $this->load->view('template/header');
-  //       $this->load->view('template/navbar');
-  //       $this->load->view('transaksi/tamkasir', $data);
-  //       $this->load->view('template/footer');
+	// 	$this->load->view('template/header');
+    //     $this->load->view('template/navbar');
+    //     $this->load->view('transaksi/tamkasir', $data);
+    //     $this->load->view('template/footer');
 
-  //   }
+    // }
     function add()
+
     {
+
         $data = array(
+            "id_transaksi" => $_POST["id_transaksi"],
             "id_member" => $_POST["id_member"],
             "tgl_transaksi" => $_POST["tgl_transaksi"],
             "id_pegawai" => $_POST["id_pegawai"],
@@ -42,6 +46,7 @@ class Transaksi extends CI_Controller
             "kembalian" => $_POST["kembalian"]
         );
         $this->m_transaksi->input_data($data, "tbl_transaksi");
+        $this->db->query("update tbl_member set point = point + 1 where id_member = '$data[id_member]'");
         redirect(base_url()."transaksi");
     }
     
