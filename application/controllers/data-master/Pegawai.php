@@ -28,14 +28,14 @@ class Pegawai extends CI_Controller
 	$id_pegawai		= $this->input->post('id_pegawai');
 	$nama_pegawai	= $this->input->post('nama_pegawai');
 	$alamat			= $this->input->post('alamat');
-	$email			= $this->input->post('email');
+	$akses			= $this->input->post('akses');
 	$no_hp			= $this->input->post('no_hp');
 
 	$data = array(
 	'id_pegawai'		=> $id_pegawai,
 	'nama_pegawai' 		=> $nama_pegawai,
 	'alamat' 			=> $alamat,
-	'email' 			=> $email,
+	'akses' 			=> $akses,
 	'no_hp' 			=> $no_hp,
 	);
 
@@ -64,7 +64,7 @@ class Pegawai extends CI_Controller
 	$id_pegawai		= $this->input->post('id_pegawai');
 	$nama_pegawai	= $this->input->post('nama_pegawai');
 	$alamat			= $this->input->post('alamat');
-	$email			= $this->input->post('email');
+	$akses			= $this->input->post('akses');
 	$no_hp			= $this->input->post('no_hp');
 	
 
@@ -72,7 +72,7 @@ class Pegawai extends CI_Controller
 	'id_pegawai'		=> $id_pegawai,
 	'nama_pegawai' 		=> $nama_pegawai,
 	'alamat' 			=> $alamat,
-	'email' 			=> $email,
+	'akses' 			=> $akses,
 	'no_hp' 			=> $no_hp,
 	
 	);
