@@ -32,7 +32,7 @@
                                 <td><?= $item->email ?></td>
                                 <td><?= $item->alamat ?></td>
                                 <td><?= $item->no_hp ?></td>
-                                <td></td>
+                                <td><?= $item->point ?></td>
                                 <td>
                                     <a href="<?php echo base_url() . 'data-master/member/edit'; ?>/<?= $item->id_member ?>" 
                                             class="btn btn-success">Edit</a>

@@ -89,7 +89,6 @@
                             <td></td>
                             <td></td>
                         </tr>
-                            <?php  ?>
                     </tbody>
                 </table>
             </div>
