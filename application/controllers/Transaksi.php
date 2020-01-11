@@ -69,6 +69,7 @@ class Transaksi extends CI_Controller
                 "stok" => $val->stok
             );
         $barang[] = $array;
+        //$this->db->query("update tbl_barangdetail set stok = stok - qty where id_barangdetail = '$data[id_barangdetail]'");
         }
         echo json_encode($barang);
        

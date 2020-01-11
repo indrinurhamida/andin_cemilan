@@ -2,7 +2,7 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Tambah Member</h1>
+        <h1 class="h3 font-weight-bold text-grey text-center">Tambah Member</h1>
     </div>
     <div class="container-fluid">
         <form class="" method="post" action="<?php echo base_url() . 'data-master/member/tambah_aksi'; ?>" enctype="multipart/form-data">

@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Edit Barang Detail</h1>
+        <h1 class="h3 font-weight-bold text-grey text-center">Edit Barang Detail</h1>
     </div>
     <div class="container-fluid">
         <form class="" method="post" action="<?php echo base_url() . 'data-master/barangdetail/update'; ?>" enctype="multipart/form-data">
@@ -35,8 +35,8 @@
                 </div>
 
                 <div class="col-sm-6 mb-3 mb-sm-0">
-                    <label for="exampleInputEmail1">Berat</label>
-                    <!--<input type="number" name="berat" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukkan Berat" value="">-->
+                    <label>Berat</label>
+                    <!--input type="number" name="berat"-->
                     <select name="berat" class="form-control">
                 <option value="">---Pilih Berat---</option>
                 <?php

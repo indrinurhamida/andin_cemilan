@@ -2,18 +2,18 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Transaksi</h1>
+        <h1 class="h3 font-weight-bold text-grey text-center">Transaksi</h1>
     </div>
 <form action="<?php echo base_url()."transaksi/add"?>" method="post" accept-charset="utf-8">
     <div class="row">
       <div class="col-md-6">
         <div class="card card-body">
             <div class="form-group">
-              <label class="control-label" for="email">id_transaksi</label>
+              <label class="control-label" for="email">ID Transaksi</label>
                 <input type="email" class="form-control" id="" value="<?= $kode1 ?>" name="id_transaksi" readonly>
             </div>
             <div class="form-group">
-              <label class="control-label" for="pwd">karyawan :</label>
+              <label class="control-label" for="pwd">Pegawai</label>
                 <select name="id_pegawai" class="form-control">
                 <option value="">---Option--</option>
                 <?php 
@@ -24,7 +24,7 @@
               </select>
             </div>
             <div class="form-group">
-              <label class="control-label" for="pwd">member :</label>
+              <label class="control-label" for="pwd">Member</label>
                 <select name="id_member" class="form-control">
                 <option value="">---Option--</option>
                 <?php 
@@ -40,11 +40,11 @@
       <div class="col-md-6">
         <div class="card card-body">
             <div class="form-group">
-              <label class="control-label" for="email">tanggal :</label>
-              <input type="email" class="form-control" id="" placeholder="<?php echo date("d/m/Y"); ?>" name="tgl_transaksi" readonly>
+              <label class="control-label" for="email">Tanggal</label>
+              <input type="date" class="form-control" id="" placeholder="<?php echo date("d/m/y"); ?>" name="tgl_transaksi">
             </div>
             <div class="form-group">
-              <label class="control-label" for="email">barang :</label>
+              <label class="control-label" for="email">Barang</label>
               <select name=""  id="brg" class="form-control">
                 <option value="">---Option--</option>
                 <?php 
@@ -55,10 +55,10 @@
               </select>
             </div>
             <div class="form-group">
-              <label class="control-label" for="pwd">qty :</label>
+              <label class="control-label" for="pwd">QTY</label>
                 <input type="number" class="form-control" id="qty" placeholder="" name="">
                 <br>
-                <button type="button" class="btn btn-info" id="tambah">tambahkan</button>
+                <button type="button" class="btn btn-info" id="tambah">Tambahkan</button>
             </div>
           </div>
       </div>
@@ -71,13 +71,13 @@
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th>#</th>
-            <th>kode barang</th>
-            <th>nama barang</th>
-            <th>harga satuan</th>
-            <th>qty</th>
-            <th>total</th>
-            <th>aksi</th>
+            <th>No</th>
+            <th>ID Barang</th>
+            <th>Nama Barang</th>
+            <th>Harga Satuan</th>
+            <th>QTY</th>
+            <th>Total</th>
+            <th>Aksi</th>
           </tr>
         </thead>
         <tbody id="tr">
@@ -88,7 +88,7 @@
     <!-- Tampilan Untuk Uang Bayar -->
 <div class="card">
     <div class="form-group">
-      <label class="control-label col-sm-2" for="email">Subtotal :</label>
+      <label class="control-label col-sm-2" for="email">Subtotal</label>
       <div class="col-sm-5">
         <input type="email" class="form-control subs" id="subtotal" placeholder="" name="" readonly>
       </div>
@@ -100,14 +100,16 @@
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="pwd">Kembalian :</label>
+      <label class="control-label col-sm-2" for="pwd">Kembalian</label>
       <div class="col-sm-5">          
         <input type="number" class="form-control" id="kembali" placeholder="" name="kembalian" readonly>
     </div>
     </div>
   <br>
+   <div class="col-sm-6 mb-3 mb-sm-0">
   <button type="submit" class="btn btn-success">Simpan dan Cetak</button>
   <a href="<?php echo base_url() . 'transaksi/tamkasir'; ?>" class="btn btn-danger">Batal</a>
+</div>
 </div>
   </div>
 </form>

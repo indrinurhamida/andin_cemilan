@@ -31,8 +31,8 @@ class Login extends CI_Controller{
             }else{
                 //echo "login gagal"; 
                 echo "<script> 
-                        alert('Login Gagal! Username atau Paaword Salah!');
-                        window.location='".base_url('auth')."';
+                        alert('Login Gagal! Username atau Password Salah!');
+                        window.location='".base_url('login')."';
                      </script>";
             }
         }

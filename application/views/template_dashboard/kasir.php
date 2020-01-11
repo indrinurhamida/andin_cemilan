@@ -4,8 +4,15 @@
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 font-weight-bold text-grey text-center">Halaman Dashboard, Kasir!</h1>
-
+            <div class="card card-body">
+            <div class="col-sm-12">
+            <form class="form-horizontal" action="">
+                <h1 class="h3 font-weight-bold text-grey text-center">Halaman Dashboard, Andin!</h1>
+            </form>
+          </div>
+          
+              
+          </div>
           </div>
 
           <!-- Content Row -->
