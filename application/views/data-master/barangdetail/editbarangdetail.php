@@ -35,8 +35,8 @@
                 </div>
 
                 <div class="col-sm-6 mb-3 mb-sm-0">
-                    <label for="exampleInputEmail1">Berat</label>
-                    <!--<input type="number" name="berat" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukkan Berat" value="">-->
+                    <label>Berat</label>
+                    <!--input type="number" name="berat"-->
                     <select name="berat" class="form-control">
                 <option value="">---Pilih Berat---</option>
                 <?php

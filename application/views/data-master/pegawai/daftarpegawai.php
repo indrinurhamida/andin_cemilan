@@ -16,7 +16,7 @@
                             <th>Nama Pegawai</th>
                             <th>Alamat</th>
                             <th>Akses</th>
-                            <th>No.hp</th>
+                            <th>No Hp</th>
                             <th>Aksi</th>
                     </tr>
                 </thead>

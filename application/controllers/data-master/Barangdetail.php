@@ -60,7 +60,7 @@
 		$where = array('id_barangdetail' =>$id);
         $data['ambil_barangdetail'] = $this->m_barangdetail->tampil_barang();
 		$data['barangdetail'] = $this->m_barangdetail->edit_data('tbl_barangdetail', $where)->row_array();
-		print_r($data["barangdetail"]);
+		//print_r($data["barangdetail"]);
 
 		$this->load->view('template/header');
         $this->load->view('template/navbar');
