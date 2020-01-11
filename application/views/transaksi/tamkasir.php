@@ -41,7 +41,7 @@
         <div class="card card-body">
             <div class="form-group">
               <label class="control-label" for="email">Tanggal</label>
-              <input type="date" class="form-control" id="" placeholder="<?php echo date("d/m/Y"); ?>" name="tgl_transaksi">
+              <input type="date" class="form-control" id="" placeholder="<?php echo date("d/m/y"); ?>" name="tgl_transaksi">
             </div>
             <div class="form-group">
               <label class="control-label" for="email">Barang</label>
