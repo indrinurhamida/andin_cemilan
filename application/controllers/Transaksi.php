@@ -19,7 +19,11 @@ class Transaksi extends CI_Controller
         $data['kode1'] = $this->m_transaksi->tampil_kode1();
 
         $this->load->view('template/header');
-        $this->load->view('template/navbar');
+        if($this->session->userdata('jabatan') == "admin"){
+               $this->load->view('template/navbar');
+            }elseif($this->session->userdata('jabatan') == "kasir"){
+               $this->load->view('template_login/navbar_kasir');
+            }
         $this->load->view('transaksi/tamkasir', $data);
         $this->load->view('template/footer');
     }

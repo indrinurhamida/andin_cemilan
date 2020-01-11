@@ -22,11 +22,31 @@ class Welcome extends CI_Controller {
 	//$this->load->helper('url');
 	public function index()
 	{
-        $this->load->view('template/header');
-        $this->load->view('template/navbar');
-        $this->load->view('dashboard');
-        $this->load->view('template/footer');
+		check_not_login();
+		if($this->session->userdata('jabatan') == "admin"){
+        	$this->load->view('template/header');
+        	$this->load->view('template/navbar');
+        	$this->load->view('template_dashboard/admin');
+        	$this->load->view('template/footer');
+
+    	} elseif($this->session->userdata('jabatan') == "kasir"){
+    		$this->load->view('template/header');
+        	$this->load->view('template_login/navbar_kasir');
+        	$this->load->view('template_dashboard/kasir');
+        	$this->load->view('template/footer');
+    	} elseif($this->session->userdata('jabatan') == "gudang"){
+    		$this->load->view('template/header');
+        	$this->load->view('template_login/navbar_gudang');
+        	$this->load->view('template_dashboard/gudang');
+        	$this->load->view('template/footer');
+    	} 
 		
+	}
+
+	public function logout(){
+		$params = array('id_akun', 'jabatan');
+		$this->session->unset_userdata($params);
+		redirect('login');
 	}
 
 }

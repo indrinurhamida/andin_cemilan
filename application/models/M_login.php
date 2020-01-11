@@ -1,8 +1,17 @@
 <?php
+defined ('BASEPATH') OR exit ('No direct script acess allowed');
+
 class M_login extends CI_Model{
-    //cek pegawai di databse
-    function auth_pegawai($username,$password){
-        $sql = $this->db->query("SELECT * FROM tbl_akun WHERE username='$username' AND password='$password' LIMIT 1");
-        return $sql;
-    }
+
+    public function login($post){
+        $this->db->select('*');
+        $this->db->from('tbl_akun');
+        $this->db->where('username', $post['username']);
+        $this->db->where('password', $post['password']);
+        $query = $this->db->get();
+        return $query;
+    } 
+
 }
+
+

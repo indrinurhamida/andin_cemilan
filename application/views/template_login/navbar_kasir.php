@@ -26,9 +26,8 @@
 
       <!-- Divider -->
       <hr class="sidebar-divider">
-      <!-- Nav Item - Pages Collapse Menu -->
-      <!-- Nav Item - Utilities Collapse Menu -->
-       <!-- Heading -->
+
+      <!-- Heading -->
       <div class="sidebar-heading">
         Data Master
       </div>
@@ -48,34 +47,20 @@
         </div>
       </li>
 
-      <li class="nav-item">
-
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-            <i class="fas fa-fw fa-folder"></i>
-            <span>Pergudangan</span>
-        </a>
-
-          <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">Login Screens:</h6>
-              <a class="collapse-item" href="<?php echo base_url() . 'data-master/barangmasuk'; ?>">Barang Masuk</a>
-            </div>
-          </div>
-      </li>
-
-      <!-- Divider -->
-
       <!-- Heading -->
-      
-      <!-- Nav Item - Pages Collapse Menu -->
-      
-
-      <!-- Nav Item - Charts -->
+      <div class="sidebar-heading">
+        Transaksi
+      </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
       
 
       <!-- Nav Item - Charts -->
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url() . 'transaksi'; ?>">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Kasir</span></a>
+      </li>
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
@@ -108,27 +93,27 @@
           <!-- Topbar Search -->
 
           <!-- Topbar Navbar -->
-            <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav ml-auto">
+
             <!-- Nav Item - Search Dropdown (Visible Only XS) -->
 
+              <!-- Dropdown - Messages -->
+              
             <!-- Nav Item - Alerts -->
-        
+            
                 <!-- Counter - Alerts -->
                 
               <!-- Dropdown - Alerts -->
-             
+              
 
             <!-- Nav Item - Messages -->
             
-                <!-- Counter - Messages -->
-                
               <!-- Dropdown - Messages -->
-             
-
+              
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Selamat Datang, Gudang!</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Selamat Datang, Kasir</span>
                 <img class="img-profile rounded-circle" src="admin.png">
               </a>
               <!-- Dropdown - User Information -->

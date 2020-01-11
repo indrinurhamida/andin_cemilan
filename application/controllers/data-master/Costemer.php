@@ -11,25 +11,7 @@ class costemer extends CI_Controller
 	{
 		$data['costemer'] = $this->m_costemer->tampil_data()->result();
         $this->load->view('template/header');
-        if($this->session->set_userdata('jabatan','admin')){
-
-			// jika yang login adalah admin maka menggunakan navbar_gudang
-			
-			$this->load->view('template_login/navbar_admin');
-			
-
-		} elseif ($this->session->set_userdata('jabatan','pegawai')) {
-
-			// jika yang login adalah pegawai maka menggunakan navbar_admin
-			
-			$this->load->view('template_login/navbar_pegawai');
-			
-
-		} else {
-			
-			// jika yang login adalah gudang maka menggunakan navbar_pegawai
-			$this->load->view('template_login/navbar_gudang');
-		}
+        $this->load->view('template/navbar');
         $this->load->view('data-master/costemer/daftarcostemer',$data);
         $this->load->view('template/footer');
 	}
