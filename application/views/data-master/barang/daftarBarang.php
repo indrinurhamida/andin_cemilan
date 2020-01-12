@@ -30,7 +30,7 @@
                                 <td>
                                     <a href="<?php echo base_url() . 'data-master/barang/edit'; ?>/<?= $item->id_barang ?>" 
                                             class="btn btn-success">Edit</a>
-                                    <!--a href="<?php //echo base_url() . 'data-master/barang/hapus'; ?>/<?php //echo $item->id_barang ?>" class="btn btn-danger" onclick="return confirm('Yakin Ingin Menghapus Data ?')">Hapus</a-->
+                                    <a href="<?php echo base_url() . 'data-master/barang/hapus'; ?>/<?php echo $item->id_barang ?>" class="btn btn-danger" onclick="return confirm('Yakin Ingin Menghapus Data ?')">Hapus</a>
                                 </td>
                             </tr>
                         <?php } ?>

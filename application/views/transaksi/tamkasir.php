@@ -50,7 +50,7 @@
                 <?php 
                   foreach ($barangdetail as $item) {
                 ?>
-                <option value="<?php echo $item->id_barangdetail ?>"><?= $item->nama_barang .' - '. $item->rasa ?> <?= $item->berat ?> <?= $item->harga ?></option>
+                <option value="<?php echo $item->id_barangdetail ?>"> <?= $item->nama_barang .' - '. $item->rasa ?> <?= $item->berat ?> <?= $item->harga ?></option>
               <?php } ?>
               </select>
             </div>

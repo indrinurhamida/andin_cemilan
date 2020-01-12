@@ -34,7 +34,7 @@
                                 <td><?= $item->jumlah_bayar?></td>
                                 <td><?= $item->kembalian ?></td-->
                                 <td>
-                                    <a href="<?php echo base_url() . ''; ?>" 
+                                    <a href="<?php echo base_url() . 'laporan/detail_laporan'; ?>" 
                                             class="btn btn-info">Detail</a>
                                     <!--a href="<?php //echo base_url() . 'data-master/barang/hapus'; ?>/<?php //echo $item->id_barang ?>" class="btn btn-danger" onclick="return confirm('Yakin Ingin Menghapus Data ?')">Hapus</a-->
                                 </td>
