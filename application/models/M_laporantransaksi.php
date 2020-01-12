@@ -28,6 +28,15 @@ class M_laporantransaksi extends CI_Model
 		return $this->db->get_where($table, $where);
 	}
 
+	/*function detail_laporan($filter){
+		$where = array('id_transaksi' => $id);
+		$data['barangdetail'] = $this->m_barangdetail->edit_data('tbl_barang', $where)->row_array();
+
+		$this->load->view('template/header');
+        $this->load->view('template/navbar');
+        $this->load->view('data-master/barang/editbarang', $data);
+        $this->load->view('template/footer');
+	}*/
 	
 }
 
