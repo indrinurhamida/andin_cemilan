@@ -12,8 +12,8 @@
                     id="exampleInputEmail1" aria-describedby="emailHelp" 
                     placeholder="Masukan ID" value="<?php echo $supplier['id_supplier'] ?>" readonly>
                 </div>
-            </div>
-            <div class="form-group row">
+            
+            <!--div class="form-group row"-->
                 <div class="col-sm-6 mb-3 mb-sm-0">
 
                     <label for="exampleInputEmail1">Nama Supplier</label>
@@ -21,6 +21,7 @@
                     id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan nama" 
                     value="<?php echo $supplier['nama_supplier'] ?>">
                 </div>
+            <!--/div-->
             </div>
             <div class="form-group row">
                 <div class="col-sm-6 mb-3 mb-sm-0">
@@ -30,8 +31,8 @@
                     id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Alamat" 
                     value="<?php echo $supplier['alamat_supplier'] ?>">
                 </div>
-            </div>
-            <div class="form-group row">
+            
+            <!--div class="form-group row"-->
                 <div class="col-sm-6 mb-3 mb-sm-0">
 
                     <label for="exampleInputEmail1">No Hp</label>
@@ -39,8 +40,8 @@
                     id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan nama" 
                     value="<?php echo $supplier['no_hp'] ?>">
                 </div>
+            <!--/div-->
             </div>
-            
             <button type="submit" class="btn btn-primary">Simpan</button>
             <a href="<?php echo base_url() . 'data-master/supplier'; ?>" class="btn btn-danger">Kembali</a>
         </form>

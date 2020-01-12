@@ -40,12 +40,12 @@
       <div class="col-md-6">
         <div class="card card-body">
             <div class="form-group">
-              <label class="control-label" for="email">Tanggal</label>
+              <label class="control-label" for="email">Tanggal Transaksi</label>
               <input type="date" class="form-control" id="" placeholder="<?php echo date("d/m/y"); ?>" name="tgl_transaksi">
             </div>
             <div class="form-group">
-              <label class="control-label" for="email">Barang</label>
-              <select name=""  id="brg" class="form-control">
+              <label class="control-label" for="email">Barang Detail</label>
+              <select name="id_barangdetail"  id="brg" class="form-control">
                 <option value="">---Option--</option>
                 <?php 
                   foreach ($barangdetail as $item) {
@@ -56,7 +56,7 @@
             </div>
             <div class="form-group">
               <label class="control-label" for="pwd">QTY</label>
-                <input type="number" class="form-control" id="qty" placeholder="" name="">
+                <input type="number" class="form-control" id="qty" placeholder="" name="qty">
                 <br>
                 <button type="button" class="btn btn-info" id="tambah">Tambahkan</button>
             </div>
@@ -72,7 +72,7 @@
         <thead>
           <tr>
             <th>No</th>
-            <th>ID Barang</th>
+            <th>ID Barang Detail</th>
             <th>Nama Barang</th>
             <th>Harga Satuan</th>
             <th>QTY</th>
@@ -88,9 +88,9 @@
     <!-- Tampilan Untuk Uang Bayar -->
 <div class="card">
     <div class="form-group">
-      <label class="control-label col-sm-2" for="email">Subtotal</label>
+      <label class="control-label col-sm-2" for="email">Sub Total</label>
       <div class="col-sm-5">
-        <input type="email" class="form-control subs" id="subtotal" placeholder="" name="" readonly>
+        <input type="email" class="form-control subs" id="subtotal" placeholder="" name="subtotal" readonly>
       </div>
     </div>
     <div class="form-group">

@@ -7,18 +7,18 @@
     <div class="container-fluid">
         <form class="" method="post" action="<?php echo base_url() . 'data-master/barangmasuk/tambah_aksi'; ?>">
             <div class="form-group row">
-                <div class="col-sm-6 mb-6 mb-sm-4">
+               <div class="col-sm-6 mb-3 mb-sm-0">
                     <label for="exampleInputEmail1">ID Barang Masuk</label>
                     <input type="text" name="id_barangmasuk" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan ID" value="<?= $kode ?>" readonly>
 
                 </div>
-                <div class="col-sm-6 mb-6 mb-sm-4">
+                <div class="col-sm-6 mb-3 mb-sm-0">
                     <label for="exampleInputEmail1">Tanggal Barang Masuk</label>
                     <input type="date" name="tgl_masuk" class="form-control" id="exampleInputEmail1">
                 </div>
             </div>
             <div class="form-group row">
-                <div class="col-sm-6 mb-6 mb-sm-4">
+                <div class="col-sm-6 mb-3 mb-sm-0">
                     <label for="exampleInputEmail1">ID_Supplier</label>
                     <select name="id_supplier" class="form-control" required>
                         <option value="">-- Pilih Supplier --</option>
@@ -32,7 +32,7 @@
                         ?>
                     </select> 
                 </div>
-                <div class="col-sm-6 mb-6 mb-sm-4">
+               <div class="col-sm-6 mb-3 mb-sm-0">
                     <label for="exampleInputEmail1">ID_Barang</label>
                     <select name="id_barang" class="form-control" required>
                         <option value="">-- Pilih Barang --</option>
@@ -47,7 +47,7 @@
                 </div>
             </div>
             <div class="form-group row">
-                <div class="col-sm-6 mb-6 mb-sm-4">
+                <div class="col-sm-6 mb-3 mb-sm-0">
                     <label for="exampleInputEmail1">ID_Pegawai</label>
                     <select name="id_pegawai" class="form-control" required>
                         <option value="">-- Pilih Pegawai --</option>
@@ -61,13 +61,13 @@
                         ?>
                     </select>
                 </div>
-                <div class="col-sm-6 mb-6 mb-sm-4">
+                <div class="col-sm-6 mb-3 mb-sm-0">
                     <label for="exampleInputEmail1">Berat</label>
                     <input type="number" name="berat" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Berat">
                 </div>
             </div>
             <div class="form-group row">
-                <div class="col-sm-6 mb-6 mb-sm-4">
+                <div class="col-sm-6 mb-3 mb-sm-0">
                     <label for="exampleInputEmail1">Harga Beli</label>
                     <input type="number" name="harga_beli" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Harga Beli">
                 </div>
