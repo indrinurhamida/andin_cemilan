@@ -74,6 +74,15 @@ class M_transaksi extends CI_Model
 	function edit_data($table,$where){
 		return $this->db->get_where($table, $where);
 	}
+	function lastId(){
+		$sql = $this->db->select("id_transaksi");
+		$sql = $this->db->from("tbl_transaksi");
+		$sql = $this->db->order_by('id_transaksi','desc');
+		$sql = $this->db->limit(1);
+		$sql = $this->db->get();
+
+		return $sql->result_array();
+	}
 
 }
 

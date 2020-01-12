@@ -35,23 +35,35 @@ class Transaksi extends CI_Controller
     //}
     function add()
 
-    {
-
+    {   
+        echo "<pre>";
+        print_r($_POST);
+        echo "</pre>";
+        $qty = array_sum($_POST['qty']);
+        $total = array_sum($_POST['subtotal']);
         $data = array(
             "id_transaksi"          => $_POST["id_transaksi"],
             "id_member"             => $_POST["id_member"],
             "tgl_transaksi"         => $_POST["tgl_transaksi"],
             "id_pegawai"            => $_POST["id_pegawai"],
-            "qty"                   => $_POST["qty"],
-            "total"                 => $_POST["subtotal"],
+            "qty"                   => $qty,
+            "total"                 => $total,
             "jumlah_bayar"          => $_POST["jumlah_bayar"],
             "kembalian"             => $_POST["kembalian"]
         );
-        //echo "<pre>";
-        //print_r($_POST);
-        //print_r($data);
-      $this->m_transaksi->input_data($data, "tbl_transaksi");
-        $this->db->query("update tbl_member set point = point + 1 where id_member = '$data[id_member]'");
+    $this->m_transaksi->input_data($data, "tbl_transaksi");
+    $this->db->query("update tbl_member set point = point + 1 where id_member = '$data[id_member]'");
+    $lastId = $this->m_transaksi->lastId()[0];
+    foreach ($_POST['id_barangdetail'] as $key => $value) {
+        $arr = array(
+            'id_transaksi' => $lastId['id_transaksi'],
+            'id_barangdetail' => $value,
+            'qty' => $_POST['qty'][$key],
+            'subtotal' => $_POST['subtotal'][$key]
+        );
+        $this->db->insert("tbl_transaksidetail", $arr);
+        $this->db->query("update tbl_barangdetail set stok = stok - $arr[qty] where id_barangdetail = '$arr[id_barangdetail]'");
+    }
         redirect(base_url()."transaksi");
     }
     

@@ -12,8 +12,11 @@
                     <tr style="text-align:center">
                             <th>ID Transaksi</th>
                             <th>ID Member</th>
-                            <th>Tanggal</th>
-                            <th>Pegawai</th>
+                            <!--th>Tanggal</th>
+                            <th>Pegawai</th-->
+                            <th>Kode Barang</th>
+                            <th>Nama Barang</th>
+                            <th>Harga</th>
                             <th>Qty</th>
                             <th>Total</th>
                             <th>Jumlah Bayar</th>
@@ -28,8 +31,11 @@
                             <tr>
                                 <td><?= $item->id_transaksi ?></td>
                                 <td><?= $item->id_member ?></td>
-                                <td><?= $item->tgl_transaksi ?></td>
-                                <td><?= $item->id_pegawai ?></td>
+                                <!--td><?= $item->tgl_transaksi ?></td>
+                                <td><?= $item->id_pegawai ?></td-->
+                                <td><?= $item->id_barangdetail ?></td>
+                                <td><?= $item->nama_barangdetail ?></td>
+                                <td><?= $item->harga ?></td>
                                 <td><?= $item->qty?></td>
                                 <td><?= $item->total ?></td>
                                 <td><?= $item->jumlah_bayar ?></td>

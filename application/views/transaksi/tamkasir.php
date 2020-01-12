@@ -90,7 +90,7 @@
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Sub Total</label>
       <div class="col-sm-5">
-        <input type="email" class="form-control subs" id="subtotal" placeholder="" name="subtotal" readonly>
+        <input type="email" class="form-control subs" id="subtotal" placeholder="" name="total" readonly>
       </div>
     </div>
     <div class="form-group">
@@ -137,11 +137,11 @@
                 $("#tr").append(`
                   <tr id="${num}">
                   <td>${num}</td>
-                  <td>${kode}</td>
+                  <td><input type="hidden" name="id_barangdetail[]" value="${kode}"> ${kode}</td>
                   <td>${nama}</td>
                   <td>${harga}</td>
-                  <td>${qty}</td>
-                  <td>${total}</td>
+                  <td><input type="hidden" name="qty[]" value="${qty}">${qty}</td>
+                  <td><input type="hidden" name="subtotal[]" value="${total}">${total}</td>
                     <td>
                       <button type="button" id="${num}" class="btn btn-danger hapus">Hapus</button>
                     </td>
