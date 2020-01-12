@@ -46,19 +46,20 @@ class Transaksi extends CI_Controller
             "id_member"             => $_POST["id_member"],
             "tgl_transaksi"         => $_POST["tgl_transaksi"],
             "id_pegawai"            => $_POST["id_pegawai"],
-            "id_barangdetail"       => $_POST["id_barangdetail"],
+            //"id_barangdetail"       => $_POST["id_barangdetail"],
             "qty"                   => $_POST["qty"],
-            "subtotal"              => $_POST["subtotal"],
+            "total"              => $_POST["subtotal"],
             "jumlah_bayar"          => $_POST["jumlah_bayar"],
             "kembalian"             => $_POST["kembalian"]
         );
-        echo "<pre>";
-        print_r($_POST);
-        print_r($data);
-/*        $this->m_transaksi->input_data($data, "tbl_transaksi");
+        //echo "<pre>";
+        //print_r($_POST);
+        //print_r($data);
+        $this->m_transaksi->input_data($data, "tbl_transaksi");
+        $this->m_transaksi->input_data($data, "tbl_transaksidetail");
         $this->db->query("update tbl_member set point = point + 1 where id_member = '$data[id_member]'");
         redirect(base_url()."transaksi");
-*/    }
+        }
     
     function kode_barang(){
         $this->load->model('m_barangdetail');
