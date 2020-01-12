@@ -55,7 +55,7 @@
               </select>
             </div>
             <div class="form-group">
-              <label class="control-label" for="pwd">QTY</label>
+              <label class="control-label" for="pwd">Qty</label>
                 <input type="number" class="form-control" id="qty" placeholder="" name="qty">
                 <br>
                 <button type="button" class="btn btn-info" id="tambah">Tambahkan</button>

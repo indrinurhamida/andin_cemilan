@@ -11,13 +11,7 @@ class Member extends CI_Controller
 	{
 		$data['member'] = $this->m_member->tampil_data()->result();
         $this->load->view('template/header');
-        if($this->session->userdata('jabatan') == "owner"){
-        	   $this->load->view('template_login/navbar_owner');
-        }elseif($this->session->userdata('jabatan') == "kasir"){
-        	   $this->load->view('template_login/navbar_kasir');
-        	}elseif ($this->session->userdata('jabatan') == "gudang") {
-        	   $this->load->view('template_login/navbar_gudang');
-        	}
+        $this->load->view('template_login/navbar_kasir');
         $this->load->view('data-master/member/daftarmember',$data);
         $this->load->view('template/footer');
 	}
@@ -26,7 +20,7 @@ class Member extends CI_Controller
 		$data['kode'] = $this->m_member->tampil_kode();
 
 		$this->load->view('template/header');
-        $this->load->view('template/navbar');
+        $this->load->view('template_login/navbar_kasir');
         $this->load->view('data-master/member/tambahmember', $data);
         $this->load->view('template/footer');
 
@@ -63,7 +57,7 @@ class Member extends CI_Controller
 		$data['member'] = $this->m_member->edit_data('tbl_member', $where)->row_array();
 
 		$this->load->view('template/header');
-        $this->load->view('template/navbar');
+        $this->load->view('template_login/navbar_kasir');
         $this->load->view('data-master/member/editmember', $data);
         $this->load->view('template/footer');
 	}

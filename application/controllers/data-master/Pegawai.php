@@ -10,9 +10,7 @@ class Pegawai extends CI_Controller
 	function index(){
 		$data['pegawai'] = $this->m_pegawai->tampil_data()->result();
     	$this->load->view('template/header');
-    	if($this->session->userdata('jabatan') == "owner"){
-        	   $this->load->view('template_login/navbar_owner');
-        }
+    	$this->load->view('template_login/navbar_owner');
        	$this->load->view('data-master/pegawai/daftarpegawai',$data);
        	$this->load->view('template/footer');
 	}
@@ -20,7 +18,7 @@ class Pegawai extends CI_Controller
 	function tambah(){
 		$data['kode'] = $this->m_pegawai->tampil_kode();
 		$this->load->view('template/header');
-        $this->load->view('template/navbar');
+        $this->load->view('template_login/navbar_owner');
         $this->load->view('data-master/pegawai/tambahpegawai', $data);
         $this->load->view('template/footer');
 
@@ -57,7 +55,7 @@ class Pegawai extends CI_Controller
 		$data['pegawai'] = $this->m_pegawai->edit_data('tbl_pegawai', $where)->row_array();
 
 		$this->load->view('template/header');
-        $this->load->view('template/navbar');
+        $this->load->view('template_login/navbar_owner');
         $this->load->view('data-master/pegawai/editpegawai', $data);
         $this->load->view('template/footer');
 	}

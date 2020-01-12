@@ -11,11 +11,9 @@
 		
 		$data['barangdetail'] = $this->m_barangdetail->tampil_data()->result();
         $this->load->view('template/header');
-        if($this->session->userdata('jabatan') == "owner"){
-        	   $this->load->view('template_login/owner');
-        	}elseif($this->session->userdata('jabatan') == "kasir"){
+        if($this->session->userdata('jabatan') == "kasir"){
         	   $this->load->view('template_login/navbar_kasir');
-        	}elseif ($this->session->userdata('jabatan') == "gudang") {
+        	}elseif($this->session->userdata('jabatan') == "gudang"){
         	   $this->load->view('template_login/navbar_gudang');
         	}
         $this->load->view('data-master/barangdetail/daftarbarangdetail',$data);
@@ -26,7 +24,11 @@
 		$data['kode'] = $this->m_barangdetail->tampil_kode();
 		$data['barangdetail'] = $this->m_barangdetail->tampil_barang();
 		$this->load->view('template/header');
-        $this->load->view('template/navbar');
+        if($this->session->userdata('jabatan') == "kasir"){
+        	   $this->load->view('template_login/navbar_kasir');
+        	}elseif($this->session->userdata('jabatan') == "gudang"){
+        	   $this->load->view('template_login/navbar_gudang');
+        	}
         $this->load->view('data-master/barangdetail/tambahbarangdetail', $data);
         $this->load->view('template/footer');
 
@@ -63,7 +65,11 @@
 		//print_r($data["barangdetail"]);
 
 		$this->load->view('template/header');
-        $this->load->view('template/navbar');
+        if($this->session->userdata('jabatan') == "kasir"){
+        	   $this->load->view('template_login/navbar_kasir');
+        	}elseif($this->session->userdata('jabatan') == "gudang"){
+        	   $this->load->view('template_login/navbar_gudang');
+        	}
         $this->load->view('data-master/barangdetail/editbarangdetail', $data);
         $this->load->view('template/footer');
 	}
