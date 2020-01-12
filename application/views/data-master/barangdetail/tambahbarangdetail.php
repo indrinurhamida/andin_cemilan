@@ -32,7 +32,7 @@
                     <select name="berat" class="form-control" required>
                         <option value="">-- Pilih Berat --</option>
                         <?php
-                            $berat = array("50 g","100 g","200 g","300 g","400 g","500 g","1000 g");
+                            $berat = array("50g","500 g","1000 g");
                             foreach ($berat as $v) {
                         ?>
                         <option><?= $v?></option>
