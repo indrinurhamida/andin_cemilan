@@ -67,15 +67,15 @@
                 </div>
             </div>
             <div class="form-group row">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                    <label for="exampleInputEmail1">Qty</label>
+                    <input type="number" name="qty" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan qty">
+                </div>
                 <div class="col-sm-6 mb-3 mb-sm-0">
                     <label for="exampleInputEmail1">Harga Beli</label>
                     <input type="number" name="harga_beli" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Harga Beli">
                 </div>
-                <div class="col-sm-6 mb-3 mb-sm-0">
-                    <label for="exampleInputEmail1">Qty</label>
-                    <input type="number" name="qty" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan qty">
-                </div>
-
+                
             </div>
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <button type="submit" class="btn btn-primary">Simpan</button>

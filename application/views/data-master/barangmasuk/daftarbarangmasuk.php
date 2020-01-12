@@ -18,6 +18,7 @@
                             <th>Nama Barang</th>
                             <th>Nama Pegawai</th>
                             <th>Berat</th>
+                            <th>Qty</th>
                             <th>Harga Beli</th>
                             <th>Aksi</th>
                     </tr>
@@ -34,6 +35,7 @@
                                 <td><?= $item->nama_barang            ?></td>
                                 <td><?= $item->nama_pegawai           ?></td>
                                 <td><?= $item->berat                ?></td>
+                                <td><?= $item->qty                ?></td>
                                 <td><?= $item->harga_beli           ?></td>
                                 <td>
                                     <a href="<?php echo base_url() . 'data-master/barangmasuk/edit'; ?>/<?php echo $item->id_barangmasuk ?>" class="btn btn-success">Edit</a>
