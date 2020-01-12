@@ -26,7 +26,7 @@ class Login extends CI_Controller{
                 $this->session->set_userdata($params);
                 echo "<script> 
                         alert('Selamat, Login Berhasil!');
-                        window.location='".base_url('welcome')."';
+                        window.location='".base_url('')."';
                      </script>";
             }else{
                 //echo "login gagal"; 

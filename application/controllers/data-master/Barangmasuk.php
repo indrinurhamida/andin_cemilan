@@ -13,11 +13,7 @@ class Barangmasuk extends CI_Controller
 		
 		$data['barangmasuk'] = $this->m_barangmasuk->tampil_data()->result();
         $this->load->view('template/header');
-        if($this->session->userdata('jabatan') == "admin"){
-        	   $this->load->view('template/navbar');
-        	}elseif($this->session->userdata('jabatan') == "gudang"){
-        	   $this->load->view('template_login/navbar_gudang');
-        	}
+        $this->load->view('template_login/navbar_gudang');
         $this->load->view('data-master/barangmasuk/daftarbarangmasuk', $data);
         $this->load->view('template/footer');
 	}
@@ -29,7 +25,7 @@ class Barangmasuk extends CI_Controller
 		$data['barang'] 			= $this->m_barangmasuk->getBarang();
 
 		$this->load->view('template/header');
-        $this->load->view('template/navbar');
+        $this->load->view('template_login/navbar_gudang');
         $this->load->view('data-master/barangmasuk/tambahbarangmasuk', $data);
         $this->load->view('template/footer');
 
@@ -72,7 +68,7 @@ class Barangmasuk extends CI_Controller
 		$data['barangmasuk'] 		= $this->m_barangmasuk->edit_data('tbl_barangmasuk', $where)->row_array();
 		
 		$this->load->view('template/header');
-        $this->load->view('template/navbar');
+        $this->load->view('template_login/navbar_gudang');
         $this->load->view('data-master/barangmasuk/editbarangmasuk', $data);
         $this->load->view('template/footer');
 	}

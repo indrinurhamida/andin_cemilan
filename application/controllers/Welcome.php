@@ -23,10 +23,10 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		check_not_login();
-		if($this->session->userdata('jabatan') == "admin"){
+		if($this->session->userdata('jabatan') == "owner"){
         	$this->load->view('template/header');
-        	$this->load->view('template/navbar');
-        	$this->load->view('template_dashboard/admin');
+        	$this->load->view('template_login/navbar_owner');
+        	$this->load->view('template_dashboard/owner');
         	$this->load->view('template/footer');
 
     	} elseif($this->session->userdata('jabatan') == "kasir"){

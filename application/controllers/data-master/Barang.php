@@ -12,11 +12,9 @@ class Barang extends CI_Controller
 
 		$data['barang'] = $this->m_barang->tampil_data()->result();
         $this->load->view('template/header');
-        	if($this->session->userdata('jabatan') == "admin"){
-        	   $this->load->view('template/navbar');
-        	}elseif($this->session->userdata('jabatan') == "kasir"){
+        if($this->session->userdata('jabatan') == "kasir"){
         	   $this->load->view('template_login/navbar_kasir');
-        	}elseif ($this->session->userdata('jabatan') == "gudang") {
+        	}elseif($this->session->userdata('jabatan') == "gudang"){
         	   $this->load->view('template_login/navbar_gudang');
         	}
         $this->load->view('data-master/barang/daftarbarang',$data);
@@ -27,7 +25,11 @@ class Barang extends CI_Controller
 		$data['kode'] = $this->m_barang->tampil_kode();
 
 		$this->load->view('template/header');
-        $this->load->view('template/navbar');
+        if($this->session->userdata('jabatan') == "kasir"){
+        	   $this->load->view('template_login/navbar_kasir');
+        	}elseif($this->session->userdata('jabatan') == "gudang"){
+        	   $this->load->view('template_login/navbar_gudang');
+        	}
         $this->load->view('data-master/barang/tambahbarang', $data);
         $this->load->view('template/footer');
 
@@ -60,7 +62,11 @@ class Barang extends CI_Controller
 		$data['barang'] = $this->m_barang->edit_data('tbl_barang', $where)->row_array();
 
 		$this->load->view('template/header');
-        $this->load->view('template/navbar');
+        if($this->session->userdata('jabatan') == "kasir"){
+        	   $this->load->view('template_login/navbar_kasir');
+        	}elseif($this->session->userdata('jabatan') == "gudang"){
+        	   $this->load->view('template_login/navbar_gudang');
+        	}
         $this->load->view('data-master/barang/editbarang', $data);
         $this->load->view('template/footer');
 	}

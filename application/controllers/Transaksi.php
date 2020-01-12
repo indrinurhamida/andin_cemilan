@@ -19,24 +19,20 @@ class Transaksi extends CI_Controller
         $data['kode1'] = $this->m_transaksi->tampil_kode1();
 
         $this->load->view('template/header');
-        if($this->session->userdata('jabatan') == "admin"){
-               $this->load->view('template/navbar');
-            }elseif($this->session->userdata('jabatan') == "kasir"){
-               $this->load->view('template_login/navbar_kasir');
-            }
+        $this->load->view('template_login/navbar_kasir');
         $this->load->view('transaksi/tamkasir', $data);
         $this->load->view('template/footer');
     }
 
-    // function tambah(){
-	// 	$data['kode'] = $this->m_transaksi->tampil_kode();
+    //function tambah(){
+	   //$data['kode'] = $this->m_transaksi->tampil_kode();
 
-	// 	$this->load->view('template/header');
-    //     $this->load->view('template/navbar');
-    //     $this->load->view('transaksi/tamkasir', $data);
-    //     $this->load->view('template/footer');
+	   //$this->load->view('template/header');
+       //$this->load->view('template/navbar');
+       //$this->load->view('transaksi/tamkasir', $data);
+       //$this->load->view('template/footer');
 
-    // }
+    //}
     function add()
 
     {
@@ -46,20 +42,18 @@ class Transaksi extends CI_Controller
             "id_member"             => $_POST["id_member"],
             "tgl_transaksi"         => $_POST["tgl_transaksi"],
             "id_pegawai"            => $_POST["id_pegawai"],
-            //"id_barangdetail"       => $_POST["id_barangdetail"],
             "qty"                   => $_POST["qty"],
-            "total"              => $_POST["subtotal"],
+            "total"                 => $_POST["subtotal"],
             "jumlah_bayar"          => $_POST["jumlah_bayar"],
             "kembalian"             => $_POST["kembalian"]
         );
         //echo "<pre>";
         //print_r($_POST);
         //print_r($data);
-        $this->m_transaksi->input_data($data, "tbl_transaksi");
-        $this->m_transaksi->input_data($data, "tbl_transaksidetail");
+      $this->m_transaksi->input_data($data, "tbl_transaksi");
         $this->db->query("update tbl_member set point = point + 1 where id_member = '$data[id_member]'");
         redirect(base_url()."transaksi");
-        }
+    }
     
     function kode_barang(){
         $this->load->model('m_barangdetail');
