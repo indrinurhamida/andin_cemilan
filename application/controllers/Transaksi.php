@@ -42,12 +42,16 @@ class Transaksi extends CI_Controller
     {
 
         $data = array(
-            "id_transaksi" => $_POST["id_transaksi"],
-            "id_member" => $_POST["id_member"],
-            "tgl_transaksi" => $_POST["tgl_transaksi"],
-            "id_pegawai" => $_POST["id_pegawai"],
-            "jumlah_bayar" => $_POST["jumlah_bayar"],
-            "kembalian" => $_POST["kembalian"]
+            "id_transaksi"          => $_POST["id_transaksi"],
+            "id_member"             => $_POST["id_member"],
+            "tgl_transaksi"         => $_POST["tgl_transaksi"],
+            "id_pegawai"            => $_POST["id_pegawai"],
+            "id_barangdetail"       => $_POST["id_barangdetail"],
+            "harga"                 => $_POST["harga"],
+            "qty"                   => $_POST["qty"],
+            "subtotal"              => $_POST["subtotal"],
+            "jumlah_bayar"          => $_POST["jumlah_bayar"],
+            "kembalian"             => $_POST["kembalian"]
         );
         $this->m_transaksi->input_data($data, "tbl_transaksi");
         $this->db->query("update tbl_member set point = point + 1 where id_member = '$data[id_member]'");
@@ -69,7 +73,6 @@ class Transaksi extends CI_Controller
                 "stok" => $val->stok
             );
         $barang[] = $array;
-        //$this->db->query("update tbl_barangdetail set stok = stok - qty where id_barangdetail = '$data[id_barangdetail]'");
         }
         echo json_encode($barang);
        

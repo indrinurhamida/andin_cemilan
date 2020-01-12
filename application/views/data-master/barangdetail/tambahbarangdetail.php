@@ -12,7 +12,7 @@
                     <input type="text" name="id_barangdetail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan ID" value="<?= $kode ?>" readonly>
                 </div>
                 <div class="col-sm-6 mb-6 mb-sm-0">
-                    <label for="exampleInputEmail1">ID_Barang</label>
+                    <label for="exampleInputEmail1">ID Barang</label>
                     <select name="id_barang" class="form-control" required>
                         <option value="">-- Pilih Barang --</option>
                         <?php

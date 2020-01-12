@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 12, 2020 at 07:47 AM
+
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 5.6.15
 
@@ -62,8 +62,7 @@ CREATE TABLE `tbl_barang` (
 INSERT INTO `tbl_barang` (`id_barang`, `nama_barang`, `rasa`) VALUES
 ('BRG003', 'bola-bola', 'coklat'),
 ('BRG004', 'bola bola ', 'asin'),
-('BRG005', 'Makaron', 'Pedas'),
-('BRG006', 'mie lidi', 'Pedas');
+
 
 -- --------------------------------------------------------
 
@@ -108,7 +107,7 @@ CREATE TABLE `tbl_barangmasuk` (
 --
 
 INSERT INTO `tbl_barangmasuk` (`id_barangmasuk`, `tgl_masuk`, `id_supplier`, `id_barang`, `id_pegawai`, `berat`, `harga_beli`) VALUES
-('BRM002', '2019-11-23', 'SPL001', 'BRG003', 'PGW001', '50', '1000');
+
 
 -- --------------------------------------------------------
 
@@ -143,8 +142,7 @@ CREATE TABLE `tbl_member` (
 --
 
 INSERT INTO `tbl_member` (`id_member`, `nama_member`, `email`, `alamat`, `no_hp`, `point`) VALUES
-('MBR001', 'azizah', 'burhan@gmail.com', 'jember', '086567234566', 15),
-('MBR002', 'munaroh', 'jihu@gmail.com', 'lamongan', '089765734234', 4);
+
 
 -- --------------------------------------------------------
 
@@ -201,8 +199,7 @@ CREATE TABLE `tbl_transaksi` (
   `id_member` char(8) NOT NULL,
   `tgl_transaksi` date NOT NULL,
   `id_pegawai` varchar(20) NOT NULL,
-  `qty` int(11) NOT NULL,
-  `total` int(11) NOT NULL,
+
   `jumlah_bayar` varchar(10) NOT NULL,
   `kembalian` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -211,32 +208,7 @@ CREATE TABLE `tbl_transaksi` (
 -- Dumping data for table `tbl_transaksi`
 --
 
-INSERT INTO `tbl_transaksi` (`id_transaksi`, `id_member`, `tgl_transaksi`, `id_pegawai`, `qty`, `total`, `jumlah_bayar`, `kembalian`) VALUES
-('TRK001', 'MBR001', '0000-00-00', 'PGW001', 0, 0, '15000', '3000'),
-('TRK002', 'MBR001', '2020-01-12', 'PGW001', 0, 0, '20000', '2000'),
-('TRK003', 'MBR001', '2020-01-12', 'PGW002', 0, 0, '6000', '0'),
-('TRK004', 'MBR001', '2020-01-12', 'PGW002', 0, 0, '4000', '0'),
-('TRK005', 'MBR001', '2020-01-13', 'PGW001', 0, 0, '6000', '0'),
-('TRK006', 'MBR002', '2020-01-12', 'PGW003', 0, 0, '2000', '0'),
-('TRK007', 'MBR001', '2020-01-12', 'PGW001', 1, 2000, '2000', '0'),
-('TRK008', 'MBR001', '2020-01-12', 'PGW001', 1, 2000, '2000', '0'),
-('TRK009', 'MBR001', '2020-01-12', 'PGW001', 1, 2000, '2000', '0'),
-('TRK010', 'MBR001', '2020-01-12', 'PGW001', 20, 40000, '40000', '0'),
-('TRK011', 'MBR001', '2020-01-12', 'PGW002', 2, 4000, '4000', '0');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_transaksidetail`
---
-
-CREATE TABLE `tbl_transaksidetail` (
-  `id_transaksidetail` char(8) NOT NULL,
-  `id_transaksi` char(8) NOT NULL,
-  `id_barangdetail` char(8) NOT NULL,
-  `qty` varchar(10) NOT NULL,
-  `subtotal` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Indexes for dumped tables
@@ -261,9 +233,7 @@ ALTER TABLE `tbl_barang`
 ALTER TABLE `tbl_barangdetail`
   ADD PRIMARY KEY (`id_barangdetail`),
   ADD KEY `id_barang` (`id_barang`),
-  ADD KEY `id_barang_2` (`id_barang`),
-  ADD KEY `id_barang_3` (`id_barang`),
-  ADD KEY `id_barang_4` (`id_barang`);
+
 
 --
 -- Indexes for table `tbl_barangmasuk`
@@ -309,14 +279,7 @@ ALTER TABLE `tbl_transaksi`
   ADD KEY `id_pegawai` (`id_pegawai`);
 
 --
--- Indexes for table `tbl_transaksidetail`
---
-ALTER TABLE `tbl_transaksidetail`
-  ADD PRIMARY KEY (`id_transaksidetail`),
-  ADD KEY `id_transaksi` (`id_transaksi`),
-  ADD KEY `id_barangdetail` (`id_barangdetail`);
 
---
 -- Constraints for dumped tables
 --
 
@@ -353,13 +316,6 @@ ALTER TABLE `tbl_barangmasukdetail`
 ALTER TABLE `tbl_transaksi`
   ADD CONSTRAINT `tbl_transaksi_ibfk_1` FOREIGN KEY (`id_member`) REFERENCES `tbl_member` (`id_member`),
   ADD CONSTRAINT `tbl_transaksi_ibfk_2` FOREIGN KEY (`id_pegawai`) REFERENCES `tbl_pegawai` (`id_pegawai`);
-
---
--- Constraints for table `tbl_transaksidetail`
---
-ALTER TABLE `tbl_transaksidetail`
-  ADD CONSTRAINT `tbl_transaksidetail_ibfk_1` FOREIGN KEY (`id_transaksi`) REFERENCES `tbl_transaksi` (`id_transaksi`),
-  ADD CONSTRAINT `tbl_transaksidetail_ibfk_2` FOREIGN KEY (`id_barangdetail`) REFERENCES `tbl_barangdetail` (`id_barangdetail`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -3,11 +3,11 @@
 class M_laporantransaksi extends CI_Model
 {
 	function tampil_data(){
-		return $this->db->get('tbl_barangdetail');
+		return $this->db->get('tbl_transaksi');
 	}
 
 	function tampil_barangdetail(){
-		return $this->db->get('tbl_barangdetail');
+		return $this->db->get('tbl_transaksi');
 	}
 
 	function input_data($data, $table){
