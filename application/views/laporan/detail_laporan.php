@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 font-weight-bold text-grey text-center">Laporan</h1>
+        <h1 class="h3 font-weight-bold text-grey text-center">Detail Laporan</h1>
     </div>
     <div class="card shadow mb-4">
     
@@ -9,8 +9,12 @@
             <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
+                    <?php 
+                        foreach ($detail as $key => $value) {
+                        
+                     ?>
                     <tr style="text-align:center">
-                            <th>ID Transaksi</th>
+                            <th>ID Transaksi</th> <td><?php echo $value['id_transaksi'] ?></td>
                             <th>Tanggal Transaksi</th>
                             <th>Pegawai</th>
                             <th>Member</th>
@@ -19,6 +23,7 @@
                             <th>Kembalian</th>
                             <th>Aksi</th>
                     </tr>
+                <?php } ?>
                 </thead>
                 <tbody>
                             <?php
@@ -30,13 +35,10 @@
                                 <td><?= $item->id_member ?></td>
                                 <td><?= $item->tgl_transaksi ?></td>
                                 <td><?= $item->id_pegawai ?></td>
-                                <!--td><?= $item->id_barangdetail ?></td>
+                                <td><?= $item->id_barangdetail ?></td>
                                 <td><?= $item->jumlah_bayar?></td>
-                                <td><?= $item->kembalian ?></td-->
+                                <td><?= $item->kembalian ?></td>
                                 <td>
-                                    <a href="<?php echo base_url() . ''; ?>/<?= $item->id_barang ?>" 
-                                            class="btn btn-success">Detail</a-->
-                                    <!--a href="<?php //echo base_url() . 'data-master/barang/hapus'; ?>/<?php //echo $item->id_barang ?>" class="btn btn-danger" onclick="return confirm('Yakin Ingin Menghapus Data ?')">Hapus</a-->
                                 </td>
                             </tr>
                         <?php } ?>

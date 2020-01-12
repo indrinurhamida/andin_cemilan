@@ -19,7 +19,7 @@
             </div>
             <div class="form-group row">
                 <div class="col-sm-6 mb-3 mb-sm-0">
-                    <label for="exampleInputEmail1">ID_Supplier</label>
+                    <label for="exampleInputEmail1">ID Supplier</label>
                     <select name="id_supplier" class="form-control" required>
                         <option value="">-- Pilih Supplier --</option>
                       <?php
@@ -33,7 +33,7 @@
                     </select> 
                 </div>
                <div class="col-sm-6 mb-3 mb-sm-0">
-                    <label for="exampleInputEmail1">ID_Barang</label>
+                    <label for="exampleInputEmail1">ID Barang</label>
                     <select name="id_barang" class="form-control" required>
                         <option value="">-- Pilih Barang --</option>
                         <?php
@@ -48,7 +48,7 @@
             </div>
             <div class="form-group row">
                 <div class="col-sm-6 mb-3 mb-sm-0">
-                    <label for="exampleInputEmail1">ID_Pegawai</label>
+                    <label for="exampleInputEmail1">ID Pegawai</label>
                     <select name="id_pegawai" class="form-control" required>
                         <option value="">-- Pilih Pegawai --</option>
                         <?php
@@ -70,6 +70,10 @@
                 <div class="col-sm-6 mb-3 mb-sm-0">
                     <label for="exampleInputEmail1">Harga Beli</label>
                     <input type="number" name="harga_beli" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Harga Beli">
+                </div>
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                    <label for="exampleInputEmail1">Qty</label>
+                    <input type="number" name="qty" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan qty">
                 </div>
 
             </div>
