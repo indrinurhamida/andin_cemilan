@@ -4,7 +4,9 @@
         <h1 class="h3 font-weight-bold text-grey text-center">Laporan</h1>
     </div>
     <div class="card shadow mb-4">
-    
+    <div class="card-header py-3">
+        <a href="<?php echo base_url() . 'laporan/laporantransaksi/detail_laporan'; ?>" class="btn btn-info">Detail</a>
+    </div>
     <div class="card-body">
             <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -16,8 +18,8 @@
                             <th>Pegawai</th>
                             <!--th>Barang Detail</th>
                             <th>Jumlah Bayar</th>
-                            <th>Kembalian</th-->
-                            <th>Aksi</th>
+                            <th>Kembalian</th>
+                            <th>Aksi</th-->
                     </tr>
                 </thead>
                 <tbody>
@@ -33,15 +35,16 @@
                                 <!--td><?= $item->id_barangdetail ?></td>
                                 <td><?= $item->jumlah_bayar?></td>
                                 <td><?= $item->kembalian ?></td-->
-                                <td>
+                                <!--td>
+                                </td-->
 
-                                    <!--a href="<?php //echo base_url() . 'laporan/detail_laporan'; ?>" 
+                                    <!--a href="<?php //echo base_url() . 'laporan/detail_laporan'; ?>"
                                             class="btn btn-info">Detail</a-->
                                     <!--a href="<?php //echo base_url() . 'data-master/barang/hapus'; ?>/<?php //echo $item->id_barang ?>" class="btn btn-danger" onclick="return confirm('Yakin Ingin Menghapus Data ?')">Hapus</a-->
 
-                                    <a href="<?php echo base_url() . 'laporan/detail_laporan'; ?>/<?php echo $item->id_transaksi ?>" class="btn btn-info">Detail</a>
+                                    <!--a href="<?php //echo base_url() . 'laporan/detail_laporan'; ?>/<?php //echo $item->id_transaksi ?>" class="btn btn-info">Detail</a-->
 
-                                </td>
+                                
                             </tr>
                         <?php } ?>
                     </tbody>
@@ -49,4 +52,5 @@
             </div>
         </div>
     </div>
+</div>
 </div>

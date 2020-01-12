@@ -44,7 +44,7 @@
               <input type="date" class="form-control" id="" placeholder="<?php echo date("d/m/y"); ?>" name="tgl_transaksi">
             </div>
             <div class="form-group">
-              <label class="control-label" for="email">Barang Detail</label>
+              <label class="control-label" for="email">Barang</label>
               <select name="id_barangdetail"  id="brg" class="form-control">
                 <option value="">---Option--</option>
                 <?php 
@@ -72,7 +72,7 @@
         <thead>
           <tr>
             <th>No</th>
-            <th>ID Barang Detail</th>
+            <th>Kode Barang</th>
             <th>Nama Barang</th>
             <th>Harga Satuan</th>
             <th>QTY</th>
@@ -107,7 +107,7 @@
     </div>
   <br>
    <div class="col-sm-6 mb-3 mb-sm-0">
-  <button type="submit" class="btn btn-success">Simpan dan Cetak</button>
+  <button type="submit" class="btn btn-success">Simpan</button>
   <a href="<?php echo base_url() . 'transaksi/tamkasir'; ?>" class="btn btn-danger">Batal</a>
 </div>
 </div>

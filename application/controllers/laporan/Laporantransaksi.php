@@ -12,9 +12,7 @@ class Laporantransaksi extends CI_Controller
     {
 		$data['laporantransaksi'] = $this->m_laporantransaksi->tampil_data()->result();
         $this->load->view('template/header');
-        if($this->session->userdata('jabatan') == "owner"){
-               $this->load->view('template_login/navbar_owner');
-        }
+        $this->load->view('template_login/navbar_owner');
         $this->load->view('laporan/laporantransaksi',$data);
         $this->load->view('template/footer');
     }
@@ -22,8 +20,8 @@ class Laporantransaksi extends CI_Controller
     {
         $data['detail_laporan'] = $this->m_laporantransaksi->tampil_data()->result();
         $this->load->view('template/header');
-        $this->load->view('template/navbar');
-        $this->load->view('laporan/laporantransaksi',$data);
+        $this->load->view('template_login/navbar_owner');
+        $this->load->view('laporan/detail_laporan',$data);
         $this->load->view('template/footer');
     }
     }

@@ -6,7 +6,7 @@ class M_laporantransaksi extends CI_Model
 		return $this->db->get('tbl_transaksi');
 	}
 
-	function tampil_barangdetail(){
+	function tampil_detail(){
 		return $this->db->get('tbl_transaksi');
 	}
 
