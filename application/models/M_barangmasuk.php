@@ -26,7 +26,7 @@ class M_barangmasuk extends CI_Model
 	 }
 
 	function tampil_data(){
-		return $this->db->query('SELECT bm.id_barangmasuk, bm.tgl_masuk, br.nama_barang, sp.nama_supplier, pg.nama_pegawai, bm.berat, bm.harga_beli FROM tbl_barangmasuk bm JOIN tbl_supplier sp ON bm.id_supplier=sp.id_supplier JOIN tbl_barang br ON bm.id_barang=br.id_barang JOIN tbl_pegawai pg ON bm.id_pegawai=pg.id_pegawai');
+		return $this->db->query('SELECT bm.id_barangmasuk, bm.tgl_masuk, br.nama_barang, sp.nama_supplier, pg.nama_pegawai, bm.berat, bm.qty, bm.harga_beli FROM tbl_barangmasuk bm JOIN tbl_supplier sp ON bm.id_supplier=sp.id_supplier JOIN tbl_barang br ON bm.id_barang=br.id_barang JOIN tbl_pegawai pg ON bm.id_pegawai=pg.id_pegawai');
 	}
 
 	function tampil_barang(){

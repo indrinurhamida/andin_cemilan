@@ -41,7 +41,7 @@
                 <option value="">---Pilih Berat---</option>
                 <?php
                     $berat = array(
-                        "50 g","100 g","200 g","300 g","400 g","500 g","1000 g"
+                        "50 g","500 g","1000 g"
                     );
                     foreach($berat as $b){
                         $kode = ($barangdetail["berat"] == $b) ? "selected" : "";

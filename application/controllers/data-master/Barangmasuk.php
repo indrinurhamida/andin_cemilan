@@ -40,6 +40,7 @@ class Barangmasuk extends CI_Controller
 		$id_barang				= $this->input->post('id_barang');
 		$id_pegawai				= $this->input->post('id_pegawai');
 		$berat					= $this->input->post('berat');
+		$qty					= $this->input->post('qty');
 		$harga_beli				= $this->input->post('harga_beli');
 		$data = array(
 			'id_barangmasuk'		=> $id_barangmasuk,
@@ -48,6 +49,7 @@ class Barangmasuk extends CI_Controller
 			'id_barang' 			=> $id_barang,
 			'id_pegawai'			=> $id_pegawai,
 			'berat' 				=> $berat,
+			'qty'					=> $qty,
 			'harga_beli' 			=> $harga_beli
 		);
 		$this->m_barangmasuk->input_data($data, 'tbl_barangmasuk');
@@ -80,6 +82,7 @@ class Barangmasuk extends CI_Controller
 		$id_barang				= $this->input->post('id_barang');
 		$id_pegawai				= $this->input->post('id_pegawai');
 		$berat					= $this->input->post('berat');
+		$qty					= $this->input->post('qty');
 		$harga_beli				= $this->input->post('harga_beli');
 		
 
@@ -89,6 +92,7 @@ class Barangmasuk extends CI_Controller
 			'id_supplier' 			=> $id_supplier,
 			'id_barang' 			=> $id_barang,
 			'berat' 				=> $berat,
+			'qty'					=> $qty,
 			'harga_beli' 			=> $harga_beli
 		);
 
