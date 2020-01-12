@@ -32,31 +32,23 @@
         Data Master
       </div>
 
-      <!-- Nav Item - Pages Collapse Menu -->
+      <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-          <i class="fas fa-fw fa-folder"></i>
-          <span>Barang</span>
-        </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <!--h6 class="collapse-header">Custom Components:</h6-->
-            <a class="collapse-item" href="<?php echo base_url() . 'data-master/barang'; ?>">Data Barang</a>
-            <a class="collapse-item" href="<?php echo base_url() . 'data-master/barangdetail'; ?>">Data Detail Barang</a>
-          </div>
-        </div>
+        <a class="nav-link" href="<?php echo base_url().'data-master/supplier'; ?>">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Supplier</span></a>
       </li>
 
-      <!-- Nav Item - Tables -->
+      <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url() . 'data-master/member'; ?>">
+        <a class="nav-link" href="<?php echo base_url() . 'data-master/pegawai';?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Member</span></a>
+          <span>Pegawai</span></a>
       </li>
 
       <!-- Heading -->
       <div class="sidebar-heading">
-        Transaksi
+        Laporan
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
@@ -64,9 +56,9 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url() . 'transaksi'; ?>">
+        <a class="nav-link" href="<?php echo base_url() . 'laporan/laporantransaksi'; ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Kasir</span></a>
+          <span>Laporan Transaksi</span></a>
       </li>
 
       <!-- Divider -->
@@ -120,7 +112,7 @@
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Selamat Datang, Kasir!</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Selamat Datang, Owner!</span>
                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
               </a>
               <!-- Dropdown - User Information -->

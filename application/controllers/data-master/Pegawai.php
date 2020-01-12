@@ -10,7 +10,9 @@ class Pegawai extends CI_Controller
 	function index(){
 		$data['pegawai'] = $this->m_pegawai->tampil_data()->result();
     	$this->load->view('template/header');
-    	$this->load->view('template/navbar');
+    	if($this->session->userdata('jabatan') == "owner"){
+        	   $this->load->view('template_login/navbar_owner');
+        }
        	$this->load->view('data-master/pegawai/daftarpegawai',$data);
        	$this->load->view('template/footer');
 	}

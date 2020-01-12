@@ -13,8 +13,8 @@ class Barangmasuk extends CI_Controller
 		
 		$data['barangmasuk'] = $this->m_barangmasuk->tampil_data()->result();
         $this->load->view('template/header');
-        if($this->session->userdata('jabatan') == "admin"){
-        	   $this->load->view('template/navbar');
+        if($this->session->userdata('jabatan') == "owner"){
+        	   $this->load->view('template_login/owner');
         	}elseif($this->session->userdata('jabatan') == "gudang"){
         	   $this->load->view('template_login/navbar_gudang');
         	}

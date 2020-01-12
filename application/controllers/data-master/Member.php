@@ -11,7 +11,13 @@ class Member extends CI_Controller
 	{
 		$data['member'] = $this->m_member->tampil_data()->result();
         $this->load->view('template/header');
-        $this->load->view('template/navbar');
+        if($this->session->userdata('jabatan') == "owner"){
+        	   $this->load->view('template_login/navbar_owner');
+        }elseif($this->session->userdata('jabatan') == "kasir"){
+        	   $this->load->view('template_login/navbar_kasir');
+        	}elseif ($this->session->userdata('jabatan') == "gudang") {
+        	   $this->load->view('template_login/navbar_gudang');
+        	}
         $this->load->view('data-master/member/daftarmember',$data);
         $this->load->view('template/footer');
 	}

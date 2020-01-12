@@ -11,7 +11,9 @@ class Supplier extends CI_Controller
 	{
 		$data['supplier'] = $this->m_supplier->tampil_data()->result();
         $this->load->view('template/header');
-        $this->load->view('template/navbar');
+        if($this->session->userdata('jabatan') == "owner"){
+        	   $this->load->view('template_login/navbar_owner');
+        }
         $this->load->view('data-master/supplier/daftarsupplier',$data);
         $this->load->view('template/footer');
 	}

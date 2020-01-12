@@ -11,8 +11,8 @@
 		
 		$data['barangdetail'] = $this->m_barangdetail->tampil_data()->result();
         $this->load->view('template/header');
-        if($this->session->userdata('jabatan') == "admin"){
-        	   $this->load->view('template/navbar');
+        if($this->session->userdata('jabatan') == "owner"){
+        	   $this->load->view('template_login/owner');
         	}elseif($this->session->userdata('jabatan') == "kasir"){
         	   $this->load->view('template_login/navbar_kasir');
         	}elseif ($this->session->userdata('jabatan') == "gudang") {
