@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 11, 2020 at 09:48 PM
+
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 5.6.15
 
@@ -39,7 +39,9 @@ CREATE TABLE `tbl_akun` (
 --
 
 INSERT INTO `tbl_akun` (`id_akun`, `username`, `password`, `jabatan`, `id_pegawai`) VALUES
-('1', 'admin', 'admin', 'admin', 'PGW001');
+('AKN001', 'admin', 'admin', 'admin', 'PGW001'),
+('AKN002', 'kasir', 'kasir', 'kasir', 'PGW002'),
+('AKN003', 'gudang', 'gudang', 'gudang', 'PGW003');
 
 -- --------------------------------------------------------
 
@@ -58,11 +60,9 @@ CREATE TABLE `tbl_barang` (
 --
 
 INSERT INTO `tbl_barang` (`id_barang`, `nama_barang`, `rasa`) VALUES
-('BRG001', 'Makaroni', 'asin'),
-('BRG002', 'mie lidi', 'pedes'),
 ('BRG003', 'bola-bola', 'coklat'),
 ('BRG004', 'bola bola ', 'asin'),
-('BRG005', 'Makaron', 'Pedas');
+
 
 -- --------------------------------------------------------
 
@@ -74,8 +74,8 @@ CREATE TABLE `tbl_barangdetail` (
   `id_barangdetail` char(8) NOT NULL,
   `id_barang` char(8) NOT NULL,
   `berat` varchar(10) NOT NULL,
-  `harga` varchar(20) NOT NULL,
-  `stok` varchar(20) NOT NULL
+  `harga` int(7) NOT NULL,
+  `stok` int(7) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -83,10 +83,8 @@ CREATE TABLE `tbl_barangdetail` (
 --
 
 INSERT INTO `tbl_barangdetail` (`id_barangdetail`, `id_barang`, `berat`, `harga`, `stok`) VALUES
-('DEB001', 'BRG001', '100 g', '2000', '30'),
-('DEB002', 'BRG002', '200', '3000', '40'),
-('DEB003', 'BRG003', '100 g', '1000', '10'),
-('DEB004', 'BRG003', '50 g', '2000', '3');
+('DEB003', 'BRG003', '100 g', 1000, 10),
+('DEB004', 'BRG003', '50 g', 2000, 3);
 
 -- --------------------------------------------------------
 
@@ -109,9 +107,7 @@ CREATE TABLE `tbl_barangmasuk` (
 --
 
 INSERT INTO `tbl_barangmasuk` (`id_barangmasuk`, `tgl_masuk`, `id_supplier`, `id_barang`, `id_pegawai`, `berat`, `harga_beli`) VALUES
-('BRM001', '2019-11-14', 'SPL001', 'BRG002', 'PGW001', '50', '1000'),
-('BRM002', '2019-11-23', 'SPL001', 'BRG003', 'PGW001', '50', '1000'),
-('BRM003', '2020-01-12', 'SPL001', 'BRG001', 'PGW002', '7', '2000');
+
 
 -- --------------------------------------------------------
 
@@ -146,8 +142,7 @@ CREATE TABLE `tbl_member` (
 --
 
 INSERT INTO `tbl_member` (`id_member`, `nama_member`, `email`, `alamat`, `no_hp`, `point`) VALUES
-('MBR001', 'azizah', 'burhan@gmail.com', 'jember', '086567234566', 7),
-('MBR002', 'munaroh', 'jihu@gmail.com', 'lamongan', '089765734234', 3);
+
 
 -- --------------------------------------------------------
 
@@ -204,7 +199,7 @@ CREATE TABLE `tbl_transaksi` (
   `id_member` char(8) NOT NULL,
   `tgl_transaksi` date NOT NULL,
   `id_pegawai` varchar(20) NOT NULL,
-  `id_barangdetail` char(8) NOT NULL,
+
   `jumlah_bayar` varchar(10) NOT NULL,
   `kembalian` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -213,9 +208,7 @@ CREATE TABLE `tbl_transaksi` (
 -- Dumping data for table `tbl_transaksi`
 --
 
-INSERT INTO `tbl_transaksi` (`id_transaksi`, `id_member`, `tgl_transaksi`, `id_pegawai`, `id_barangdetail`, `jumlah_bayar`, `kembalian`) VALUES
-('TRK001', 'MBR001', '0000-00-00', 'PGW001', '', '15000', '3000'),
-('TRK002', 'MBR001', '2020-01-12', 'PGW001', '', '20000', '2000');
+
 
 --
 -- Indexes for dumped tables
@@ -240,7 +233,7 @@ ALTER TABLE `tbl_barang`
 ALTER TABLE `tbl_barangdetail`
   ADD PRIMARY KEY (`id_barangdetail`),
   ADD KEY `id_barang` (`id_barang`),
-  ADD KEY `id_barang_2` (`id_barang`);
+
 
 --
 -- Indexes for table `tbl_barangmasuk`
@@ -286,6 +279,7 @@ ALTER TABLE `tbl_transaksi`
   ADD KEY `id_pegawai` (`id_pegawai`);
 
 --
+
 -- Constraints for dumped tables
 --
 
@@ -299,15 +293,15 @@ ALTER TABLE `tbl_akun`
 -- Constraints for table `tbl_barangdetail`
 --
 ALTER TABLE `tbl_barangdetail`
-  ADD CONSTRAINT `tbl_barangdetail_ibfk_1` FOREIGN KEY (`id_barang`) REFERENCES `tbl_barang` (`id_barang`);
+  ADD CONSTRAINT `tbl_barangdetail_ibfk_1` FOREIGN KEY (`id_barang`) REFERENCES `tbl_barang` (`id_barang`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `tbl_barangmasuk`
 --
 ALTER TABLE `tbl_barangmasuk`
   ADD CONSTRAINT `tbl_barangmasuk_ibfk_1` FOREIGN KEY (`id_supplier`) REFERENCES `tbl_supplier` (`id_supplier`),
-  ADD CONSTRAINT `tbl_barangmasuk_ibfk_2` FOREIGN KEY (`id_barang`) REFERENCES `tbl_barang` (`id_barang`),
-  ADD CONSTRAINT `tbl_barangmasuk_ibfk_3` FOREIGN KEY (`id_pegawai`) REFERENCES `tbl_pegawai` (`id_pegawai`);
+  ADD CONSTRAINT `tbl_barangmasuk_ibfk_3` FOREIGN KEY (`id_pegawai`) REFERENCES `tbl_pegawai` (`id_pegawai`),
+  ADD CONSTRAINT `tbl_barangmasuk_ibfk_4` FOREIGN KEY (`id_barang`) REFERENCES `tbl_barang` (`id_barang`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `tbl_barangmasukdetail`
