@@ -20,7 +20,7 @@ class Laporantransaksi extends CI_Controller
     }
     function detail_laporan()
     {
-        $data['detail_laporan'] = $this->m_laporantransaksi->tampil_data()->result();
+        $data['detail_laporan'] = $this->m_laporantransaksi->tampil_detail()->result();
         $this->load->view('template/header');
         $this->load->view('template_login/navbar_owner');
         $this->load->view('laporan/detail_laporan',$data);

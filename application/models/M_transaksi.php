@@ -53,9 +53,9 @@ class M_transaksi extends CI_Model
 		return $this->db->get('tbl_barang');
 	}
 
-	function detail_laporan($kode){
-        return $this->db->query("SELECT t.nama_barang, b.rasa, bt.id_barangdetail, bt.berat, bt.harga, bt.stok FROM `tbl_barangdetail` as bt join tbl_barang as b ON bt.id_barang=b.id_barang WHERE bt.id_barangdetail='".$kode."'");
-    }
+	//function detail_laporan($kode){
+        //return $this->db->query("SELECT t.nama_barang, b.rasa, bt.id_barangdetail, bt.berat, bt.harga, bt.stok FROM `tbl_barangdetail` as bt join tbl_barang as b ON bt.id_barang=b.id_barang WHERE bt.id_barangdetail='".$kode."'");
+    //}
 
 	function input_data($data, $table){
 		$this->db->insert($table, $data);

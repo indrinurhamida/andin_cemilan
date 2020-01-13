@@ -10,17 +10,17 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr style="text-align:center">
+                            <!--th>ID Transaksi Detail</th-->
                             <th>ID Transaksi</th>
-                            <th>ID Member</th>
                             <!--th>Tanggal</th>
                             <th>Pegawai</th-->
-                            <th>Kode Barang</th>
-                            <th>Nama Barang</th>
-                            <th>Harga</th>
+                            <th>Barang</th>
                             <th>Qty</th>
+                            <th>Subtotal</th>
+                            <!--th>Qty</th>
                             <th>Total</th>
                             <th>Jumlah Bayar</th>
-                            <th>Kembalian</th>
+                            <th>Kembalian</th-->
                     </tr>
                 </thead>
                 <tbody>
@@ -29,17 +29,17 @@
                             ?>
 
                             <tr>
+                                <!--td><?= $item->id_transaksidetail ?></td-->
                                 <td><?= $item->id_transaksi ?></td>
-                                <td><?= $item->id_member ?></td>
                                 <!--td><?= $item->tgl_transaksi ?></td>
                                 <td><?= $item->id_pegawai ?></td-->
                                 <td><?= $item->id_barangdetail ?></td>
-                                <td><?= $item->nama_barangdetail ?></td>
-                                <td><?= $item->harga ?></td>
+                                <!--td><?= $item->nama_barangdetail ?></td>
+                                <td><?= $item->harga ?></td-->
                                 <td><?= $item->qty?></td>
-                                <td><?= $item->total ?></td>
-                                <td><?= $item->jumlah_bayar ?></td>
-                                <td><?= $item->kembalian ?></td>
+                                <td><?= $item->subtotal ?></td>
+                                <!--td><?= $item->jumlah_bayar ?></td>
+                                <td><?= $item->kembalian ?></td-->
                             </tr>
                         <?php } ?>
                     </tbody>
