@@ -12,6 +12,7 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr style="text-align:center">
+                            
                             <th>ID Transaksi</th>
                             <th>Member</th>
                             <th>Tanggal Transaksi</th>

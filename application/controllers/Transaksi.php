@@ -36,9 +36,9 @@ class Transaksi extends CI_Controller
     function add()
 
     {   
-        echo "<pre>";
-        print_r($_POST);
-        echo "</pre>";
+        //echo "<pre>";
+        //print_r($_POST);
+        //echo "</pre>";
         $qty = array_sum($_POST['qty']);
         $total = array_sum($_POST['subtotal']);
         $data = array(
