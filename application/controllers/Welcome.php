@@ -39,8 +39,12 @@ class Welcome extends CI_Controller {
         	$this->load->view('template_login/navbar_gudang');
         	$this->load->view('template_dashboard/gudang');
         	$this->load->view('template/footer');
-    	} 
-		
+    	} elseif($this->session->userdata('jabatan') == "admin"){
+    		$this->load->view('template/header');
+        	$this->load->view('template/navbar');
+        	$this->load->view('dashboard');
+        	$this->load->view('template/footer');
+		}
 	}
 
 	public function logout(){

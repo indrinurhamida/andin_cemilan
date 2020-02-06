@@ -20,8 +20,8 @@ class M_barangkeluar extends CI_Model
             //jika kode belum ada      
             $kode = 1;
         }
-        $kodemax = str_pad($kode, 5, "0", STR_PAD_LEFT);
-        $kodejadi = "BRGKL" . $kodemax;
+        $kodemax = str_pad($kode, 3, "0", STR_PAD_LEFT);
+        $kodejadi = "BKL" . $kodemax;
         return $kodejadi;
 	}
 
@@ -29,9 +29,21 @@ class M_barangkeluar extends CI_Model
 		return $this->db->get('tbl_barangkeluar');
 	}
 
-	function tampil_barangdetail(){
-		return $this->db->get('tbl_barangkeluardetail');
-	}
+	function getRasa(){
+        return $this->db->get('tbl_rasa')->result();
+    }
+
+    //function getBarang(){
+		//return $this->db->get('tbl_barang')->result();
+	//}
+
+	//function getDetailbarang(){
+		//return $this->db->get('tbl_barangdetail')->result();
+	//}
+
+	//function tampil_barangdetail(){
+		//return $this->db->get('tbl_barangdetail');
+	//}
 
 	function input_data($data, $table){
 		$this->db->insert($table, $data);
@@ -50,8 +62,6 @@ class M_barangkeluar extends CI_Model
 	function edit_data($table,$where){
 		return $this->db->get_where($table, $where);
 	}
-
-	
 }
 
 ?>

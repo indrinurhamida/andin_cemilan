@@ -1,8 +1,17 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Edit Akun</h1>
+        <div class="card card-body">
+            <div class="col-sm-12">
+                <form class="form-horizontal" action="">
+                    <h1 class="h3 font-weight-bold text-grey text-center">Edit Akun</h1>
+                </form>
+            </div>
+        </div>
     </div>
+
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <div class="card card-body">
     <div class="container-fluid">
         <form class="" method="post" action="<?php echo base_url() . 'data-master/akun/update'; ?>" enctype="multipart/form-data">
             <div class="form-group row">
@@ -19,11 +28,11 @@
             <div class="form-group row">
                 <div class="col-sm-6 mb-3 mb-sm-0">
                     <label for="exampleInputEmail1">Password</label>
-                    <input type="text" name="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Stok" value="<?php echo $akun['password'] ?>">
+                    <input type="text" name="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Password" value="<?php echo $akun['password'] ?>">
                 </div>
                 <div class="col-sm-6 mb-3 mb-sm-0">
                     <label for="exampleInputEmail1">Jabatan</label>
-                    <input type="text" name="jabatan" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Stok" value="<?php echo $akun['jabatan'] ?>">
+                    <input type="text" name="jabatan" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Jabatan" value="<?php echo $akun['jabatan'] ?>">
                 </div>
             </div>
 

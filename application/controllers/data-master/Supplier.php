@@ -11,7 +11,11 @@ class Supplier extends CI_Controller
 	{
 		$data['supplier'] = $this->m_supplier->tampil_data()->result();
         $this->load->view('template/header');
-        $this->load->view('template_login/navbar_owner');
+        if($this->session->userdata('jabatan') == "owner"){
+        	   $this->load->view('template_login/navbar_owner');
+        	}elseif ($this->session->userdata('jabatan') == "admin") {
+        	   $this->load->view('template/navbar');	
+        	}
         $this->load->view('data-master/supplier/daftarsupplier',$data);
         $this->load->view('template/footer');
 	}
@@ -20,7 +24,11 @@ class Supplier extends CI_Controller
 		$data['kode'] = $this->m_supplier->tampil_kode();
 
 		$this->load->view('template/header');
-        $this->load->view('template_login/navbar_owner');
+        if($this->session->userdata('jabatan') == "owner"){
+        	   $this->load->view('template_login/navbar_owner');
+        	}elseif ($this->session->userdata('jabatan') == "admin") {
+        	   $this->load->view('template/navbar');	
+        	}
         $this->load->view('data-master/supplier/tambahsupplier', $data);
         $this->load->view('template/footer');
 
@@ -55,7 +63,11 @@ class Supplier extends CI_Controller
 		$data['supplier'] = $this->m_supplier->edit_data('tbl_supplier', $where)->row_array();
 
 		$this->load->view('template/header');
-        $this->load->view('template_login/navbar_owner');
+        if($this->session->userdata('jabatan') == "owner"){
+        	   $this->load->view('template_login/navbar_owner');
+        	}elseif ($this->session->userdata('jabatan') == "admin") {
+        	   $this->load->view('template/navbar');	
+        	}
         $this->load->view('data-master/supplier/editSupplier', $data);
         $this->load->view('template/footer');
 	}

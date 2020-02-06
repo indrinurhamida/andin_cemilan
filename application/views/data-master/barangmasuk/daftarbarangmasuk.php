@@ -1,7 +1,13 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 font-weight-bold text-grey text-center">Data Barang Masuk</h1>
+        <div class="card card-body">
+            <div class="col-sm-12">
+                <form class="form-horizontal" action="">
+                    <h1 class="h3 font-weight-bold text-grey text-center">Data Barang Masuk</h1>
+                </form>
+            </div>
+        </div>
     </div>
     <div class="card shadow mb-4">
     <div class="card-header py-3">
@@ -16,6 +22,7 @@
                             <th>Tanggal Barang Masuk</th>
                             <th>Nama Supplier</th>
                             <th>Nama Barang</th>
+                            <!--th>Rasa</th-->
                             <th>Nama Pegawai</th>
                             <th>Berat</th>
                             <th>Qty</th>
@@ -31,13 +38,14 @@
                             <tr>
                                 <td><?= $item->id_barangmasuk       ?></td>
                                 <td><?= $item->tgl_masuk            ?></td>
-                                <td><?= $item->nama_supplier          ?></td>
-                                <td><?= $item->nama_barang            ?></td>
-                                <td><?= $item->nama_pegawai           ?></td>
+                                <td><?= $item->nama_supplier        ?></td>
+                                <td><?= $item->nama_barang          ?></td>
+                                <!--td><?= $item->nama_rasa            ?></td-->
+                                <td><?= $item->nama_pegawai         ?></td>
                                 <td><?= $item->berat                ?></td>
-                                <td><?= $item->qty                ?></td>
+                                <td><?= $item->qty                  ?></td>
                                 <td><?= $item->harga_beli           ?></td>
-                                <td>
+                                <td style="text-align:center">
                                     <a href="<?php echo base_url() . 'data-master/barangmasuk/edit'; ?>/<?php echo $item->id_barangmasuk ?>" class="btn btn-success">Edit</a>
                                     <a href="<?php echo base_url() . 'data-master/barangmasuk/hapus'; ?>/<?php echo $item->id_barangmasuk ?>" class="btn btn-danger" onclick= "return confirm('Yakin Ingin Menghapus Data?')">Hapus</a>
                                 </td>

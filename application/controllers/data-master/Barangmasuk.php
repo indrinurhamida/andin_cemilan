@@ -13,7 +13,11 @@ class Barangmasuk extends CI_Controller
 		
 		$data['barangmasuk'] = $this->m_barangmasuk->tampil_data()->result();
         $this->load->view('template/header');
-        $this->load->view('template_login/navbar_gudang');
+        if($this->session->userdata('jabatan') == "gudang"){
+        	   $this->load->view('template_login/navbar_gudang');
+        	}elseif($this->session->userdata('jabatan') == "admin"){
+        	   $this->load->view('template/navbar');
+        	}
         $this->load->view('data-master/barangmasuk/daftarbarangmasuk', $data);
         $this->load->view('template/footer');
 	}
@@ -23,9 +27,14 @@ class Barangmasuk extends CI_Controller
 		$data['supplier'] 			= $this->m_barangmasuk->getSupplier();
 		$data['pegawai'] 			= $this->m_barangmasuk->getPegawai();
 		$data['barang'] 			= $this->m_barangmasuk->getBarang();
+		//$data['rasa'] 				= $this->m_barangmasuk->getRasa();
 
 		$this->load->view('template/header');
-        $this->load->view('template_login/navbar_gudang');
+        if($this->session->userdata('jabatan') == "gudang"){
+        	   $this->load->view('template_login/navbar_gudang');
+        	}elseif($this->session->userdata('jabatan') == "admin"){
+        	   $this->load->view('template/navbar');
+        	}
         $this->load->view('data-master/barangmasuk/tambahbarangmasuk', $data);
         $this->load->view('template/footer');
 
@@ -38,6 +47,7 @@ class Barangmasuk extends CI_Controller
 		$tgl_masuk				= $this->input->post('tgl_masuk');
 		$id_supplier			= $this->input->post('id_supplier');
 		$id_barang				= $this->input->post('id_barang');
+		//$id_rasa				= $this->input->post('id_rasa');
 		$id_pegawai				= $this->input->post('id_pegawai');
 		$berat					= $this->input->post('berat');
 		$qty					= $this->input->post('qty');
@@ -47,6 +57,7 @@ class Barangmasuk extends CI_Controller
 			'tgl_masuk' 			=> $tgl_masuk,
 			'id_supplier' 			=> $id_supplier,
 			'id_barang' 			=> $id_barang,
+			//'id_rasa'				=> $id_rasa,
 			'id_pegawai'			=> $id_pegawai,
 			'berat' 				=> $berat,
 			'qty'					=> $qty,
@@ -67,10 +78,15 @@ class Barangmasuk extends CI_Controller
 		$data['supplier'] 			= $this->m_barangmasuk->getSupplier();
 		$data['pegawai'] 			= $this->m_barangmasuk->getPegawai();
 		$data['barang'] 			= $this->m_barangmasuk->getBarang();
+		//$data['rasa'] 				= $this->m_barangmasuk->getRasa();
 		$data['barangmasuk'] 		= $this->m_barangmasuk->edit_data('tbl_barangmasuk', $where)->row_array();
 		
 		$this->load->view('template/header');
-        $this->load->view('template_login/navbar_gudang');
+        if($this->session->userdata('jabatan') == "gudang"){
+        	   $this->load->view('template_login/navbar_gudang');
+        	}elseif($this->session->userdata('jabatan') == "admin"){
+        	   $this->load->view('template/navbar');
+        	}
         $this->load->view('data-master/barangmasuk/editbarangmasuk', $data);
         $this->load->view('template/footer');
 	}
@@ -80,6 +96,7 @@ class Barangmasuk extends CI_Controller
 		$tgl_masuk				= $this->input->post('tgl_masuk');
 		$id_supplier			= $this->input->post('id_supplier');
 		$id_barang				= $this->input->post('id_barang');
+		//$id_rasa				= $this->input->post('id_rasa');
 		$id_pegawai				= $this->input->post('id_pegawai');
 		$berat					= $this->input->post('berat');
 		$qty					= $this->input->post('qty');
@@ -91,6 +108,7 @@ class Barangmasuk extends CI_Controller
 			'tgl_masuk' 			=> $tgl_masuk,
 			'id_supplier' 			=> $id_supplier,
 			'id_barang' 			=> $id_barang,
+			//'id_rasa'				=> $id_rasa,
 			'berat' 				=> $berat,
 			'qty'					=> $qty,
 			'harga_beli' 			=> $harga_beli

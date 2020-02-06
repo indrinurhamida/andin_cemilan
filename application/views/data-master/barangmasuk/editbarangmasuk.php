@@ -2,8 +2,17 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 font-weight-bold text-grey text-center">Edit Barang Masuk</h1>
+        <div class="card card-body">
+            <div class="col-sm-12">
+                <form class="form-horizontal" action="">
+                    <h1 class="h3 font-weight-bold text-grey text-center">Edit Barang Masuk</h1>
+                </form>
+            </div>
+        </div>
     </div>
+
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <div class="card card-body">
     <div class="container-fluid">
         <form class="" method="post" action="<?php echo base_url() . 'data-master/barangmasuk/update'; ?>">
             <div class="form-group row">
@@ -41,7 +50,7 @@
                         foreach ($barang as $v) {
                         $selected = ($v->id_barang == $barangmasuk['id_barang']) ? "selected" : "";
                         ?>
-                        <option value="<?php echo $v->id_barang ?>" <?php echo $selected?>><?php echo $v->nama_barang ?> <?php echo $v->rasa ?></option>}
+                        <option value="<?php echo $v->id_barang ?>" <?php echo $selected?>><?php echo $v->nama_barang ?> <?php echo $v->nama_rasa ?></option>}
                         
                         <?php
                         }

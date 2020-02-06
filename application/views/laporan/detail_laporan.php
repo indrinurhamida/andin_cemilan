@@ -2,7 +2,13 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 font-weight-bold text-grey text-center">Detail Laporan</h1>
+        <div class="card card-body">
+            <div class="col-sm-12">
+                <form class="form-horizontal" action="">
+                    <h1 class="h3 font-weight-bold text-grey text-center">Detail Laporan</h1>
+                </form>
+            </div>
+        </div>
     </div>
     <div class="card shadow mb-4">
     <div class="card-body">
@@ -10,7 +16,7 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr style="text-align:center">
-                            <!--th>ID Transaksi Detail</th-->
+                            <th>No</th>
                             <th>ID Transaksi</th>
                             <!--th>Tanggal</th>
                             <th>Pegawai</th-->
@@ -29,14 +35,14 @@
                             ?>
 
                             <tr>
-                                <!--td><?= $item->id_transaksidetail ?></td-->
+                                <td><?= $item->id_transaksidetail ?></td>
                                 <td><?= $item->id_transaksi ?></td>
                                 <!--td><?= $item->tgl_transaksi ?></td>
                                 <td><?= $item->id_pegawai ?></td-->
                                 <td><?= $item->id_barangdetail ?></td>
                                 <!--td><?= $item->nama_barangdetail ?></td>
                                 <td><?= $item->harga ?></td-->
-                                <td><?= $item->qty?></td>
+                                <td><?= $item->qty ?></td>
                                 <td><?= $item->subtotal ?></td>
                                 <!--td><?= $item->jumlah_bayar ?></td>
                                 <td><?= $item->kembalian ?></td-->

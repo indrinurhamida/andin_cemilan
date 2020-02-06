@@ -6,8 +6,8 @@ class M_barangmasuk extends CI_Model
 	 {
 	 	$this->db->select('RIGHT (tbl_barangmasuk.id_barangmasuk, 2) as kode', FALSE);
         $this->db->order_by('id_barangmasuk', 'DESC');
-         $this->db->limit(1);
-         $query = $this->db->get('tbl_barangmasuk');    
+        $this->db->limit(1);
+        $query = $this->db->get('tbl_barangmasuk');    
 
          //cek dulu apakah ada sudah ada kode di tabel.    
          if ($query->num_rows() <> 0) {
@@ -45,6 +45,10 @@ class M_barangmasuk extends CI_Model
 		return $this->db->get('tbl_barang')->result();
 	}
 
+	//function getRasa(){
+		//return $this->db->get('tbl_rasa')->result();
+	//}
+
 	function input_data($data, $table){
 	$this->db->insert($table, $data);
 	}
@@ -62,7 +66,6 @@ class M_barangmasuk extends CI_Model
 	function edit_data($table,$where){
 		return $this->db->get_where($table, $where);
 	}
-
 	
 }
 

@@ -1,8 +1,21 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 font-weight-bold text-grey text-center">Edit Barang</h1>
+        <div class="card card-body">
+            <div class="col-sm-12">
+                <form class="form-horizontal" action="">
+                    <h1 class="h3 font-weight-bold text-grey text-center">Edit Barang</h1>
+                </form>
+            </div>
+        </div>
     </div>
+
+    <!--div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 font-weight-bold text-grey text-center">Edit Barang</h1>
+    </div-->
+
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <div class="card card-body">
     <div class="container-fluid">
         <form class="" method="post" action="<?php echo base_url() . 'data-master/barang/update'; ?>" enctype="multipart/form-data">
             <div class="form-group row">
@@ -21,14 +34,23 @@
                 </div>
             </div>
             <div class="form-group row">
-                
-                <div class="col-sm-6 mb-3 mb-sm-0">
+
+                    <div class="col-sm-6 mb-3 mb-sm-0">
                     <label for="exampleInputEmail1">Rasa</label>
-                    <input type="text" name="rasa" class="form-control" 
-                    id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan nama rasa" 
-                    value="<?php echo $barang['rasa'] ?>">
+                    <select name="id_rasa" class="form-control">
+                        <option value="">-- Pilih Rasa --</option>
+                        <?php
+                        foreach ($rasa as $v) {
+                        ?>
+                        <option value="<?php echo $v->id_rasa ?>"><?php echo $v->nama_rasa ?></option>}
+                        
+                        <?php
+                        }
+                        ?>
+                    </select>
                 </div>
             </div>
+
             <button type="submit" class="btn btn-primary">Simpan</button>
             <a href="<?php echo base_url() . 'data-master/barang'; ?>" class="btn btn-danger">Kembali</a>
         </form>

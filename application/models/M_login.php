@@ -7,7 +7,7 @@ class M_login extends CI_Model{
         $this->db->select('*');
         $this->db->from('tbl_akun');
         $this->db->where('username', $post['username']);
-        $this->db->where('password', sha1($post['password']));
+        $this->db->where('password', $post['password']);
         $query = $this->db->get();
         return $query;
     } 

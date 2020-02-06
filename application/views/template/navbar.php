@@ -43,6 +43,7 @@
             <!--h6 class="collapse-header">Custom Components:</h6-->
             <a class="collapse-item" href="<?php echo base_url() . 'data-master/barang'; ?>">Data Barang</a>
             <a class="collapse-item" href="<?php echo base_url() . 'data-master/barangdetail'; ?>">Data Detail Barang</a>
+            <a class="collapse-item" href="<?php echo base_url() . 'data-master/rasa'; ?>">Rasa Barang</a>
           </div>
         </div>
       </li>
@@ -63,12 +64,12 @@
           <span>Pegawai</span></a>
       </li>
 
-      <!-- Nav Item - Tables -->
-      <!--li class="nav-item">
-        <a class="nav-link" href="<?php //echo base_url() . 'data-master/akun'; ?>">
+      <!--Nav Item - Tables-->
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url() . 'data-master/akun'; ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Akun</span></a>
-      </li-->
+      </li>
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
@@ -88,6 +89,7 @@
             <div class="bg-white py-2 collapse-inner rounded">
               <!--h6 class="collapse-header">Login Screens:</h6-->
               <a class="collapse-item" href="<?php echo base_url() . 'data-master/barangmasuk'; ?>">Barang Masuk</a>
+              <a class="collapse-item" href="<?php echo base_url() . 'data-master/barangkeluar'; ?>">Barang Keluar</a>
             </div>
           </div>
       </li>

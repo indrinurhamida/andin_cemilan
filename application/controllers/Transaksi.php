@@ -19,7 +19,11 @@ class Transaksi extends CI_Controller
         $data['kode1'] = $this->m_transaksi->tampil_kode1();
 
         $this->load->view('template/header');
-        $this->load->view('template_login/navbar_kasir');
+        if($this->session->userdata('jabatan') == "kasir"){
+               $this->load->view('template_login/navbar_kasir');
+            }elseif ($this->session->userdata('jabatan') == "admin") {
+                $this->load->view('template/navbar');
+            }
         $this->load->view('transaksi/tamkasir', $data);
         $this->load->view('template/footer');
     }
@@ -53,6 +57,8 @@ class Transaksi extends CI_Controller
         );
     $this->m_transaksi->input_data($data, "tbl_transaksi");
     $this->db->query("update tbl_member set point = point + 1 where id_member = '$data[id_member]'");
+
+
     $lastId = $this->m_transaksi->lastId()[0];
     foreach ($_POST['id_barangdetail'] as $key => $value) {
         $arr = array(
@@ -63,6 +69,7 @@ class Transaksi extends CI_Controller
         );
         $this->db->insert("tbl_transaksidetail", $arr);
         $this->db->query("update tbl_barangdetail set stok = stok - $arr[qty] where id_barangdetail = '$arr[id_barangdetail]'");
+        
     }
         redirect(base_url()."transaksi");
     }
@@ -76,7 +83,7 @@ class Transaksi extends CI_Controller
         $array = array(
                 "id_barangdetail" => $val->id_barangdetail,
                 "nama_barang" => $val->nama_barang,
-                "rasa" => $val->rasa,
+                "id_rasa" => $val->id_rasa,
                 "berat" => $val->berat,
                 "harga" => $val->harga,
                 "stok" => $val->stok

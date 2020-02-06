@@ -11,7 +11,11 @@ class Akun extends CI_Controller
 	{
 		$data['akun'] = $this->m_akun->tampil_data()->result();
         $this->load->view('template/header');
-        $this->load->view('template/navbar');
+        if($this->session->userdata('jabatan') == "owner"){
+        	   $this->load->view('template_login/navbar_owner');
+        	}elseif($this->session->userdata('jabatan') == "admin"){
+        	   $this->load->view('template/navbar');
+        	}
         $this->load->view('data-master/akun/daftarakun',$data);
         $this->load->view('template/footer');
 	}
@@ -20,7 +24,11 @@ class Akun extends CI_Controller
 		$data['kode'] = $this->m_akun->tampil_kode();
 		$data['pegawai'] = $this->m_akun->getPegawai();
 		$this->load->view('template/header');
-        $this->load->view('template/navbar');
+        if($this->session->userdata('jabatan') == "owner"){
+        	   $this->load->view('template_login/navbar_owner');
+        	}elseif($this->session->userdata('jabatan') == "admin"){
+        	   $this->load->view('template/navbar');
+        	}
         $this->load->view('data-master/akun/tambahakun', $data);
         $this->load->view('template/footer');
 
@@ -59,7 +67,11 @@ class Akun extends CI_Controller
 		$data['data_akun'] = $this->m_akun->tampil_akun()->result();
 		
 		$this->load->view('template/header');
-        $this->load->view('template/navbar');
+        if($this->session->userdata('jabatan') == "owner"){
+        	   $this->load->view('template_login/navbar_owner');
+        	}elseif($this->session->userdata('jabatan') == "admin"){
+        	   $this->load->view('template/navbar');
+        	}
         $this->load->view('data-master/akun/editakun', $data);
         $this->load->view('template/footer');
 	}

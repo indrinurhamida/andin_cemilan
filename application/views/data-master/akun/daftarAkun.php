@@ -1,7 +1,13 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Data Akun</h1>
+        <div class="card card-body">
+            <div class="col-sm-12">
+                <form class="form-horizontal" action="">
+                    <h1 class="h3 font-weight-bold text-grey text-center">Data Akun</h1>
+                </form>
+            </div>
+        </div>
     </div>
     <div class="card shadow mb-4">
     <div class="card-header py-3">
@@ -34,7 +40,7 @@
                                 <td><?= $item->password ?></td>
                                 <td><?= $item->jabatan ?></td>
                                 <td><?= $item->nama_pegawai ?></td>
-                                <td>
+                                <td style="text-align:center">
                                     <a href="<?php echo base_url() . 'data-master/akun/edit'; ?>/<?php echo $item->id_akun?>" 
                                             class="btn btn-success">Edit</a>
                                     <a href="<?php echo base_url() . 'data-master/akun/hapus'; ?>/<?php echo $item->id_akun?>" class="btn btn-danger" onclick="return confirm('Yakin Ingin Menghapus Data ?')">Hapus</a>

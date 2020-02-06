@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 12 Jan 2020 pada 23.56
--- Versi Server: 10.1.13-MariaDB
--- PHP Version: 5.5.34
+-- Generation Time: Feb 04, 2020 at 03:54 PM
+-- Server version: 10.1.9-MariaDB
+-- PHP Version: 5.6.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -23,7 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_akun`
+-- Table structure for table `tbl_akun`
 --
 
 CREATE TABLE `tbl_akun` (
@@ -35,7 +35,7 @@ CREATE TABLE `tbl_akun` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_akun`
+-- Dumping data for table `tbl_akun`
 --
 
 INSERT INTO `tbl_akun` (`id_akun`, `username`, `password`, `jabatan`, `id_pegawai`) VALUES
@@ -46,109 +46,52 @@ INSERT INTO `tbl_akun` (`id_akun`, `username`, `password`, `jabatan`, `id_pegawa
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_barang`
+-- Table structure for table `tbl_barang`
 --
 
 CREATE TABLE `tbl_barang` (
   `id_barang` char(8) NOT NULL,
   `nama_barang` varchar(50) NOT NULL,
-  `rasa` varchar(50) NOT NULL
+  `id_rasa` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_barang`
+-- Dumping data for table `tbl_barang`
 --
 
-INSERT INTO `tbl_barang` (`id_barang`, `nama_barang`, `rasa`) VALUES
-('BRG001', 'makaroni pipa', 'super pedas'),
-('BRG002', 'makaroni pipa', 'pedas biasa'),
-('BRG003', 'makaroni pipa', 'jagung manis'),
-('BRG004', 'makaroni pipa', 'jagung manis pedas'),
-('BRG005', 'makaroni pipa', 'balado'),
-('BRG006', 'makaroni pipa', 'ayam bakar'),
-('BRG007', 'makaroni pipa', 'lada hitam'),
-('BRG008', 'makaroni pipa', 'lada hitam pedas'),
-('BRG009', 'makaroni pipa', 'barbeque'),
-('BRG010', 'makaroni pipa', 'rumput laut'),
-('BRG011', 'makaroni pipa', 'keju asin'),
-('BRG012', 'makaroni spiral', 'super pedas'),
-('BRG013', 'makaroni spiral', 'balado'),
-('BRG014', 'makaroni spiral', 'barbeque'),
-('BRG015', 'mie lidi', 'super pedas'),
-('BRG016', 'mie lidi', 'jagung manis'),
-('BRG017', 'mie lidi', 'jagung manis pedas'),
-('BRG018', 'mie lidi', 'jagung bakar'),
-('BRG019', 'mie lidi', 'jagung bakar pedas'),
-('BRG020', 'mie lidi', 'sapi panggang'),
-('BRG021', 'mie lidi', 'sapi panggang pedas'),
-('BRG022', 'mie lidi', 'asin'),
-('BRG023', 'mie lidi', 'cabe ijo'),
-('BRG024', 'mie lidi', 'coklat'),
-('BRG025', 'mie lidi', 'balado'),
-('BRG026', 'mie lidi', 'balado pedas'),
-('BRG027', 'mie lidi', 'keju'),
-('BRG028', 'mie lidi', 'keju bakar'),
-('BRG029', 'mie lidi', 'ayam bakar'),
-('BRG030', 'mie lidi', 'ayam bawang'),
-('BRG031', 'mie lidi', 'ayam bawang pedas'),
-('BRG032', 'molring', 'asin'),
-('BRG033', 'molring', 'pedas');
+INSERT INTO `tbl_barang` (`id_barang`, `nama_barang`, `id_rasa`) VALUES
+('BRG0037', 'apagitu', '111'),
+('BRG034', 'nano', 'RSA034'),
+('BRG035', 'Makaroni', 'RSA014'),
+('BRG036', 'Makaroni', 'RSA035');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_barangdetail`
+-- Table structure for table `tbl_barangdetail`
 --
 
 CREATE TABLE `tbl_barangdetail` (
   `id_barangdetail` char(8) NOT NULL,
   `id_barang` char(8) NOT NULL,
-  `berat` varchar(10) NOT NULL,
-  `harga` int(7) NOT NULL,
-  `stok` int(7) NOT NULL
+  `berat` varchar(5) NOT NULL,
+  `harga` int(5) NOT NULL,
+  `stok` int(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_barangdetail`
+-- Dumping data for table `tbl_barangdetail`
 --
 
 INSERT INTO `tbl_barangdetail` (`id_barangdetail`, `id_barang`, `berat`, `harga`, `stok`) VALUES
-('DEB001', 'BRG001', '50 g', 2000, 40),
-('DEB002', 'BRG001', '500 g', 18000, 30),
-('DEB003', 'BRG001', '1000 g', 33000, 10),
-('DEB004', 'BRG002', '50 g', 2000, 45),
-('DEB005', 'BRG002', '500 g', 18000, 10),
-('DEB006', 'BRG002', '1000 g', 33000, 15),
-('DEB007', 'BRG003', '50g', 2000, 80),
-('DEB008', 'BRG003', '500 g', 18000, 10),
-('DEB009', 'BRG012', '50g', 2000, 60),
-('DEB010', 'BRG013', '50g', 2000, 40),
-('DEB011', 'BRG014', '500 g', 18000, 30),
-('DEB012', 'BRG015', '1000 g', 33000, 20),
-('DEB013', 'BRG016', '50g', 2000, 20),
-('DEB014', 'BRG017', '500 g', 18000, 50),
-('DEB015', 'BRG018', '50g', 2000, 30),
-('DEB016', 'BRG019', '50g', 2000, 50),
-('DEB017', 'BRG020', '500 g', 18000, 20),
-('DEB018', 'BRG021', '50g', 2000, 30),
-('DEB019', 'BRG022', '1000 g', 33000, 10),
-('DEB020', 'BRG023', '500 g', 18000, 10),
-('DEB021', 'BRG024', '50g', 2000, 50),
-('DEB022', 'BRG025', '500 g', 18000, 20),
-('DEB023', 'BRG026', '1000 g', 33000, 20),
-('DEB024', 'BRG027', '50g', 2000, 100),
-('DEB025', 'BRG028', '50g', 2000, 30),
-('DEB026', 'BRG029', '500 g', 18000, 20),
-('DEB027', 'BRG030', '500 g', 18000, 10),
-('DEB028', 'BRG030', '50g', 2000, 100),
-('DEB029', 'BRG031', '50g', 2000, 100),
-('DEB030', 'BRG032', '500 g', 18000, 30),
-('DEB031', 'BRG033', '50g', 2000, 50);
+('DEB0099', 'BRG0037', '20 kg', 2000000, 20),
+('DEB032', 'BRG036', '50g', 20000, 20),
+('DEB033', 'BRG035', '500 g', 20000, 10);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_barangmasuk`
+-- Table structure for table `tbl_barangmasuk`
 --
 
 CREATE TABLE `tbl_barangmasuk` (
@@ -157,25 +100,15 @@ CREATE TABLE `tbl_barangmasuk` (
   `id_supplier` char(8) NOT NULL,
   `id_barang` char(8) NOT NULL,
   `id_pegawai` varchar(20) NOT NULL,
-  `berat` varchar(10) NOT NULL,
-  `qty` int(7) NOT NULL,
-  `harga_beli` varchar(20) NOT NULL
+  `berat` varchar(5) NOT NULL,
+  `qty` int(3) NOT NULL,
+  `harga_beli` varchar(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `tbl_barangmasuk`
---
-
-INSERT INTO `tbl_barangmasuk` (`id_barangmasuk`, `tgl_masuk`, `id_supplier`, `id_barang`, `id_pegawai`, `berat`, `qty`, `harga_beli`) VALUES
-('BRM001', '2019-12-29', 'SPL003', 'BRG015', 'PGW003', '2', 5, '65000'),
-('BRM002', '2019-12-16', 'SPL005', 'BRG013', 'PGW003', '2', 5, '65000'),
-('BRM003', '0000-00-00', 'SPL002', 'BRG032', 'PGW003', '2', 6, '70000'),
-('BRM004', '2019-12-28', 'SPL004', 'BRG003', 'PGW003', '2', 6, '70000');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_member`
+-- Table structure for table `tbl_member`
 --
 
 CREATE TABLE `tbl_member` (
@@ -183,14 +116,21 @@ CREATE TABLE `tbl_member` (
   `nama_member` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `alamat` text NOT NULL,
-  `no_hp` varchar(20) NOT NULL,
+  `no_hp` varchar(13) NOT NULL,
   `point` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_member`
+--
+
+INSERT INTO `tbl_member` (`id_member`, `nama_member`, `email`, `alamat`, `no_hp`, `point`) VALUES
+('MBR001', 'bukan member', 'bukanmember@gmail.com', 'Jember', '081234567789', 14);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_pegawai`
+-- Table structure for table `tbl_pegawai`
 --
 
 CREATE TABLE `tbl_pegawai` (
@@ -198,33 +138,84 @@ CREATE TABLE `tbl_pegawai` (
   `nama_pegawai` varchar(50) NOT NULL,
   `alamat` varchar(50) NOT NULL,
   `akses` varchar(7) NOT NULL,
-  `no_hp` varchar(50) NOT NULL
+  `no_hp` varchar(13) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_pegawai`
+-- Dumping data for table `tbl_pegawai`
 --
 
 INSERT INTO `tbl_pegawai` (`id_pegawai`, `nama_pegawai`, `alamat`, `akses`, `no_hp`) VALUES
 ('PGW001', 'Regita', 'Situbondo', 'admin', '089765345567'),
-('PGW002', 'Andin', 'Situbondo', 'kasir', '+6285607498613'),
+('PGW002', 'Andin', 'Situbondo', 'kasir', '08560749861'),
 ('PGW003', 'Andi', 'Situbondo', 'gudang', '085791277247');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_supplier`
+-- Table structure for table `tbl_rasa`
+--
+
+CREATE TABLE `tbl_rasa` (
+  `id_rasa` varchar(30) NOT NULL,
+  `nama_rasa` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_rasa`
+--
+
+INSERT INTO `tbl_rasa` (`id_rasa`, `nama_rasa`) VALUES
+('RSA001', 'Super Pedas'),
+('RSA003', 'Jagung Manis'),
+('RSA004', 'Jagung Manis Pedas'),
+('RSA005', 'Balado'),
+('RSA006', 'Ayam Bakar'),
+('RSA007', 'Lada Hitam'),
+('RSA008', 'Lada Hitam Pedas'),
+('RSA009', 'Barbeque'),
+('RSA010', 'Rumput Laut'),
+('RSA011', 'Keju'),
+('RSA012', 'Asin'),
+('RSA013', 'Jagung Bakar'),
+('RSA014', 'Jagung Bakar Pedas'),
+('RSA015', 'Sapi Panggang'),
+('RSA016', 'Sapi Panggang Pedas'),
+('RSA017', 'Cabe Ijo'),
+('RSA018', 'Coklat'),
+('RSA019', 'Balado Pedas'),
+('RSA020', 'Keju Pedas'),
+('RSA021', 'Ayam Bawang'),
+('RSA022', 'Ayam Bawang Pedas'),
+('RSA023', 'Pedas'),
+('RSA024', 'Original'),
+('RSA025', 'Manis'),
+('RSA026', 'Pedas Manis'),
+('RSA027', 'Biasa'),
+('RSA028', 'Warna-warni'),
+('RSA029', 'Pandan'),
+('RSA030', 'Vanila'),
+('RSA031', 'Stawberry'),
+('RSA032', 'Mochacino'),
+('RSA033', 'Original Manis'),
+('RSA034', 'nano nano rasanya'),
+('RSA035', 'rasa yang pernah ada');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_supplier`
 --
 
 CREATE TABLE `tbl_supplier` (
   `id_supplier` char(8) NOT NULL,
   `nama_supplier` varchar(50) NOT NULL,
   `alamat_supplier` varchar(50) NOT NULL,
-  `no_hp` varchar(50) NOT NULL
+  `no_hp` varchar(13) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_supplier`
+-- Dumping data for table `tbl_supplier`
 --
 
 INSERT INTO `tbl_supplier` (`id_supplier`, `nama_supplier`, `alamat_supplier`, `no_hp`) VALUES
@@ -237,7 +228,7 @@ INSERT INTO `tbl_supplier` (`id_supplier`, `nama_supplier`, `alamat_supplier`, `
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_transaksi`
+-- Table structure for table `tbl_transaksi`
 --
 
 CREATE TABLE `tbl_transaksi` (
@@ -245,24 +236,24 @@ CREATE TABLE `tbl_transaksi` (
   `id_member` char(8) NOT NULL,
   `tgl_transaksi` date NOT NULL,
   `id_pegawai` varchar(20) NOT NULL,
-  `qty` int(11) NOT NULL,
-  `total` int(11) NOT NULL,
-  `jumlah_bayar` varchar(10) NOT NULL,
-  `kembalian` varchar(10) NOT NULL
+  `qty` int(6) NOT NULL,
+  `total` int(6) NOT NULL,
+  `jumlah_bayar` varchar(6) NOT NULL,
+  `kembalian` varchar(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_transaksidetail`
+-- Table structure for table `tbl_transaksidetail`
 --
 
 CREATE TABLE `tbl_transaksidetail` (
-  `id_transaksidetail` char(8) NOT NULL,
+  `id_transaksidetail` int(3) NOT NULL,
   `id_transaksi` char(8) NOT NULL,
   `id_barangdetail` char(8) NOT NULL,
-  `qty` varchar(10) NOT NULL,
-  `subtotal` int(11) NOT NULL
+  `qty` int(3) NOT NULL,
+  `subtotal` int(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -280,7 +271,8 @@ ALTER TABLE `tbl_akun`
 -- Indexes for table `tbl_barang`
 --
 ALTER TABLE `tbl_barang`
-  ADD PRIMARY KEY (`id_barang`);
+  ADD PRIMARY KEY (`id_barang`),
+  ADD KEY `id_rasa` (`id_rasa`);
 
 --
 -- Indexes for table `tbl_barangdetail`
@@ -314,6 +306,12 @@ ALTER TABLE `tbl_pegawai`
   ADD PRIMARY KEY (`id_pegawai`);
 
 --
+-- Indexes for table `tbl_rasa`
+--
+ALTER TABLE `tbl_rasa`
+  ADD PRIMARY KEY (`id_rasa`);
+
+--
 -- Indexes for table `tbl_supplier`
 --
 ALTER TABLE `tbl_supplier`
@@ -336,23 +334,32 @@ ALTER TABLE `tbl_transaksidetail`
   ADD KEY `id_barangdetail` (`id_barangdetail`);
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `tbl_akun`
+-- AUTO_INCREMENT for table `tbl_transaksidetail`
+--
+ALTER TABLE `tbl_transaksidetail`
+  MODIFY `id_transaksidetail` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `tbl_akun`
 --
 ALTER TABLE `tbl_akun`
   ADD CONSTRAINT `tbl_akun_ibfk_1` FOREIGN KEY (`id_pegawai`) REFERENCES `tbl_pegawai` (`id_pegawai`);
 
 --
--- Ketidakleluasaan untuk tabel `tbl_barangdetail`
+-- Constraints for table `tbl_barangdetail`
 --
 ALTER TABLE `tbl_barangdetail`
   ADD CONSTRAINT `tbl_barangdetail_ibfk_1` FOREIGN KEY (`id_barang`) REFERENCES `tbl_barang` (`id_barang`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `tbl_barangmasuk`
+-- Constraints for table `tbl_barangmasuk`
 --
 ALTER TABLE `tbl_barangmasuk`
   ADD CONSTRAINT `tbl_barangmasuk_ibfk_1` FOREIGN KEY (`id_supplier`) REFERENCES `tbl_supplier` (`id_supplier`),
@@ -360,14 +367,14 @@ ALTER TABLE `tbl_barangmasuk`
   ADD CONSTRAINT `tbl_barangmasuk_ibfk_4` FOREIGN KEY (`id_barang`) REFERENCES `tbl_barang` (`id_barang`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `tbl_transaksi`
+-- Constraints for table `tbl_transaksi`
 --
 ALTER TABLE `tbl_transaksi`
   ADD CONSTRAINT `tbl_transaksi_ibfk_1` FOREIGN KEY (`id_member`) REFERENCES `tbl_member` (`id_member`),
   ADD CONSTRAINT `tbl_transaksi_ibfk_2` FOREIGN KEY (`id_pegawai`) REFERENCES `tbl_pegawai` (`id_pegawai`);
 
 --
--- Ketidakleluasaan untuk tabel `tbl_transaksidetail`
+-- Constraints for table `tbl_transaksidetail`
 --
 ALTER TABLE `tbl_transaksidetail`
   ADD CONSTRAINT `tbl_transaksidetail_ibfk_1` FOREIGN KEY (`id_transaksi`) REFERENCES `tbl_transaksi` (`id_transaksi`),

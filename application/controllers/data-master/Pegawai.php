@@ -10,7 +10,11 @@ class Pegawai extends CI_Controller
 	function index(){
 		$data['pegawai'] = $this->m_pegawai->tampil_data()->result();
     	$this->load->view('template/header');
-    	$this->load->view('template_login/navbar_owner');
+    	if($this->session->userdata('jabatan') == "owner"){
+        	   $this->load->view('template_login/navbar_owner');
+        	}elseif($this->session->userdata('jabatan') == "admin"){
+        	   $this->load->view('template/navbar');
+        	}
        	$this->load->view('data-master/pegawai/daftarpegawai',$data);
        	$this->load->view('template/footer');
 	}
@@ -18,7 +22,11 @@ class Pegawai extends CI_Controller
 	function tambah(){
 		$data['kode'] = $this->m_pegawai->tampil_kode();
 		$this->load->view('template/header');
-        $this->load->view('template_login/navbar_owner');
+        if($this->session->userdata('jabatan') == "owner"){
+        	   $this->load->view('template_login/navbar_owner');
+        	}elseif($this->session->userdata('jabatan') == "admin"){
+        	   $this->load->view('template/navbar');
+        	}
         $this->load->view('data-master/pegawai/tambahpegawai', $data);
         $this->load->view('template/footer');
 
@@ -28,14 +36,14 @@ class Pegawai extends CI_Controller
 	$id_pegawai		= $this->input->post('id_pegawai');
 	$nama_pegawai	= $this->input->post('nama_pegawai');
 	$alamat			= $this->input->post('alamat');
-	$akses			= $this->input->post('akses');
+	//$akses			= $this->input->post('akses');
 	$no_hp			= $this->input->post('no_hp');
 
 	$data = array(
 	'id_pegawai'		=> $id_pegawai,
 	'nama_pegawai' 		=> $nama_pegawai,
 	'alamat' 			=> $alamat,
-	'akses' 			=> $akses,
+	//'akses' 			=> $akses,
 	'no_hp' 			=> $no_hp,
 	);
 
@@ -55,7 +63,11 @@ class Pegawai extends CI_Controller
 		$data['pegawai'] = $this->m_pegawai->edit_data('tbl_pegawai', $where)->row_array();
 
 		$this->load->view('template/header');
-        $this->load->view('template_login/navbar_owner');
+        if($this->session->userdata('jabatan') == "owner"){
+        	   $this->load->view('template_login/navbar_owner');
+        	}elseif($this->session->userdata('jabatan') == "admin"){
+        	   $this->load->view('template/navbar');
+        	}
         $this->load->view('data-master/pegawai/editpegawai', $data);
         $this->load->view('template/footer');
 	}
@@ -64,7 +76,7 @@ class Pegawai extends CI_Controller
 	$id_pegawai		= $this->input->post('id_pegawai');
 	$nama_pegawai	= $this->input->post('nama_pegawai');
 	$alamat			= $this->input->post('alamat');
-	$akses			= $this->input->post('akses');
+	//$akses			= $this->input->post('akses');
 	$no_hp			= $this->input->post('no_hp');
 	
 
@@ -72,7 +84,7 @@ class Pegawai extends CI_Controller
 	'id_pegawai'		=> $id_pegawai,
 	'nama_pegawai' 		=> $nama_pegawai,
 	'alamat' 			=> $alamat,
-	'akses' 			=> $akses,
+	//'akses' 			=> $akses,
 	'no_hp' 			=> $no_hp,
 	
 	);

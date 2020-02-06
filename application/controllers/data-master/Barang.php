@@ -16,6 +16,8 @@ class Barang extends CI_Controller
         	   $this->load->view('template_login/navbar_kasir');
         	}elseif($this->session->userdata('jabatan') == "gudang"){
         	   $this->load->view('template_login/navbar_gudang');
+        	}elseif ($this->session->userdata('jabatan') == "admin") {
+        		$this->load->view('template/navbar');
         	}
         $this->load->view('data-master/barang/daftarbarang',$data);
         $this->load->view('template/footer');
@@ -23,12 +25,14 @@ class Barang extends CI_Controller
 
 	function tambah(){
 		$data['kode'] = $this->m_barang->tampil_kode();
-
+		$data['rasa'] = $this->m_barang->getRasa();
 		$this->load->view('template/header');
         if($this->session->userdata('jabatan') == "kasir"){
         	   $this->load->view('template_login/navbar_kasir');
         	}elseif($this->session->userdata('jabatan') == "gudang"){
         	   $this->load->view('template_login/navbar_gudang');
+        	}elseif ($this->session->userdata('jabatan') == "admin") {
+        		$this->load->view('template/navbar');
         	}
         $this->load->view('data-master/barang/tambahbarang', $data);
         $this->load->view('template/footer');
@@ -38,12 +42,12 @@ class Barang extends CI_Controller
 	function tambah_aksi(){
 		$id_barang		= $this->input->post('id_barang');
 		$nama_barang	= $this->input->post('nama_barang');
-		$rasa			= $this->input->post('rasa');
+		$id_rasa		= $this->input->post('id_rasa');
 
 		$data = array(
 			'id_barang'			=> $id_barang,
 			'nama_barang' 		=> $nama_barang,
-			'rasa' 				=> $rasa,
+			'id_rasa' 			=> $id_rasa,
 		);
 
 		$this->m_barang->input_data($data, 'tbl_barang');
@@ -60,12 +64,14 @@ class Barang extends CI_Controller
 	function edit($id){
 		$where = array('id_barang' => $id);
 		$data['barang'] = $this->m_barang->edit_data('tbl_barang', $where)->row_array();
-
+		$data['rasa'] = $this->m_barang->getRasa();
 		$this->load->view('template/header');
         if($this->session->userdata('jabatan') == "kasir"){
         	   $this->load->view('template_login/navbar_kasir');
         	}elseif($this->session->userdata('jabatan') == "gudang"){
         	   $this->load->view('template_login/navbar_gudang');
+        	}elseif ($this->session->userdata('jabatan') == "admin") {
+        		$this->load->view('template/navbar');
         	}
         $this->load->view('data-master/barang/editbarang', $data);
         $this->load->view('template/footer');
@@ -74,12 +80,12 @@ class Barang extends CI_Controller
 	function update(){
 		$id_barang		= $this->input->post('id_barang');
 		$nama_barang	= $this->input->post('nama_barang');
-		$rasa			= $this->input->post('rasa');
+		$id_rasa		= $this->input->post('id_rasa');
 
 		$data = array(
 			'id_barang'			=> $id_barang,
 			'nama_barang' 		=> $nama_barang,
-			'rasa' 				=> $rasa,
+			'id_rasa' 			=> $id_rasa,
 		);
 
 		$where = array(

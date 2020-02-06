@@ -2,7 +2,13 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 font-weight-bold text-grey text-center">Transaksi</h1>
+        <div class="card card-body">
+            <div class="col-sm-12">
+                <form class="form-horizontal" action="">
+                    <h1 class="h3 font-weight-bold text-grey text-center">Transaksi</h1>
+                </form>
+            </div>
+        </div>
     </div>
 <form action="<?php echo base_url()."transaksi/add"?>" method="post" accept-charset="utf-8">
     <div class="row">
@@ -50,7 +56,7 @@
                 <?php 
                   foreach ($barangdetail as $item) {
                 ?>
-                <option value="<?php echo $item->id_barangdetail ?>"> <?= $item->nama_barang .' - '. $item->rasa ?> <?= $item->berat ?> <?= $item->harga ?></option>
+                <option value="<?php echo $item->id_barangdetail ?>"> <?= $item->nama_barang .' - '. $item->nama_rasa ?> <?= $item->berat ?> <?= $item->harga ?></option>
               <?php } ?>
               </select>
             </div>

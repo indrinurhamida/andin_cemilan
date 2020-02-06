@@ -1,13 +1,13 @@
 <?php
 
-class M_barang extends CI_Model
+class M_rasa extends CI_Model
 {
 	function tampil_kode()
 	{
-		$this->db->select('RIGHT (tbl_barang.id_barang, 2) as kode', FALSE);
-        $this->db->order_by('id_barang', 'DESC');
+		$this->db->select('RIGHT (tbl_rasa.id_rasa, 2) as kode', FALSE);
+        $this->db->order_by('id_rasa', 'DESC');
         $this->db->limit(1);
-        $query = $this->db->get('tbl_barang');    
+        $query = $this->db->get('tbl_rasa');    
 
         //cek dulu apakah ada sudah ada kode di tabel.    
         if ($query->num_rows() <> 0) {
@@ -21,17 +21,12 @@ class M_barang extends CI_Model
             $kode = 1;
         }
         $kodemax = str_pad($kode, 3, "0", STR_PAD_LEFT);
-        $kodejadi = "BRG" . $kodemax;
+        $kodejadi = "RSA" . $kodemax;
         return $kodejadi;
 	}
 
-	function getRasa(){
-		return $this->db->get('tbl_rasa')->result();
-	}
-
 	function tampil_data(){
-		//return $this->db->get('tbl_barang');
-		return $this->db->query('SELECT r.nama_rasa, b.id_barang, b.nama_barang, b.id_rasa FROM `tbl_barang` as b JOIN tbl_rasa as r ON r.id_rasa=b.id_rasa');
+		return $this->db->get('tbl_rasa');
 	}
 
 	function input_data($data, $table){
