@@ -50,7 +50,7 @@
                         foreach ($barang as $v) {
                         $selected = ($v->id_barang == $barangmasuk['id_barang']) ? "selected" : "";
                         ?>
-                        <option value="<?php echo $v->id_barang ?>" <?php echo $selected?>><?php echo $v->nama_barang ?> <?php echo $v->nama_rasa ?></option>}
+                        <option value="<?php echo $v->id_barang ?>" <?php echo $selected?>><?php echo $v->nama_barang ?> <?php echo $v->id_rasa ?></option>}
                         
                         <?php
                         }

@@ -43,7 +43,7 @@
             </div>
 
             <div class="col-sm-6 mb-6 mb-sm-0">
-                <button type="submit" class="btn btn-primary">Simpan</button>
+                <button type="button" class="btn btn-primary">Simpan</button>
                 <a href="<?php echo base_url() . 'data-master/member'; ?>" class="btn btn-danger">Kembali</a>
             </div>
         </form>

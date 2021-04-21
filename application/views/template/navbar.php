@@ -89,7 +89,7 @@
             <div class="bg-white py-2 collapse-inner rounded">
               <!--h6 class="collapse-header">Login Screens:</h6-->
               <a class="collapse-item" href="<?php echo base_url() . 'data-master/barangmasuk'; ?>">Barang Masuk</a>
-              <a class="collapse-item" href="<?php echo base_url() . 'data-master/barangkeluar'; ?>">Barang Keluar</a>
+              <!--a class="collapse-item" href="<?php //echo base_url() . 'data-master/barangkeluar'; ?>">Barang Keluar</a-->
             </div>
           </div>
       </li>
